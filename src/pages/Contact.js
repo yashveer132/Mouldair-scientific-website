@@ -72,30 +72,30 @@ const Contact = () => {
   };
 
   const inputClasses =
-    "w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200";
+    "w-full px-3 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200";
   const labelClasses = "block text-sm font-medium text-gray-700 mb-1";
 
   return (
     <Layout>
       <ToastContainer />
       <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900">
               Get in <span className="text-indigo-600">Touch</span>
             </h1>
-            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               We'd love to hear from you. Whether you have a question about our
               products, pricing, or just want to say hello, we're here to help.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -103,11 +103,11 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               className="bg-white shadow-xl rounded-lg overflow-hidden transform transition"
             >
-              <div className="p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              <div className="p-6 sm:p-8">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">
                   Send us a message
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div>
                     <label htmlFor="name" className={labelClasses}>
                       Name
@@ -121,7 +121,7 @@ const Contact = () => {
                       className={inputClasses}
                     />
                     {formErrors.name && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-xs sm:text-sm mt-1">
                         {formErrors.name}
                       </p>
                     )}
@@ -139,7 +139,7 @@ const Contact = () => {
                       className={inputClasses}
                     />
                     {formErrors.email && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-xs sm:text-sm mt-1">
                         {formErrors.email}
                       </p>
                     )}
@@ -157,7 +157,7 @@ const Contact = () => {
                       className={inputClasses}
                     />
                     {formErrors.subject && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-xs sm:text-sm mt-1">
                         {formErrors.subject}
                       </p>
                     )}
@@ -175,7 +175,7 @@ const Contact = () => {
                       className={inputClasses}
                     ></textarea>
                     {formErrors.message && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-xs sm:text-sm mt-1">
                         {formErrors.message}
                       </p>
                     )}
@@ -183,7 +183,7 @@ const Contact = () => {
                   <div>
                     <motion.button
                       type="submit"
-                      className="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-200"
+                      className="w-full py-2 sm:py-3 px-4 text-sm sm:text-base border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-200"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -195,12 +195,12 @@ const Contact = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="mt-8 flex justify-center pb-8"
+                  className="mt-8 flex justify-center"
                 >
                   <motion.img
-                    src="pump2.png"
+                    src="/pump2.png"
                     alt="ModuVac Logo"
-                    className="h-48 w-auto mt-8"
+                    className="h-32 sm:h-48 w-auto"
                     whileHover={{ scale: 1.1 }}
                   />
                 </motion.div>
@@ -211,38 +211,41 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 className="bg-white shadow-xl rounded-lg overflow-hidden transform transition"
               >
-                <div className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                <div className="p-6 sm:p-8">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                     Contact Information
                   </h2>
                   <div className="space-y-4">
-                    <div className="flex items-center">
-                      <MdLocationOn className="text-2xl text-indigo-600 mr-4" />
+                    <div className="flex items-start sm:items-center">
+                      <MdLocationOn className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4 mt-1 sm:mt-0" />
                       <div>
-                        <h3 className="font-semibold">Address</h3>
-                        <p className="text-gray-600">
-                          123 Vacuum Street, Techville, CA 90210, USA
+                        <h3 className="font-semibold text-sm sm:text-base">Address</h3>
+                        <p className="text-gray-600 text-xs sm:text-sm">
+                          44 Happy Residency B/H Narmada Hotel, Zadeshwar,
+                          Bharuch, Gujarat 392011, India
                         </p>
                       </div>
                     </div>
                     <div className="flex items-center">
-                      <MdPhone className="text-2xl text-indigo-600 mr-4" />
+                      <MdPhone className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4" />
                       <div>
-                        <h3 className="font-semibold">Phone</h3>
-                        <p className="text-gray-600">+1 (555) 123-4567</p>
+                        <h3 className="font-semibold text-sm sm:text-base">Phone</h3>
+                        <p className="text-gray-600 text-xs sm:text-sm">+076986 60715</p>
                       </div>
                     </div>
                     <div className="flex items-center">
-                      <MdEmail className="text-2xl text-indigo-600 mr-4" />
+                      <MdEmail className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4" />
                       <div>
-                        <h3 className="font-semibold">Email</h3>
-                        <p className="text-gray-600">info@moduvac.com</p>
+                        <h3 className="font-semibold text-sm sm:text-base">Email</h3>
+                        <p className="text-gray-600 text-xs sm:text-sm">
+                          info@mouldairscientific.com
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -253,43 +256,22 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 className="bg-white shadow-xl rounded-lg overflow-hidden transform transition"
               >
-                <div className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                <div className="p-6 sm:p-8">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                     Follow Us
                   </h2>
-                  <div className="flex justify-center space-x-4">
-                    <motion.a
-                      href="#"
-                      className="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-200"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaFacebookF className="text-xl" />
-                    </motion.a>
-                    <motion.a
-                      href="#"
-                      className="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-200"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaTwitter className="text-xl" />
-                    </motion.a>
-                    <motion.a
-                      href="#"
-                      className="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-200"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaLinkedinIn className="text-xl" />
-                    </motion.a>
-                    <motion.a
-                      href="#"
-                      className="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-200"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaInstagram className="text-xl" />
-                    </motion.a>
+                  <div className="flex justify-center space-x-3 sm:space-x-4">
+                    {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, index) => (
+                      <motion.a
+                        key={index}
+                        href="#"
+                        className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full hover:bg-indigo-700 transition duration-200"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <Icon className="text-lg sm:text-xl" />
+                      </motion.a>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -298,7 +280,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 className="bg-white shadow-xl rounded-lg overflow-hidden transform transition"
               >
-                <div className="aspect-w-16 aspect-h-9 h-[400px]">
+                <div className="aspect-w-16 aspect-h-9 h-[300px] sm:h-[400px]">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14825.231225323734!2d73.0288011!3d21.7295895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f8b428ea21a85%3A0xb6a14a7dfb8db901!2sMouldAir%20Scientific%20%26%20Lab%20Equipments!5e0!3m2!1sen!2sin!4v1684659417317!5m2!1sen!2sin"
                     width="100%"

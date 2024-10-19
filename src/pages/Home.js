@@ -162,10 +162,10 @@ const Home = () => {
         <AnimatedSection className="bg-gray-900 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Experience ModuVac in Action
+              Experience Mouldair Scientific in Action
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-8">
-              Watch our video to see how ModuVac can transform your workflow.
+              Watch our video to see how Mouldair Scientific can transform your workflow.
             </p>
             <motion.div
               className="relative rounded-lg overflow-hidden shadow-2xl"
@@ -244,7 +244,7 @@ const Home = () => {
         <AnimatedSection className="bg-gray-100 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 sm:mb-12">
-              Why Choose ModuVac?
+              Why Choose Mouldair Scientific?
             </h2>
             <motion.div
               className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"

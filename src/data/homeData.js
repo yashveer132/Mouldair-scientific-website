@@ -45,7 +45,7 @@ export const testimonials = [
   {
     name: "Dr. Jane Doe",
     feedback:
-      "ModuVac's pumps have revolutionized our lab operations with their powerful and quiet performance.",
+      "Mouldair Scientific's pumps have revolutionized our lab operations with their powerful and quiet performance.",
     role: "Lead Scientist, XYZ Lab",
   },
   {
@@ -57,7 +57,7 @@ export const testimonials = [
   {
     name: "Dr. Sarah Lee",
     feedback:
-      "ModuVac pumps are incredibly reliable, and the customer support is top-notch. Highly recommended!",
+      "Mouldair Scientific pumps are incredibly reliable, and the customer support is top-notch. Highly recommended!",
     role: "Head of Research, LMN Innovations",
   },
 ];
@@ -78,7 +78,7 @@ export const fadeInUp = {
 };
 
 export const heroContent = {
-  title: "Elevate Your Research with ModuVac",
+  title: "Elevate Your Research with Mouldair Scientific",
   subtitle:
     "Discover our cutting-edge modular vacuum pumps that combine power, efficiency, and reliability for all your scientific and industrial needs.",
   buttonText: "Explore Our Products",

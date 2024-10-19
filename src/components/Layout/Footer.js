@@ -32,7 +32,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                ModuVac
+                Mouldair Scientific
               </motion.span>
             </Link>
             <p className="text-gray-400 text-base">
@@ -199,7 +199,7 @@ const Footer = () => {
         </div>
         <div className="mt-12 border-t border-gray-700 pt-8">
           <p className="text-base text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} ModuVac, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} Mouldair Scientific, Inc. All rights reserved.
           </p>
         </div>
       </div>
