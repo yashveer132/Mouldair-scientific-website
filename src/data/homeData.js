@@ -1,31 +1,31 @@
-export const products = [
+export const categories = [
   {
-    id: "1",
-    name: "VacuPro 1000",
-    description: "High-performance modular vacuum pump",
-    imageUrl: "/pump3.jpg",
-    price: 1999.99,
+    id: "watson-marlow",
+    name: "Watson Marlow Pumps",
+    description: "Fluid handling pumps from Watson Marlow.",
+    imageUrl: "/pump2.png",
+    link: "/categories/watson-marlow",
   },
   {
-    id: "2",
-    name: "VacuPro 2000",
-    description: "Ultra-quiet modular vacuum pump",
-    imageUrl: "/pump3.jpg",
-    price: 2499.99,
+    id: "leybold",
+    name: "Leybold Vacuum Pumps",
+    description: "Leading vacuum solutions from Leybold.",
+    imageUrl: "/pump3.png",
+    link: "/categories/leybold",
   },
   {
-    id: "3",
-    name: "VacuPro 3000",
-    description: "Energy-efficient modular vacuum pump",
-    imageUrl: "/pump3.jpg",
-    price: 2999.99,
+    id: "welch",
+    name: "Welch Vacuum Pumps",
+    description: "Trusted vacuum pumps from Welch.",
+    imageUrl: "/pump4.png",
+    link: "/categories/welch",
   },
 ];
 
 export const features = [
   {
     title: "High Performance",
-    description: "Unmatched vacuum power for your research needs",
+    description: "Unmatched pumping solutions as per your requirements",
   },
   {
     title: "Energy Efficient",
@@ -37,28 +37,28 @@ export const features = [
   },
   {
     title: "Quiet Operation",
-    description: "Minimal noise disruption in your lab environment",
+    description: "Minimal noise disruption",
   },
 ];
 
 export const testimonials = [
   {
-    name: "Dr. Jane Doe",
+    name: "Mr. Rahul D Narkhede",
     feedback:
       "Mouldair Scientific's pumps have revolutionized our lab operations with their powerful and quiet performance.",
-    role: "Lead Scientist, XYZ Lab",
+    role: "Production manager, DSSLLP",
   },
   {
-    name: "John Smith",
+    name: "Mr. Sanjay Divedia",
     feedback:
-      "The energy efficiency and modular design of the VacuPro series are game changers for our industry needs.",
-    role: "Operations Manager, ABC Corp",
+      "The energy efficiency and modular design of Mouldair products are game changers for our industry needs.",
+    role: "Senior Manager, JDM Scientific Research",
   },
   {
-    name: "Dr. Sarah Lee",
+    name: "Mr. Devendrakumar Gurjar",
     feedback:
       "Mouldair Scientific pumps are incredibly reliable, and the customer support is top-notch. Highly recommended!",
-    role: "Head of Research, LMN Innovations",
+    role: "Manager, Process Development, Solenis Chemicals",
   },
 ];
 
@@ -78,11 +78,10 @@ export const fadeInUp = {
 };
 
 export const heroContent = {
-  title: "Elevate Your Research with Mouldair Scientific",
+  title: "Elevate Your Pump Research with Mouldair Scientific",
   subtitle:
-    "Discover our cutting-edge modular vacuum pumps that combine power, efficiency, and reliability for all your scientific and industrial needs.",
+    "Discover our cutting-edge technical sales and after-services that combine power, efficiency, and reliability for all your industrial pump requirements",
   buttonText: "Explore Our Products",
-  buttonLink: "/products",
 };
 
 export const innovateSection = {

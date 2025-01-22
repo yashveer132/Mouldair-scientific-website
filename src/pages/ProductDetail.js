@@ -12,11 +12,11 @@ import {
   FaShieldAlt,
   FaFileExcel,
 } from "react-icons/fa";
-import { products } from "../data/productData";
+import { productData } from "../data/productData";
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const product = products.find((p) => p.id === id);
+  const product = productData.find((p) => p.id === id);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -47,19 +47,21 @@ const ProductDetail = () => {
             >
               {product.name}
             </motion.h1>
-            <motion.a
-              href={product.datasheetUrl}
-              download
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaFileExcel className="mr-2" />
-              Download Datasheet
-            </motion.a>
+            {product.datasheetUrl && (
+              <motion.a
+                href={product.datasheetUrl}
+                download
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaFileExcel className="mr-2" />
+                Download Datasheet
+              </motion.a>
+            )}
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mb-12 lg:mb-16">
@@ -219,54 +221,58 @@ const ProductDetail = () => {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-            className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16"
-            whileHover={{ scale: 1.02 }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              Additional Features
-            </h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {product.additionalFeatures.map((feature, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * index }}
-                  className="flex items-center space-x-2 bg-indigo-50 p-3 rounded-lg"
-                >
-                  <FaCog className="text-indigo-600 flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.6 }}
-            className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              Product Demo Video
-            </h3>
-            <div
-              className="w-full h-0 relative"
-              style={{ paddingBottom: "56.25%" }}
+          {product.additionalFeatures && (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
+              className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16"
+              whileHover={{ scale: 1.02 }}
             >
-              <iframe
-                src={`https://www.youtube.com/embed/${product.videoId}`}
-                title="Product Demo Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
-              ></iframe>
-            </div>
-          </motion.div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                Additional Features
+              </h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {product.additionalFeatures.map((feature, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * index }}
+                    className="flex items-center space-x-2 bg-indigo-50 p-3 rounded-lg"
+                  >
+                    <FaCog className="text-indigo-600 flex-shrink-0" />
+                    <span className="text-gray-700">{feature}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+
+          {product.videoId && (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                Product Demo Video
+              </h3>
+              <div
+                className="w-full h-0 relative"
+                style={{ paddingBottom: "56.25%" }}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${product.videoId}`}
+                  title="Product Demo Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                ></iframe>
+              </div>
+            </motion.div>
+          )}
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}

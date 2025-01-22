@@ -3,15 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Layout from "../components/Layout/Layout";
 import ProductCard from "../components/Layout/ProductCard";
 import AnimatedSection from "../components/AnimatedSection";
-import { products } from "../data/productsData";
+import { productData } from "../data/productData";
 import { FaSearch } from "react-icons/fa";
 
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = useMemo(() => {
-    return products.filter((product) =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    return productData.filter((p) =>
+      p.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }, [searchTerm]);
 
@@ -25,7 +25,7 @@ const Products = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 sm:mb-8 text-center"
           >
-            Discover Our Innovative Products
+            Discover All Our Products
           </motion.h1>
 
           <div className="mb-6 sm:mb-8 flex justify-center">
@@ -58,7 +58,12 @@ const Products = () => {
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <ProductCard {...product} />
+                  <ProductCard
+                    id={product.id}
+                    name={product.name}
+                    description={product.description}
+                    imageUrl={product.imageUrl[0]}
+                  />
                 </motion.div>
               ))}
             </AnimatePresence>
