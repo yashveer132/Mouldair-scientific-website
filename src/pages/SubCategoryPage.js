@@ -9,6 +9,7 @@ import ProductCard from "../components/Layout/ProductCard";
 
 const SubCategoryPage = () => {
   const { brand, pumpType } = useParams();
+
   const filteredProducts = productData.filter(
     (product) => product.brand === brand && product.pumpType === pumpType
   );
@@ -62,7 +63,11 @@ const SubCategoryPage = () => {
                       id={product.id}
                       name={product.name}
                       description={product.description}
-                      imageUrl={product.imageUrl[0]}
+                      imageUrl={
+                        product.imageUrl && product.imageUrl.length > 0
+                          ? product.imageUrl[0]
+                          : null
+                      }
                     />
                   </Link>
                 </motion.div>

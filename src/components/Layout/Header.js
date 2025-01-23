@@ -152,9 +152,9 @@ const Header = () => {
                       className="cursor-pointer flex items-center space-x-2"
                     >
                       <img
-                        src="/pump.png"
+                        src="/logo.png"
                         alt="Mouldair Logo"
-                        className="h-8 w-auto sm:h-10 lg:h-12"
+                        className="h-8 w-auto sm:h-10 lg:h-12 rounded"
                       />
                       <span className="text-gray-700 font-semibold text-base sm:text-lg md:text-xl lg:text-2xl">
                         Mouldair Scientific

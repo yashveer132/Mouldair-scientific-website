@@ -3,11 +3,11 @@ export const productData = [
   {
     id: "wm1",
     brand: "watson-marlow",
-    pumpType: "peristaltic-lab",
+    pumpType: "Peristaltic Lab Pumps",
     name: "Watson Marlow LabMaster 100",
     description:
       "Compact peristaltic pump ideal for precise laboratory applications.",
-    imageUrl: ["/wm_lab1.png", "/wm_lab1.png"],
+    imageUrl: ["/original.png", "/original.png"],
     features: [
       "Flow range: 0.1-100 ml/min",
       "Integrated speed control",
@@ -36,11 +36,11 @@ export const productData = [
   {
     id: "wm2",
     brand: "watson-marlow",
-    pumpType: "peristaltic-industrial",
+    pumpType: "Peristaltic Industrial Pumps",
     name: "Watson Marlow ProcessMaster 300",
     description:
       "Industrial peristaltic pump designed for robust fluid handling applications.",
-    imageUrl: ["/wm_industrial1.png", "/wm_industrial1.png"],
+    imageUrl: ["/original.png", "/original.png"],
     features: [
       "Flow range: 1-1000 ml/min",
       "Heavy-duty tubing",
@@ -69,10 +69,10 @@ export const productData = [
   {
     id: "wm3",
     brand: "watson-marlow",
-    pumpType: "precision-mini-pumps",
+    pumpType: "Precision Mini Pumps",
     name: "Watson Marlow MicroFlow 50",
     description: "High-accuracy miniature pump for microfluidic applications.",
-    imageUrl: ["/wm_micro1.png", "/wm_micro1.png"],
+    imageUrl: ["/original.png", "/original.png"],
     features: [
       "Flow range: 0.01-10 ml/min",
       "Compact and lightweight",
@@ -101,11 +101,11 @@ export const productData = [
   {
     id: "wm4",
     brand: "watson-marlow",
-    pumpType: "high-flow-industrial",
+    pumpType: "High Flow Industrial Pumps",
     name: "Watson Marlow FlowPro 1500",
     description:
       "High-flow industrial peristaltic pump designed for demanding processes.",
-    imageUrl: ["/wm_highflow1.png", "/wm_highflow1.png"],
+    imageUrl: ["/original.png", "/original.png"],
     features: [
       "Flow range: 10-5000 ml/min",
       "Heavy-duty design",
@@ -134,7 +134,7 @@ export const productData = [
   {
     id: "wm5",
     brand: "watson-marlow",
-    pumpType: "oem-custom",
+    pumpType: "Oem Custom Pumps",
     name: "Watson Marlow OEMFlex 200",
     description: "Customizable OEM pump for specialized applications.",
     imageUrl: ["/wm_oem1.png", "/wm_oem1.png"],
@@ -168,7 +168,7 @@ export const productData = [
   {
     id: "ley1",
     brand: "leybold",
-    pumpType: "Oil Sealed Vacuum Pumps",
+    pumpType: "Oil Sealed Pumps",
     name: "Leybold TRIVAC B",
     description:
       "Oil-sealed rotary vane pump designed for industrial and lab applications.",
@@ -197,7 +197,7 @@ export const productData = [
   {
     id: "ley2",
     brand: "leybold",
-    pumpType: "Oil Sealed Vacuum Pumps",
+    pumpType: "Oil Sealed Pumps",
     name: "Leybold TRIVAC L",
     description: "Compact rotary vane pump for oil-sealed applications.",
     imageUrl: ["/pump1.png", "/pump1.png"],
@@ -517,7 +517,7 @@ export const productData = [
   {
     id: "wel5",
     brand: "welch",
-    pumpType: "cryogenic",
+    pumpType: "Cryogenic Pumps",
     name: "Welch CryoCool",
     description:
       "Cryogenic vacuum pump for specialized ultra-high vacuum applications.",
@@ -550,7 +550,7 @@ export const productData = [
   {
     id: "wel6",
     brand: "welch",
-    pumpType: "industrial-dry",
+    pumpType: "Industrial Dry Pumps",
     name: "Welch DryPower 500",
     description: "Heavy-duty dry vacuum pump for industrial processes.",
     imageUrl: ["/pump9.png", "/pump9.png"],

@@ -87,9 +87,9 @@ const Home = () => {
                 className="lg:w-1/2 mt-8 lg:mt-0"
               >
                 <img
-                  src="/pump2.png"
+                  src="/original.png"
                   alt="ModuVac Vacuum Pump"
-                  className="w-full h-auto rounded-lg shadow-2xl"
+                  className="w-full h-80 rounded-lg shadow-2xl lg:ml-4"
                 />
               </motion.div>
             </div>
@@ -152,7 +152,7 @@ const Home = () => {
               transition={{ duration: 0.3 }}
             >
               <iframe
-                src="https://www.youtube.com/embed/pnqXEnn3DNk"
+                src="https://www.youtube.com/embed/8OpkLSdy7ms"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
@@ -167,7 +167,7 @@ const Home = () => {
               transition={{ duration: 0.3 }}
             >
               <iframe
-                src="https://www.youtube.com/embed/pnqXEnn3DNk"
+                src="https://www.youtube.com/embed/vrJlsgag26M"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
