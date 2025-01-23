@@ -1,19 +1,14 @@
-// src/pages/CategoryPage.js
-
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import AnimatedSection from "../components/AnimatedSection";
 import { motion, AnimatePresence } from "framer-motion";
 import { productData } from "../data/productData";
-// If you have pumpTypeLabels in a separate file
 import { pumpTypeLabels } from "../data/pumpTypeLabels";
 import ProductCard from "../components/Layout/ProductCard";
 
 const CategoryPage = () => {
   const { brand } = useParams();
-
-  // Filter productData to the brand
   const brandProducts = productData.filter(
     (product) => product.brand === brand
   );
@@ -33,7 +28,6 @@ const CategoryPage = () => {
     );
   }
 
-  // Get unique pumpTypes for this brand
   const pumpTypesSet = new Set(brandProducts.map((p) => p.pumpType));
   const pumpTypes = Array.from(pumpTypesSet);
 
@@ -50,7 +44,6 @@ const CategoryPage = () => {
             {brand.replace("-", " ")} Pumps
           </motion.h1>
 
-          {/* Sub-categories listing as cards */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -68,8 +61,6 @@ const CategoryPage = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <Link to={`/categories/${brand}/${type}`}>
-                    {/* Reuse your ProductCard or create a sub-category card.
-                        Here we adapt a simple card style. */}
                     <div className="bg-white rounded-lg shadow-md overflow-hidden text-center p-6">
                       <h2 className="text-lg font-semibold text-gray-700 mb-2">
                         {pumpTypeLabels[type] || type}

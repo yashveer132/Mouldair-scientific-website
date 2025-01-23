@@ -3,10 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 
-// *************************
-// ** DUMMY DATA (10 each) **
-// *************************
-
 const technicalSections = [
   {
     title: "Introduction to Vacuum Technology",
@@ -202,10 +198,9 @@ const TechnicalCorner = () => {
   const [activeArticle, setActiveArticle] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 
-  // NEW: Scroll to anchor on load or when hash changes
   useEffect(() => {
     if (location.hash) {
-      const id = location.hash.replace("#", ""); // e.g. "articles"
+      const id = location.hash.replace("#", "");
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
@@ -226,7 +221,6 @@ const TechnicalCorner = () => {
         </motion.h1>
 
         <div className="max-w-7xl mx-auto">
-          {/* Technical Sections Tabs */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -291,8 +285,6 @@ const TechnicalCorner = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Articles Section */}
-          {/* ADD THE ID HERE */}
           <section id="articles" className="mt-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-8">
               Latest Articles
@@ -362,8 +354,6 @@ const TechnicalCorner = () => {
             </AnimatePresence>
           </section>
 
-          {/* Case Studies Section */}
-          {/* ADD THE ID HERE */}
           <section id="case-studies" className="mt-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-8">
               Case Studies

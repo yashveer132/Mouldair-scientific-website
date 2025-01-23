@@ -13,7 +13,11 @@ export const productData = [
       "Integrated speed control",
       "Quick tubing change system",
     ],
-    applications: ["Pharmaceutical dosing", "Chemical sampling", "Food-grade dispensing"],
+    applications: [
+      "Pharmaceutical dosing",
+      "Chemical sampling",
+      "Food-grade dispensing",
+    ],
     technicalSpecs: {
       dimensions: "250 x 150 x 120 mm",
       weight: "4 kg",
@@ -42,7 +46,11 @@ export const productData = [
       "Heavy-duty tubing",
       "Advanced motor system",
     ],
-    applications: ["Biopharma processes", "Industrial filtration", "Chemical dosing"],
+    applications: [
+      "Biopharma processes",
+      "Industrial filtration",
+      "Chemical dosing",
+    ],
     technicalSpecs: {
       dimensions: "400 x 250 x 200 mm",
       weight: "10 kg",
@@ -63,15 +71,18 @@ export const productData = [
     brand: "watson-marlow",
     pumpType: "precision-mini-pumps",
     name: "Watson Marlow MicroFlow 50",
-    description:
-      "High-accuracy miniature pump for microfluidic applications.",
+    description: "High-accuracy miniature pump for microfluidic applications.",
     imageUrl: ["/wm_micro1.png", "/wm_micro1.png"],
     features: [
       "Flow range: 0.01-10 ml/min",
       "Compact and lightweight",
       "Precision dispensing mechanism",
     ],
-    applications: ["Microfluidics", "Lab-scale dosing", "Research applications"],
+    applications: [
+      "Microfluidics",
+      "Lab-scale dosing",
+      "Research applications",
+    ],
     technicalSpecs: {
       dimensions: "120 x 80 x 50 mm",
       weight: "1.5 kg",
@@ -100,7 +111,11 @@ export const productData = [
       "Heavy-duty design",
       "Customizable operation modes",
     ],
-    applications: ["Water treatment", "Mining applications", "Bulk fluid transfer"],
+    applications: [
+      "Water treatment",
+      "Mining applications",
+      "Bulk fluid transfer",
+    ],
     technicalSpecs: {
       dimensions: "500 x 350 x 300 mm",
       weight: "15 kg",
@@ -121,15 +136,18 @@ export const productData = [
     brand: "watson-marlow",
     pumpType: "oem-custom",
     name: "Watson Marlow OEMFlex 200",
-    description:
-      "Customizable OEM pump for specialized applications.",
+    description: "Customizable OEM pump for specialized applications.",
     imageUrl: ["/wm_oem1.png", "/wm_oem1.png"],
     features: [
       "Flow range: Customizable",
       "Compact design",
       "Built for integration",
     ],
-    applications: ["Medical devices", "Custom industrial equipment", "Biotech instruments"],
+    applications: [
+      "Medical devices",
+      "Custom industrial equipment",
+      "Biotech instruments",
+    ],
     technicalSpecs: {
       dimensions: "Variable",
       weight: "2-5 kg",
@@ -181,8 +199,7 @@ export const productData = [
     brand: "leybold",
     pumpType: "Oil Sealed Vacuum Pumps",
     name: "Leybold TRIVAC L",
-    description:
-      "Compact rotary vane pump for oil-sealed applications.",
+    description: "Compact rotary vane pump for oil-sealed applications.",
     imageUrl: ["/pump1.png", "/pump1.png"],
     features: [
       "Ultimate pressure: 5 x 10^-3 mbar",
@@ -239,8 +256,7 @@ export const productData = [
     brand: "leybold",
     pumpType: "Small Dry Pumps",
     name: "Leybold DIVAC",
-    description:
-      "Diaphragm vacuum pump for compact and oil-free applications.",
+    description: "Diaphragm vacuum pump for compact and oil-free applications.",
     imageUrl: ["/pump3.png", "/pump3.png"],
     features: [
       "Ultimate pressure: 5 x 10^-1 mbar",
@@ -268,8 +284,7 @@ export const productData = [
     brand: "leybold",
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "Leybold DRYVAC",
-    description:
-      "Heavy-duty dry vacuum pump for industrial applications.",
+    description: "Heavy-duty dry vacuum pump for industrial applications.",
     imageUrl: ["/pump4.png", "/pump4.png"],
     features: [
       "Ultimate pressure: 1 x 10^-3 mbar",
@@ -326,8 +341,7 @@ export const productData = [
     brand: "leybold",
     pumpType: "Turbomolecular Vacuum Pumps",
     name: "Leybold TURBOVAC i",
-    description:
-      "High-speed turbomolecular pump with integrated electronics.",
+    description: "High-speed turbomolecular pump with integrated electronics.",
     imageUrl: ["/pump6.png", "/pump6.png"],
     features: [
       "Ultimate pressure: 1 x 10^-8 mbar",
@@ -355,15 +369,18 @@ export const productData = [
     brand: "leybold",
     pumpType: "Cryogenic Systems",
     name: "Leybold COOLVAC e",
-    description:
-      "Cryogenic vacuum pump for ultra-high vacuum applications.",
+    description: "Cryogenic vacuum pump for ultra-high vacuum applications.",
     imageUrl: ["/pump7.png", "/pump7.png"],
     features: [
       "Ultimate pressure: 1 x 10^-8 mbar",
       "High cooling efficiency",
       "Compact cryogenic design",
     ],
-    applications: ["Space research", "Particle accelerators", "Vacuum insulation"],
+    applications: [
+      "Space research",
+      "Particle accelerators",
+      "Vacuum insulation",
+    ],
     technicalSpecs: {
       dimensions: "800 x 600 x 500 mm",
       weight: "80 kg",
@@ -510,7 +527,11 @@ export const productData = [
       "High cooling efficiency",
       "Compact design",
     ],
-    applications: ["Space research", "Vacuum insulation", "Particle accelerators"],
+    applications: [
+      "Space research",
+      "Vacuum insulation",
+      "Particle accelerators",
+    ],
     technicalSpecs: {
       dimensions: "800 x 600 x 500 mm",
       weight: "80 kg",
@@ -531,8 +552,7 @@ export const productData = [
     brand: "welch",
     pumpType: "industrial-dry",
     name: "Welch DryPower 500",
-    description:
-      "Heavy-duty dry vacuum pump for industrial processes.",
+    description: "Heavy-duty dry vacuum pump for industrial processes.",
     imageUrl: ["/pump9.png", "/pump9.png"],
     features: [
       "Ultimate vacuum: 1 x 10^-3 mbar",
@@ -554,6 +574,5 @@ export const productData = [
     ],
     datasheetUrl: "/WelchDryPower500_Datasheet.xlsx",
     videoId: "pnqXEnn3DNk",
-  }
-
+  },
 ];

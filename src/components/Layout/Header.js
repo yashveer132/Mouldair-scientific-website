@@ -18,13 +18,11 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { productData } from "../../data/productData";
 import { pumpTypeLabels } from "../../data/pumpTypeLabels";
 
-// Extra nav links (Technical Corner removed here)
 const otherNav = [
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
 
-// Social icons
 const socialMedia = [
   { icon: FaFacebook, href: "#" },
   { icon: FaTwitter, href: "#" },
@@ -32,7 +30,6 @@ const socialMedia = [
   { icon: FaInstagram, href: "#" },
 ];
 
-// Brand order and labels
 const brandOrder = ["watson-marlow", "leybold", "welch"];
 const brandLabels = {
   "watson-marlow": "Watson Marlow",
@@ -40,14 +37,6 @@ const brandLabels = {
   welch: "Welch",
 };
 
-/**
- * Build a nested object for brand > pumpType > products
- * brandMap = {
- *   [brand]: {
- *       [pumpType]: [ { id, name, ... }, ... ]
- *   }
- * }
- */
 const brandMap = productData.reduce((acc, product) => {
   const { brand, pumpType } = product;
   if (!acc[brand]) {
@@ -63,23 +52,18 @@ const brandMap = productData.reduce((acc, product) => {
 const Header = () => {
   const location = useLocation();
 
-  // Existing states
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [hoveredBrand, setHoveredBrand] = useState(null);
   const [hoveredPumpType, setHoveredPumpType] = useState(null);
 
-  // New state to track Technical Corner dropdown (desktop).
   const [isTechnicalOpen, setIsTechnicalOpen] = useState(false);
 
   useEffect(() => {
-    // Close dropdowns on navigation
     setIsProductsOpen(false);
     setHoveredBrand(null);
     setHoveredPumpType(null);
     setIsTechnicalOpen(false);
 
-    // If there's no hash in the URL (e.g., /technical#articles), scroll to top.
-    // If there IS a hash, let the browser/React handle scrolling to that element.
     if (!location.hash) {
       window.scrollTo(0, 0);
     }
@@ -106,7 +90,6 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md z-50 sticky top-0">
-      {/* Top banner */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -115,14 +98,15 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
-            {/* Contact links */}
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 sm:mb-0">
               <a
                 href="mailto:info@mouldairscientific.com"
                 className="flex items-center text-sm sm:text-base lg:text-lg hover:text-indigo-200 transition-colors duration-300"
               >
                 <EnvelopeIcon className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-                <span className="hidden sm:inline">info@mouldairscientific.com</span>
+                <span className="hidden sm:inline">
+                  info@mouldairscientific.com
+                </span>
                 <span className="sm:hidden">Email Us</span>
               </a>
               <a
@@ -133,9 +117,10 @@ const Header = () => {
                 +076986 60715
               </a>
             </div>
-            {/* Social media links */}
             <div className="flex items-center space-x-4">
-              <span className="text-sm sm:text-base lg:text-lg mr-2">Follow us:</span>
+              <span className="text-sm sm:text-base lg:text-lg mr-2">
+                Follow us:
+              </span>
               {socialMedia.map((social, index) => (
                 <motion.a
                   key={index}
@@ -154,13 +139,11 @@ const Header = () => {
         </div>
       </motion.div>
 
-      {/* Main navigation */}
       <Disclosure>
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16 sm:h-20">
-                {/* Logo */}
                 <div className="flex flex-1 items-center space-x-2 sm:space-x-3">
                   <Link to="/">
                     <motion.div
@@ -180,9 +163,7 @@ const Header = () => {
                   </Link>
                 </div>
 
-                {/* Desktop menu */}
                 <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6 xl:space-x-8 mr-32">
-                  {/* Home */}
                   <motion.div className="transition duration-300">
                     <Link
                       to="/"
@@ -195,8 +176,6 @@ const Header = () => {
                       Home
                     </Link>
                   </motion.div>
-
-                  {/* Products dropdown */}
                   <div
                     className="relative"
                     onMouseEnter={handleProductsEnter}
@@ -266,7 +245,6 @@ const Header = () => {
                                   },
                                 }}
                               >
-                                {/* Top-level brand link */}
                                 <Link
                                   to={`/categories/${brand}`}
                                   className="block px-4 py-2 text-sm text-center text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
@@ -274,7 +252,6 @@ const Header = () => {
                                   {brandLabels[brand]}
                                 </Link>
 
-                                {/* Sub-categories dropdown */}
                                 <AnimatePresence>
                                   {hoveredBrand === brand && (
                                     <motion.div
@@ -335,7 +312,6 @@ const Header = () => {
                                               }}
                                               className="relative"
                                             >
-                                              {/* Link to sub-category page */}
                                               <Link
                                                 to={`/categories/${brand}/${pumpType}`}
                                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
@@ -344,9 +320,9 @@ const Header = () => {
                                                   pumpType}
                                               </Link>
 
-                                              {/* Product-level dropdown */}
                                               <AnimatePresence>
-                                                {hoveredPumpType === pumpType && (
+                                                {hoveredPumpType ===
+                                                  pumpType && (
                                                   <motion.div
                                                     initial={{
                                                       opacity: 0,
@@ -382,7 +358,8 @@ const Header = () => {
                                                         closed: {
                                                           transition: {
                                                             staggerChildren: 0.05,
-                                                            staggerDirection: -1,
+                                                            staggerDirection:
+                                                              -1,
                                                           },
                                                         },
                                                       }}
@@ -399,7 +376,8 @@ const Header = () => {
                                                               transition: {
                                                                 y: {
                                                                   stiffness: 1000,
-                                                                  velocity: -100,
+                                                                  velocity:
+                                                                    -100,
                                                                 },
                                                               },
                                                             },
@@ -441,7 +419,6 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
 
-                  {/* Technical Corner dropdown (Desktop) */}
                   <div
                     className="relative"
                     onMouseEnter={() => setIsTechnicalOpen(true)}
@@ -492,7 +469,6 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
 
-                  {/* Additional nav links */}
                   {otherNav.map((item) => (
                     <motion.div
                       key={item.name}
@@ -512,7 +488,6 @@ const Header = () => {
                   ))}
                 </div>
 
-                {/* Mobile Menu Button */}
                 <div className="flex items-center md:hidden">
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-indigo-600 focus:outline-none">
                     {open ? (
@@ -531,7 +506,6 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Mobile dropdown */}
             <AnimatePresence>
               {open && (
                 <Disclosure.Panel
@@ -608,9 +582,7 @@ const Header = () => {
                                             >
                                               {Object.keys(brandMap[brand]).map(
                                                 (pumpType) => (
-                                                  <Disclosure
-                                                    key={pumpType}
-                                                  >
+                                                  <Disclosure key={pumpType}>
                                                     {({
                                                       open: pumpTypeOpen,
                                                     }) => (
@@ -684,7 +656,6 @@ const Header = () => {
                       )}
                     </Disclosure>
 
-                    {/* Technical Corner (mobile) */}
                     <Disclosure>
                       {({ open: technicalOpen }) => (
                         <>
@@ -704,10 +675,12 @@ const Header = () => {
                                 initial={{ height: 0 }}
                                 animate={{ height: "auto" }}
                                 exit={{ height: 0 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                transition={{
+                                  duration: 0.3,
+                                  ease: "easeInOut",
+                                }}
                                 className="px-3 pt-1 pb-3 space-y-1 bg-indigo-50 rounded-md"
                               >
-                                {/* Sub-links */}
                                 <Link
                                   to="/technical#articles"
                                   className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"

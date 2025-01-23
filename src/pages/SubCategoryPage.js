@@ -1,5 +1,3 @@
-// src/pages/SubCategoryPage.js
-
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
@@ -11,8 +9,6 @@ import ProductCard from "../components/Layout/ProductCard";
 
 const SubCategoryPage = () => {
   const { brand, pumpType } = useParams();
-
-  // Filter products by brand + pumpType
   const filteredProducts = productData.filter(
     (product) => product.brand === brand && product.pumpType === pumpType
   );

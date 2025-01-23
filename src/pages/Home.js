@@ -16,7 +16,7 @@ import {
   fadeInUp,
   heroContent,
   ctaSection,
-  features
+  features,
 } from "../data/homeData";
 
 const Home = () => {
@@ -253,7 +253,7 @@ const Home = () => {
             </motion.div>
           </div>
         </AnimatedSection>
-        
+
         <AnimatedSection className="bg-indigo-700 text-white py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">

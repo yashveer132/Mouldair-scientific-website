@@ -107,7 +107,10 @@ const Contact = () => {
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">
                   Send us a message
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-4 sm:space-y-6"
+                >
                   <div>
                     <label htmlFor="name" className={labelClasses}>
                       Name
@@ -225,7 +228,9 @@ const Contact = () => {
                     <div className="flex items-start sm:items-center">
                       <MdLocationOn className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4 mt-1 sm:mt-0" />
                       <div>
-                        <h3 className="font-semibold text-sm sm:text-base">Address</h3>
+                        <h3 className="font-semibold text-sm sm:text-base">
+                          Address
+                        </h3>
                         <p className="text-gray-600 text-xs sm:text-sm">
                           44 Happy Residency B/H Narmada Hotel, Zadeshwar,
                           Bharuch, Gujarat 392011, India
@@ -235,14 +240,20 @@ const Contact = () => {
                     <div className="flex items-center">
                       <MdPhone className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4" />
                       <div>
-                        <h3 className="font-semibold text-sm sm:text-base">Phone</h3>
-                        <p className="text-gray-600 text-xs sm:text-sm">+076986 60715</p>
+                        <h3 className="font-semibold text-sm sm:text-base">
+                          Phone
+                        </h3>
+                        <p className="text-gray-600 text-xs sm:text-sm">
+                          +076986 60715
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center">
                       <MdEmail className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4" />
                       <div>
-                        <h3 className="font-semibold text-sm sm:text-base">Email</h3>
+                        <h3 className="font-semibold text-sm sm:text-base">
+                          Email
+                        </h3>
                         <p className="text-gray-600 text-xs sm:text-sm">
                           info@mouldairscientific.com
                         </p>
@@ -261,17 +272,19 @@ const Contact = () => {
                     Follow Us
                   </h2>
                   <div className="flex justify-center space-x-3 sm:space-x-4">
-                    {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, index) => (
-                      <motion.a
-                        key={index}
-                        href="#"
-                        className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full hover:bg-indigo-700 transition duration-200"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                      >
-                        <Icon className="text-lg sm:text-xl" />
-                      </motion.a>
-                    ))}
+                    {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map(
+                      (Icon, index) => (
+                        <motion.a
+                          key={index}
+                          href="#"
+                          className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full hover:bg-indigo-700 transition duration-200"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                        >
+                          <Icon className="text-lg sm:text-xl" />
+                        </motion.a>
+                      )
+                    )}
                   </div>
                 </div>
               </motion.div>
