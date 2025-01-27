@@ -201,9 +201,9 @@ const Contact = () => {
                   className="mt-8 flex justify-center"
                 >
                   <motion.img
-                    src="/pump2.png"
+                    src="/Black on Transparent.png"
                     alt="ModuVac Logo"
-                    className="h-32 sm:h-48 w-auto"
+                    className="h-full w-full object-cover"
                     whileHover={{ scale: 1.1 }}
                   />
                 </motion.div>

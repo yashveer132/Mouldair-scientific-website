@@ -48,7 +48,7 @@ const Home = () => {
         >
           <motion.div
             style={{ opacity, scale: scaleSpring, y }}
-            className="max-w-7xl mx-auto py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative z-10"
+            className="max-w-7xl mx-auto py-4 sm:py-8 md:py-12 px-4 sm:px-6 lg:px-8 relative z-10"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between">
               <motion.div
@@ -83,13 +83,14 @@ const Home = () => {
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="lg:w-1/2 mt-8 lg:mt-0"
               >
                 <img
                   src="/original.png"
                   alt="ModuVac Vacuum Pump"
-                  className="w-full h-80 rounded-lg shadow-2xl lg:ml-4"
+                  className="w-full aspect-[4/3] object-cover rounded-lg shadow-2xl lg:ml-4"
                 />
               </motion.div>
             </div>
@@ -117,7 +118,12 @@ const Home = () => {
               animate="show"
             >
               {categories.map((cat) => (
-                <motion.div key={cat.id} variants={fadeInUp}>
+                <motion.div
+                  key={cat.id}
+                  variants={fadeInUp}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
                     <img
                       src={cat.imageUrl}

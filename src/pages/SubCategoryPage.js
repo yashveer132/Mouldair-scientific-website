@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import AnimatedSection from "../components/AnimatedSection";
 import { motion, AnimatePresence } from "framer-motion";
 import { productData } from "../data/productData";
 import { pumpTypeLabels } from "../data/pumpTypeLabels";
-import ProductCard from "../components/Layout/ProductCard";
 
 const SubCategoryPage = () => {
   const { brand, pumpType } = useParams();
+  const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = productData.filter(
     (product) => product.brand === brand && product.pumpType === pumpType
+  );
+
+  const filteredProductsBySearch = filteredProducts.filter((product) =>
+    searchTerm
+      ? product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchTerm.toLowerCase())
+      : true
   );
 
   if (filteredProducts.length === 0) {
@@ -45,33 +52,68 @@ const SubCategoryPage = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center mb-8"
+          >
+            <input
+              type="text"
+              placeholder="Search pumps..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10"
           >
             <AnimatePresence>
-              {filteredProducts.map((product) => (
-                <motion.div
-                  key={product.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Link to={`/products/${product.id}`}>
-                    <ProductCard
-                      id={product.id}
-                      name={product.name}
-                      description={product.description}
-                      imageUrl={
-                        product.imageUrl && product.imageUrl.length > 0
-                          ? product.imageUrl[0]
-                          : null
-                      }
-                    />
-                  </Link>
-                </motion.div>
-              ))}
+              {filteredProductsBySearch.length === 0 ? (
+                <div className="col-span-full text-center text-gray-700 font-semibold">
+                  No matching pumps found.
+                </div>
+              ) : (
+                filteredProductsBySearch.map((product) => (
+                  <motion.div
+                    key={product.id}
+                    layout
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link to={`/products/${product.id}`}>
+                      <div className="bg-white rounded-lg shadow-md overflow-hidden relative">
+                        <img
+                          src={
+                            product.imageUrl && product.imageUrl.length > 0
+                              ? product.imageUrl[0]
+                              : "https://via.placeholder.com/400x200/eee/ccc?text=Pump+Image"
+                          }
+                          alt={product.name}
+                          className="w-full h-40 object-cover"
+                        />
+                        <div className="p-5 text-center">
+                          <h2 className="text-lg font-semibold text-gray-700 mb-2">
+                            {product.name}
+                          </h2>
+                          <p className="text-gray-600 text-sm">
+                            {product.description}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))
+              )}
             </AnimatePresence>
           </motion.div>
         </AnimatedSection>

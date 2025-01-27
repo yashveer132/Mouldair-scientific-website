@@ -238,6 +238,7 @@ const ProductDetail = () => {
                     key={index}
                     initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                     animate={{ opacity: 1, x: 0 }}
+                    whileHover={{ scale: 1.05 }}
                     transition={{ delay: 0.1 * index }}
                     className="flex items-center space-x-2 bg-indigo-50 p-3 rounded-lg"
                   >
