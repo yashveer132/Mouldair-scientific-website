@@ -46,7 +46,7 @@ const CategoryPage = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 sm:mb-8 text-center capitalize"
           >
-            {brand.replace("-", " ")} Pumps
+            {brand.replace("-", " ")} Vacuum Pumps
           </motion.h1>
 
           <motion.div

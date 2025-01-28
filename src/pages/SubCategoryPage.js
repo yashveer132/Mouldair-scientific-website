@@ -46,7 +46,7 @@ const SubCategoryPage = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 sm:mb-8 text-center capitalize"
           >
-            {pumpTypeLabels[pumpType] || pumpType} Pumps
+            {pumpTypeLabels[pumpType] || pumpType}
           </motion.h1>
 
           <motion.div
