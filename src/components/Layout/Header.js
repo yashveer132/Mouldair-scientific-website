@@ -346,7 +346,7 @@ const Header = () => {
                                                     transition={{
                                                       duration: 0.2,
                                                     }}
-                                                    className="absolute top-0 left-100 w-56 bg-white shadow-lg rounded-lg z-50"
+                                                    className="absolute top-0 left-100 w-48 bg-white shadow-lg rounded-lg z-50  max-h-64 overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-indigo-600 hover:scrollbar-thumb-indigo-700 "
                                                   >
                                                     <motion.ul
                                                       className="py-3"
@@ -380,7 +380,8 @@ const Header = () => {
                                                               transition: {
                                                                 y: {
                                                                   stiffness: 1000,
-                                                                  velocity: -100,
+                                                                  velocity:
+                                                                    -100,
                                                                 },
                                                               },
                                                             },
@@ -397,7 +398,7 @@ const Header = () => {
                                                         >
                                                           <Link
                                                             to={`/products/${prod.id}`}
-                                                            className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                                                           >
                                                             {prod.name}
                                                           </Link>
@@ -560,7 +561,7 @@ const Header = () => {
                                 animate={{ height: "auto" }}
                                 exit={{ height: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md"
+                                className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md overflow-y-auto max-h-64 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-indigo-600 hover:scrollbar-thumb-indigo-700"
                               >
                                 {brandOrder.map((brand) => (
                                   <Disclosure key={brand}>
@@ -591,7 +592,7 @@ const Header = () => {
                                               animate={{ height: "auto" }}
                                               exit={{ height: 0 }}
                                               transition={{ duration: 0.3 }}
-                                              className="pl-6 pr-3 pt-1 pb-2 space-y-2 bg-white rounded-md"
+                                              className="pl-6 pr-3 pt-1 pb-2 space-y-2 bg-white rounded-md overflow-y-auto max-h-64 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-indigo-600 hover:scrollbar-thumb-indigo-700"
                                             >
                                               {Object.keys(brandMap[brand]).map(
                                                 (pumpType) => (
