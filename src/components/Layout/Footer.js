@@ -99,11 +99,23 @@ const Footer = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  to="/products"
+                  to="/#categories"
                   onClick={scrollToTop}
                   className="text-base text-gray-400 hover:text-white transition duration-300"
                 >
                   Products
+                </Link>
+              </motion.li>
+              <motion.li
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to="/technical"
+                  onClick={scrollToTop}
+                  className="text-base text-gray-400 hover:text-white transition duration-300"
+                >
+                  Technical Corner
                 </Link>
               </motion.li>
               <motion.li

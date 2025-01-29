@@ -1,4 +1,4 @@
-import React, { useRef ,useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import Layout from "../components/Layout/Layout";
@@ -90,8 +90,6 @@ const Home = () => {
                 </motion.div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="lg:w-1/2 mt-8 lg:mt-0"

@@ -37,6 +37,7 @@ const brandLabels = {
   welch: "Welch",
 };
 
+// Map the product data for nested dropdowns
 const brandMap = productData.reduce((acc, product) => {
   const { brand, pumpType } = product;
   if (!acc[brand]) {
@@ -90,6 +91,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md z-50 sticky top-0">
+      {/* Top bar with email, phone, and social links */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -144,6 +146,7 @@ const Header = () => {
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16 sm:h-20">
+                {/* Logo */}
                 <div className="flex flex-1 items-center space-x-2 sm:space-x-3">
                   <Link to="/">
                     <motion.div
@@ -163,7 +166,9 @@ const Header = () => {
                   </Link>
                 </div>
 
+                {/* Desktop Nav */}
                 <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6 xl:space-x-8 mr-32">
+                  {/* Home */}
                   <motion.div className="transition duration-300">
                     <Link
                       to="/"
@@ -176,22 +181,24 @@ const Header = () => {
                       Home
                     </Link>
                   </motion.div>
+
+                  {/* PRODUCTS (DESKTOP) */}
                   <div
                     className="relative"
                     onMouseEnter={handleProductsEnter}
                     onMouseLeave={handleProductsLeave}
                   >
-                    <motion.div className="transition duration-300 cursor-pointer flex items-center text-sm lg:text-base xl:text-lg font-medium">
+                    <motion.div className="transition duration-300 cursor-pointer flex items-center text-lg font-medium">
                       <Link
                         to="/#categories"
                         className={`${
                           isProductsOpen
                             ? "text-indigo-600 font-semibold"
                             : "text-gray-600 hover:text-indigo-600"
-                        } flex items-center`}
+                        } flex items-center text-center`}
                       >
                         Products
-                        <ChevronDownIcon className="ml-1 h-4 w-4 lg:h-5 lg:w-5" />
+                        <ChevronDownIcon className="ml-1 h-5 w-5" />
                       </Link>
                     </motion.div>
 
@@ -202,10 +209,10 @@ const Header = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg z-40"
+                          className="absolute text-center left-0 mt-2 w-64 bg-white shadow-lg rounded-lg z-40"
                         >
                           <motion.ul
-                            className="py-2"
+                            className="py-4"
                             initial="closed"
                             animate="open"
                             variants={{
@@ -248,7 +255,7 @@ const Header = () => {
                               >
                                 <Link
                                   to={`/categories/${brand}`}
-                                  className="block px-4 py-2 text-sm text-center text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                  className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                                 >
                                   {brandLabels[brand]}
                                 </Link>
@@ -260,11 +267,10 @@ const Header = () => {
                                       animate={{ opacity: 1, x: "100%" }}
                                       exit={{ opacity: 0, x: "110%" }}
                                       transition={{ duration: 0.2 }}
-                                      className="absolute top-0 left-100 w-40 text-center bg-white shadow-lg rounded-lg z-50"
-                                      style={{ minHeight: "100%" }}
+                                      className="absolute top-0 left-100 w-56 bg-white shadow-lg rounded-lg z-50"
                                     >
                                       <motion.ul
-                                        className="py-2"
+                                        className="py-3"
                                         initial="closed"
                                         animate="open"
                                         variants={{
@@ -315,7 +321,7 @@ const Header = () => {
                                             >
                                               <Link
                                                 to={`/categories/${brand}/${pumpType}`}
-                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                                className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                                               >
                                                 {pumpTypeLabels[pumpType] ||
                                                   pumpType}
@@ -340,13 +346,10 @@ const Header = () => {
                                                     transition={{
                                                       duration: 0.2,
                                                     }}
-                                                    className="absolute top-0 left-100 w-40 bg-white shadow-lg rounded-lg z-50"
-                                                    style={{
-                                                      minHeight: "100%",
-                                                    }}
+                                                    className="absolute top-0 left-100 w-56 bg-white shadow-lg rounded-lg z-50"
                                                   >
                                                     <motion.ul
-                                                      className="py-2"
+                                                      className="py-3"
                                                       initial="closed"
                                                       animate="open"
                                                       variants={{
@@ -377,8 +380,7 @@ const Header = () => {
                                                               transition: {
                                                                 y: {
                                                                   stiffness: 1000,
-                                                                  velocity:
-                                                                    -100,
+                                                                  velocity: -100,
                                                                 },
                                                               },
                                                             },
@@ -395,7 +397,7 @@ const Header = () => {
                                                         >
                                                           <Link
                                                             to={`/products/${prod.id}`}
-                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                                            className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                                                           >
                                                             {prod.name}
                                                           </Link>
@@ -420,22 +422,23 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
 
+                  {/* TECHNICAL CORNER (DESKTOP) */}
                   <div
                     className="relative"
                     onMouseEnter={() => setIsTechnicalOpen(true)}
                     onMouseLeave={() => setIsTechnicalOpen(false)}
                   >
-                    <motion.div className="transition duration-300 cursor-pointer flex items-center text-sm lg:text-base xl:text-lg font-medium">
+                    <motion.div className="transition duration-300 cursor-pointer flex items-center text-lg font-medium">
                       <Link
                         to="/technical"
                         className={`${
                           isTechnicalOpen
                             ? "text-indigo-600 font-semibold"
                             : "text-gray-600 hover:text-indigo-600"
-                        } flex items-center`}
+                        } flex items-center text-center`}
                       >
                         Technical Corner
-                        <ChevronDownIcon className="ml-1 h-4 w-4 lg:h-5 lg:w-5" />
+                        <ChevronDownIcon className="ml-1 h-5 w-5" />
                       </Link>
                     </motion.div>
 
@@ -446,13 +449,13 @@ const Header = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg z-40"
+                          className="absolute left-0 mt-2 w-64 text-center bg-white shadow-lg rounded-lg z-40"
                         >
-                          <motion.ul className="py-2">
+                          <motion.ul className="py-4">
                             <motion.li>
                               <Link
                                 to="/technical#articles"
-                                className="block px-4 py-2 text-sm text-center text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                               >
                                 Latest Articles
                               </Link>
@@ -460,7 +463,7 @@ const Header = () => {
                             <motion.li>
                               <Link
                                 to="/technical#case-studies"
-                                className="block px-4 py-2 text-sm text-center text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                               >
                                 Case Studies
                               </Link>
@@ -471,6 +474,7 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
 
+                  {/* Additional Nav Items */}
                   {otherNav.map((item) => (
                     <motion.div
                       key={item.name}
@@ -490,6 +494,7 @@ const Header = () => {
                   ))}
                 </div>
 
+                {/* Mobile menu button */}
                 <div className="flex items-center md:hidden">
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-indigo-600 focus:outline-none">
                     {open ? (
@@ -508,6 +513,7 @@ const Header = () => {
               </div>
             </div>
 
+            {/* Mobile Nav */}
             <AnimatePresence>
               {open && (
                 <Disclosure.Panel
@@ -520,6 +526,7 @@ const Header = () => {
                   className="md:hidden bg-indigo-50 overflow-hidden"
                 >
                   <div className="px-2 pt-2 pb-3 space-y-1">
+                    {/* Home (Mobile) */}
                     <Link
                       to="/"
                       className={`${
@@ -530,17 +537,20 @@ const Header = () => {
                     >
                       Home
                     </Link>
+
+                    {/* PRODUCTS (MOBILE) */}
                     <Disclosure>
                       {({ open: productsOpen }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                          <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-lg font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center">
                             Products
                             <ChevronDownIcon
                               className={`${
                                 productsOpen ? "transform rotate-180" : ""
-                              } w-5 h-5 sm:w-6 sm:h-6 text-gray-500`}
+                              } w-5 h-5 text-gray-500`}
                             />
                           </Disclosure.Button>
+
                           <AnimatePresence>
                             {productsOpen && (
                               <Disclosure.Panel
@@ -550,13 +560,13 @@ const Header = () => {
                                 animate={{ height: "auto" }}
                                 exit={{ height: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="px-3 pt-1 pb-3 space-y-1 bg-indigo-50 rounded-md"
+                                className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md"
                               >
                                 {brandOrder.map((brand) => (
                                   <Disclosure key={brand}>
                                     {({ open: brandOpen }) => (
                                       <>
-                                        <Disclosure.Button className="flex justify-between w-full px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                                        <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
                                           <Link
                                             to={`/categories/${brand}`}
                                             className="flex-1"
@@ -571,6 +581,7 @@ const Header = () => {
                                             } w-5 h-5 text-gray-500 ml-2`}
                                           />
                                         </Disclosure.Button>
+
                                         <AnimatePresence>
                                           {brandOpen && (
                                             <Disclosure.Panel
@@ -580,7 +591,7 @@ const Header = () => {
                                               animate={{ height: "auto" }}
                                               exit={{ height: 0 }}
                                               transition={{ duration: 0.3 }}
-                                              className="pl-6 pr-3 pt-1 pb-2 space-y-1 bg-white rounded-md"
+                                              className="pl-6 pr-3 pt-1 pb-2 space-y-2 bg-white rounded-md"
                                             >
                                               {Object.keys(brandMap[brand]).map(
                                                 (pumpType) => (
@@ -589,7 +600,7 @@ const Header = () => {
                                                       open: pumpTypeOpen,
                                                     }) => (
                                                       <>
-                                                        <Disclosure.Button className="flex justify-between w-full px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                                                        <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
                                                           <Link
                                                             to={`/categories/${brand}/${pumpType}`}
                                                             className="flex-1"
@@ -606,6 +617,7 @@ const Header = () => {
                                                             } w-5 h-5 text-gray-500 ml-2`}
                                                           />
                                                         </Disclosure.Button>
+
                                                         <AnimatePresence>
                                                           {pumpTypeOpen && (
                                                             <Disclosure.Panel
@@ -623,7 +635,7 @@ const Header = () => {
                                                               transition={{
                                                                 duration: 0.3,
                                                               }}
-                                                              className="pl-6 pr-3 pt-1 pb-2 space-y-1 bg-indigo-50 rounded-md"
+                                                              className="pl-6 pr-3 pt-1 pb-2 space-y-2 bg-indigo-50 rounded-md"
                                                             >
                                                               {brandMap[brand][
                                                                 pumpType
@@ -631,7 +643,7 @@ const Header = () => {
                                                                 <Link
                                                                   key={prod.id}
                                                                   to={`/products/${prod.id}`}
-                                                                  className="block px-2 py-1 text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition-colors"
+                                                                  className="block px-4 py-2 text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition-colors"
                                                                 >
                                                                   {prod.name}
                                                                 </Link>
@@ -658,17 +670,19 @@ const Header = () => {
                       )}
                     </Disclosure>
 
+                    {/* TECHNICAL CORNER (MOBILE) */}
                     <Disclosure>
                       {({ open: technicalOpen }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                          <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-lg font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
                             Technical Corner
                             <ChevronDownIcon
                               className={`${
                                 technicalOpen ? "transform rotate-180" : ""
-                              } w-5 h-5 sm:w-6 sm:h-6 text-gray-500`}
+                              } w-5 h-5 text-gray-500`}
                             />
                           </Disclosure.Button>
+
                           <AnimatePresence>
                             {technicalOpen && (
                               <Disclosure.Panel
@@ -681,17 +695,17 @@ const Header = () => {
                                   duration: 0.3,
                                   ease: "easeInOut",
                                 }}
-                                className="px-3 pt-1 pb-3 space-y-1 bg-indigo-50 rounded-md"
+                                className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md text-center"
                               >
                                 <Link
                                   to="/technical#articles"
-                                  className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                                  className="block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
                                 >
                                   Latest Articles
                                 </Link>
                                 <Link
                                   to="/technical#case-studies"
-                                  className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                                  className="block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
                                 >
                                   Case Studies
                                 </Link>
@@ -702,6 +716,7 @@ const Header = () => {
                       )}
                     </Disclosure>
 
+                    {/* Additional Nav Items (Mobile) */}
                     {otherNav.map((item) => (
                       <Link
                         key={item.name}
