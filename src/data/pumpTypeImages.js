@@ -1,5 +1,5 @@
 export const pumpTypeImages = {
-  "Peristaltic Lab Pumps": "/original.png",
+  "Peristaltic Pumps": "/watson.jpg",
   "Peristaltic Industrial Pumps": "/original.png",
   "Precision Mini Pumps": "/original.png",
   "High Flow Industrial Pumps": "/original.png",

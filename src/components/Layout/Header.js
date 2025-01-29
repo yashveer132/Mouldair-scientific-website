@@ -152,7 +152,7 @@ const Header = () => {
                       className="cursor-pointer flex items-center space-x-2"
                     >
                       <img
-                        src="/logo.png"
+                        src="/logo3.png"
                         alt="Mouldair Logo"
                         className="h-8 w-auto sm:h-10 lg:h-12 rounded"
                       />
@@ -182,7 +182,8 @@ const Header = () => {
                     onMouseLeave={handleProductsLeave}
                   >
                     <motion.div className="transition duration-300 cursor-pointer flex items-center text-sm lg:text-base xl:text-lg font-medium">
-                      <span
+                      <Link
+                        to="/#categories"
                         className={`${
                           isProductsOpen
                             ? "text-indigo-600 font-semibold"
@@ -191,7 +192,7 @@ const Header = () => {
                       >
                         Products
                         <ChevronDownIcon className="ml-1 h-4 w-4 lg:h-5 lg:w-5" />
-                      </span>
+                      </Link>
                     </motion.div>
 
                     <AnimatePresence>
@@ -425,7 +426,8 @@ const Header = () => {
                     onMouseLeave={() => setIsTechnicalOpen(false)}
                   >
                     <motion.div className="transition duration-300 cursor-pointer flex items-center text-sm lg:text-base xl:text-lg font-medium">
-                      <span
+                      <Link
+                        to="/technical"
                         className={`${
                           isTechnicalOpen
                             ? "text-indigo-600 font-semibold"
@@ -434,7 +436,7 @@ const Header = () => {
                       >
                         Technical Corner
                         <ChevronDownIcon className="ml-1 h-4 w-4 lg:h-5 lg:w-5" />
-                      </span>
+                      </Link>
                     </motion.div>
 
                     <AnimatePresence>

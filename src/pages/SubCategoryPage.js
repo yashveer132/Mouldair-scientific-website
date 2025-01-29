@@ -92,15 +92,17 @@ const SubCategoryPage = () => {
                   >
                     <Link to={`/products/${product.id}`}>
                       <div className="bg-white rounded-lg shadow-md overflow-hidden relative">
-                        <img
-                          src={
-                            product.imageUrl && product.imageUrl.length > 0
-                              ? product.imageUrl[0]
-                              : "https://via.placeholder.com/400x200/eee/ccc?text=Pump+Image"
-                          }
-                          alt={product.name}
-                          className="w-full h-40 object-cover"
-                        />
+                        <div className="relative w-full h-56 sm:h-64 md:h-72">
+                          <img
+                            src={
+                              product.imageUrl && product.imageUrl.length > 0
+                                ? product.imageUrl[0]
+                                : "https://via.placeholder.com/400x200/eee/ccc?text=Pump+Image"
+                            }
+                            alt={product.name}
+                            className="absolute inset-0 w-full h-full object-contain"
+                          />
+                        </div>
                         <div className="p-5 text-center">
                           <h2 className="text-lg font-semibold text-gray-700 mb-2">
                             {product.name}

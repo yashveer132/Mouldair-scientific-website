@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef ,useEffect} from "react";
+import { useLocation } from "react-router-dom";
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import Layout from "../components/Layout/Layout";
 import AnimatedSection from "../components/AnimatedSection";
@@ -22,6 +23,14 @@ import {
 const Home = () => {
   const heroRef = useRef(null);
   const categoriesRef = useRef(null);
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === "#categories" && categoriesRef.current) {
+      categoriesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [hash]);
+
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
@@ -96,7 +105,7 @@ const Home = () => {
             </div>
           </motion.div>
         </section>
-        <div ref={categoriesRef}>
+        <div ref={categoriesRef} id="categories">
           <AnimatedSection className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
             <motion.div
               variants={staggerContainer}
