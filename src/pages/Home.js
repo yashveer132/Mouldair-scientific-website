@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import Layout from "../components/Layout/Layout";
@@ -19,11 +19,13 @@ import {
   ctaSection,
   features,
 } from "../data/homeData";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Home = () => {
   const heroRef = useRef(null);
   const categoriesRef = useRef(null);
   const { hash } = useLocation();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     if (hash === "#categories" && categoriesRef.current) {
@@ -48,63 +50,77 @@ const Home = () => {
       categoriesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Add preload effect
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/original.png";
+  }, []);
+
   return (
     <Layout>
-      <div className="bg-gray-100 min-h-screen">
+      <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
         <section
           ref={heroRef}
-          className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden"
+          className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden min-h-[90vh] flex items-center"
         >
+          <div className="absolute inset-0 bg-black opacity-10"></div>
           <motion.div
             style={{ opacity, scale: scaleSpring, y }}
-            className="max-w-7xl mx-auto py-4 sm:py-8 md:py-12 px-4 sm:px-6 lg:px-8 relative z-10"
+            className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10"
           >
-            <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               <motion.div
                 initial="hidden"
                 animate="show"
                 variants={staggerContainer}
-                className="lg:w-1/2 mb-8 lg:mb-0"
+                className="lg:w-1/2"
               >
                 <motion.h1
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 sm:mb-6"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6"
                   variants={fadeInUp}
                 >
                   {heroContent.title}
                 </motion.h1>
                 <motion.p
-                  className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8"
+                  className="text-xl sm:text-2xl md:text-3xl mb-8 text-gray-100"
                   variants={fadeInUp}
-                  transition={{ delay: 0.2 }}
                 >
                   {heroContent.subtitle}
                 </motion.p>
-                <motion.div variants={fadeInUp} transition={{ delay: 0.4 }}>
+                <motion.div variants={fadeInUp}>
                   <button
                     onClick={handleScrollToCategories}
-                    className="inline-flex items-center bg-white text-indigo-600 px-6 sm:px-8 py-2 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-indigo-50 transition duration-300 shadow-lg"
+                    className="group inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-indigo-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                   >
                     {heroContent.buttonText}
-                    <FaArrowRight className="ml-2" />
+                    <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </motion.div>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="lg:w-1/2 mt-8 lg:mt-0"
+                className="lg:w-1/2 relative"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
               >
-                <img
-                  src="/original.png"
-                  alt="ModuVac Vacuum Pump"
-                  className="w-full aspect-[4/3] object-cover rounded-lg shadow-2xl lg:ml-4"
-                />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="/original.png"
+                    alt="ModuVac Vacuum Pump"
+                    className="w-full aspect-[4/3] object-cover rounded-2xl transform hover:scale-105 transition-transform duration-700"
+                    loading="eager"
+                    fetchpriority="high"
+                  />
+                </div>
               </motion.div>
             </div>
           </motion.div>
         </section>
-        <div ref={categoriesRef} id="categories">
-          <AnimatedSection className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+
+        <div ref={categoriesRef} id="categories" className="relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-white opacity-50"></div>
+          <AnimatedSection className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 relative">
             <motion.div
               variants={staggerContainer}
               initial="hidden"
