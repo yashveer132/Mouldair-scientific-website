@@ -1,118 +1,1251 @@
-// Method 1: Named export
 export const productData = [
   // Watson Marlow
-
   {
     id: "wm1",
     brand: "watson-marlow",
-    pumpType: "Peristaltic Pumps",
-    name: "Qdos chemical metering and dosing pump",
-    description: "",
+    pumpType: "Chemical Metering Pumps",
+    name: "Qdos chemical metering pump",
+    description: "The Qdos range sets new standards in chemical metering with high accuracy and near-linear flow under varying process conditions. Designed for tough chemical metering applications.",
     imageUrl: ["/watson1.webp"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
-    datasheetUrl: "",
-    videoId: "",
+    features: [
+      "ReNu pumphead technology",
+      "No-tools maintenance",
+      "Fluid recovery system",
+      "Low maintenance",
+      "Simple installation",
+      "Accurate chemical delivery",
+      "Intuitive interface"
+    ],
+    applications: [
+      "Municipal and industrial water treatment",
+      "Industrial chemical processes",
+      "Food and beverage",
+      "Printing and packaging",
+      "Metal surface treatment",
+      "Paper and pulp",
+      "Agriculture"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.1 - 2,000 ml/min",
+      "Pressure Rating": "up to 7 bar (100 psi)",
+      "Accuracy": "±1% accuracy",
+      "Turndown Ratio": "20000:1",
+      "Display": "3.5\" TFT Color",
+      "Control": "Manual, 4-20mA, PROFIBUS"
+    },
+    additionalFeatures: [
+      "Safety pressure switch",
+      "Leak detection",
+      "Remote control options",
+      "Multiple I/O configurations",
+      "Chemical compatibility"
+    ],
+    datasheetUrl: "https://www.wmftg.com/qdos",
+    videoId: ""
   },
   {
     id: "wm2",
     brand: "watson-marlow",
-    pumpType: "Peristaltic Pumps",
-    name: "Qdos H-FLO: chemical metering and dosing pump",
-    description: "",
+    pumpType: "Chemical Metering Pumps",
+    name: "Qdos H-FLO: chemical metering pump",
+    description: "Qdos H-FLO offers higher flow rates while maintaining the precision and reliability of the Qdos range. Ideal for larger scale chemical dosing applications.",
     imageUrl: ["/watson2.webp"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
-    datasheetUrl: "",
-    videoId: "",
+    features: [
+      "Higher flow capability",
+      "ReNu HF pumphead",
+      "Tool-free maintenance",
+      "Advanced fluid handling",
+      "Process control integration",
+      "Robust design",
+      "User-friendly interface"
+    ],
+    applications: [
+      "Large scale water treatment",
+      "Chemical processing",
+      "Mining operations",
+      "Power generation",
+      "Manufacturing processes",
+      "Industrial cleaning",
+      "Wastewater treatment"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.1 - 4,000 ml/min",
+      "Pressure Rating": "up to 5 bar (72 psi)",
+      "Accuracy": "±1% accuracy",
+      "Turndown Ratio": "20000:1",
+      "Power Supply": "100-240V AC",
+      "Protection Rating": "IP66"
+    },
+    additionalFeatures: [
+      "High-flow capability",
+      "Advanced diagnostics",
+      "Multiple language support",
+      "Preventive maintenance alerts",
+      "Enhanced safety features"
+    ],
+    datasheetUrl: "https://www.wmftg.com/qdos-hflo",
+    videoId: ""
   },
   {
     id: "wm3",
     brand: "watson-marlow",
-    pumpType: "Peristaltic Pumps",
-    name: "Quantum single-use bioprocessing pumps",
-    description: "",
+    pumpType: "Bioprocessing Pumps",
+    name: "Quantum single-use bioprocessing pump",
+    description: "The Quantum pump is specifically designed for single-use bioprocessing applications, offering high accuracy and sterility with reduced validation requirements.",
     imageUrl: ["/watson3.webp"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
-    datasheetUrl: "",
-    videoId: "",
+    features: [
+      "Single-use technology",
+      "High accuracy flow",
+      "Low pulsation",
+      "Reduced validation time",
+      "Full traceability",
+      "Plug and play operation",
+      "High turndown ratio"
+    ],
+    applications: [
+      "Biopharmaceutical processing",
+      "Vaccine production",
+      "Cell culture",
+      "Fermentation",
+      "Filtration",
+      "Chromatography",
+      "Buffer preparation"
+    ],
+    technicalSpecs: {
+      "Flow Range": "0.1 - 20 L/min",
+      "Pressure Rating": "up to 3 bar (43.5 psi)",
+      "Accuracy": "±1%",
+      "Control": "Manual and automated",
+      "Materials": "USP Class VI",
+      "Sterilization": "Gamma irradiated"
+    },
+    additionalFeatures: [
+      "BioPure materials",
+      "Validation documentation",
+      "Process monitoring",
+      "Data logging",
+      "Automated control options"
+    ],
+    datasheetUrl: "https://www.wmftg.com/quantum",
+    videoId: ""
   },
   {
     id: "wm4",
     brand: "watson-marlow",
     pumpType: "Peristaltic Pumps",
     name: "100 series cased pump",
-    description: "",
+    description: "The 100 series offers precise, repeatable low flow rates for laboratory and process applications. Ideal for fluid transfer and metering in various laboratory settings.",
     imageUrl: ["/watson4.webp"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
+    features: [
+      "Simple tube loading",
+      "Compact design",
+      "Manual control",
+      "Low maintenance",
+      "Reliable performance",
+      "Easy to operate",
+      "Quiet operation"
+    ],
+    applications: [
+      "Laboratory fluid transfer",
+      "Process sampling",
+      "Media addition",
+      "Chemical dosing",
+      "Research and development",
+      "Small-scale fluid handling",
+      "Educational facilities"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.001-2000 ml/min",
+      "Speed Range": "4-400 rpm",
+      "Tube Sizes": "0.5-4.8mm bore",
+      "Number of Rollers": "8",
+      "Operating Temperature": "5-40°C",
+      "Power Supply": "100-240V"
+    },
+    additionalFeatures: [
+      "Multiple tube holder options",
+      "Fixed and variable speed models",
+      "Reversible flow direction",
+      "Stackable design",
+      "IP31 protection"
+    ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: ""
   },
   {
     id: "wm5",
     brand: "watson-marlow",
     pumpType: "Peristaltic Pumps",
     name: "300 series cased pump",
-    description: "",
+    description: "The 300 series delivers reliable performance for laboratory and light industrial applications. Features enhanced control options and durability.",
     imageUrl: ["/watson5.webp"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
+    features: [
+      "Digital speed control",
+      "Manual or auto control",
+      "Easy tube loading",
+      "Robust construction",
+      "Multiple pump head options",
+      "Maintenance-free drive",
+      "Compact footprint"
+    ],
+    applications: [
+      "Process fluid transfer",
+      "Laboratory automation",
+      "Biopharmaceutical processes",
+      "Chemical addition",
+      "Water treatment",
+      "Food and beverage",
+      "Industrial sampling"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.1-2200 ml/min",
+      "Speed Range": "0.1-400 rpm",
+      "Tube Sizes": "0.5-8.0mm bore",
+      "Number of Rollers": "4",
+      "Control Interface": "Membrane keypad",
+      "Protection Rating": "IP31"
+    },
+    additionalFeatures: [
+      "Digital display",
+      "Remote control capability",
+      "Direction control",
+      "Start/stop functions",
+      "Multiple mounting options"
+    ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: ""
   },
   {
     id: "wm6",
     brand: "watson-marlow",
     pumpType: "Peristaltic Pumps",
     name: "530 process pumps",
-    description: "",
+    description: "The 530 series offers advanced process control capabilities with enhanced durability for industrial applications. Features comprehensive communication options.",
     imageUrl: ["/watson6.jpg"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
+    features: [
+      "Advanced process control",
+      "Network connectivity",
+      "High accuracy dispensing",
+      "Multiple protocol support",
+      "Intuitive interface",
+      "CIP/SIP capable",
+      "Validation package available"
+    ],
+    applications: [
+      "Process manufacturing",
+      "Chemical processing",
+      "Biopharmaceutical production",
+      "Food and beverage",
+      "Water treatment",
+      "Industrial automation",
+      "Process integration"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.1-3500 ml/min",
+      "Speed Range": "0.1-220 rpm",
+      "Accuracy": "±0.5%",
+      "Control Options": "Manual, Auto, PROFIBUS",
+      "Display": "3.5\" Color TFT",
+      "Protection Rating": "IP66"
+    },
+    additionalFeatures: [
+      "Data logging",
+      "Process control integration",
+      "Security features",
+      "Maintenance scheduling",
+      "Multiple language support"
+    ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: ""
   },
   {
     id: "wm7",
     brand: "watson-marlow",
     pumpType: "Peristaltic Pumps",
     name: "630 mid-flow process pumps",
-    description: "",
+    description: "The 630 series provides reliable mid-flow performance with advanced control features for industrial processes. Ideal for demanding applications requiring precise flow control.",
     imageUrl: ["/watson7.webp"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
+    features: [
+      "High precision control",
+      "Industrial communication",
+      "Robust construction",
+      "Multiple pump head options",
+      "Advanced diagnostics",
+      "User-friendly interface",
+      "Maintenance alerts"
+    ],
+    applications: [
+      "Chemical processing",
+      "Industrial manufacturing",
+      "Water treatment",
+      "Mining operations",
+      "Food processing",
+      "Pharmaceutical production",
+      "Process automation"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.1-33 L/min",
+      "Speed Range": "0.1-265 rpm",
+      "Pressure Rating": "up to 7 bar",
+      "Control Interface": "Touch screen",
+      "Communication": "Multiple protocols",
+      "Protection Rating": "IP66"
+    },
+    additionalFeatures: [
+      "Process optimization",
+      "Remote monitoring",
+      "Predictive maintenance",
+      "Security features",
+      "Validation support"
+    ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: ""
   },
   {
     id: "wm8",
     brand: "watson-marlow",
     pumpType: "Peristaltic Pumps",
     name: "730 process pumps",
-    description: "",
+    description: "The 730 series delivers high-flow performance with advanced control capabilities for demanding industrial applications. Features robust design and comprehensive monitoring.",
     imageUrl: ["/watson8.webp"],
-    features: [],
-    applications: [],
-    technicalSpecs: {},
-    additionalFeatures: [],
+    features: [
+      "High flow capability",
+      "Advanced process control",
+      "Industrial durability",
+      "Network integration",
+      "Smart monitoring",
+      "Easy maintenance",
+      "Multiple configuration options"
+    ],
+    applications: [
+      "Large scale processing",
+      "Industrial manufacturing",
+      "Chemical processing",
+      "Mining operations",
+      "Wastewater treatment",
+      "Food and beverage",
+      "Process integration"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 33 L/min",
+      "Speed Range": "0.1-360 rpm",
+      "Pressure Rating": "up to 7 bar",
+      "Control Options": "Manual, Auto, Network",
+      "Display": "Color touch screen",
+      "Protection Rating": "IP66"
+    },
+    additionalFeatures: [
+      "Advanced diagnostics",
+      "Process automation",
+      "Data logging",
+      "Preventive maintenance",
+      "Validation packages"
+    ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: ""
+  },
+  {
+    id: "wm9",
+    brand: "watson-marlow",
+    pumpType: "High Flow Industrial Pumps",
+    name: "800 series industrial pump",
+    description: "The 800 series delivers maximum flow rates for industrial applications requiring reliable continuous operation. Features robust design and comprehensive monitoring capabilities.",
+    imageUrl: ["/watson800.webp"],
+    features: [
+      "Maximum flow capability",
+      "Industrial-grade construction",
+      "Advanced monitoring",
+      "Network integration",
+      "Multiple drive options",
+      "Maintenance alerts",
+      "Process optimization"
+    ],
+    applications: [
+      "Large scale processing",
+      "Industrial manufacturing",
+      "Mining operations",
+      "Wastewater treatment",
+      "Chemical processing",
+      "Large volume transfer",
+      "Process integration"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 80 L/min",
+      "Pressure Rating": "up to 7 bar",
+      "Control Options": "Manual, Auto, Network",
+      "Display": "Color touchscreen",
+      "Protection Rating": "IP66",
+      "Communication": "Multiple protocols"
+    },
+    additionalFeatures: [
+      "Predictive maintenance",
+      "Energy monitoring",
+      "Remote operation",
+      "Data logging",
+      "Advanced diagnostics"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm10",
+    brand: "watson-marlow",
+    pumpType: "Sanitary/Hygienic Pumps",
+    name: "Maxthane CIP pump",
+    description: "The Maxthane CIP pump is specifically designed for sanitary applications requiring clean-in-place capabilities. Features USP Class VI compliant materials and sanitary connections.",
+    imageUrl: ["/watsonmaxthane.webp"],
+    features: [
+      "CIP/SIP capable",
+      "USP Class VI materials",
+      "Sanitary connections",
+      "Easy maintenance",
+      "High purity operation",
+      "Validation package",
+      "Hygienic design"
+    ],
+    applications: [
+      "Food processing",
+      "Beverage production",
+      "Dairy manufacturing",
+      "Pharmaceutical production",
+      "Bioprocessing",
+      "Personal care products",
+      "Clean room operations"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.1-20 L/min",
+      "Pressure Rating": "up to 4 bar",
+      "Material Compliance": "FDA, USP Class VI",
+      "Cleaning": "CIP/SIP capable",
+      "Protection Rating": "IP66",
+      "Documentation": "Full validation package"
+    },
+    additionalFeatures: [
+      "Sanitary fittings",
+      "Process validation",
+      "Material certification",
+      "Clean room compatible",
+      "Sterilization options"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm11",
+    brand: "watson-marlow",
+    pumpType: "OEM Pumps",
+    name: "300 OEM pump",
+    description: "The 300 OEM series is designed for integration into OEM equipment. Features compact design and flexible control options for various applications.",
+    imageUrl: ["/watson300oem.webp"],
+    features: [
+      "Compact design",
+      "Flexible integration",
+      "Multiple control options",
+      "Low maintenance",
+      "Reliable operation",
+      "Custom configurations",
+      "Long service life"
+    ],
+    applications: [
+      "Medical devices",
+      "Analytical instruments",
+      "Laboratory equipment",
+      "Process systems",
+      "Diagnostic devices",
+      "Industrial machinery",
+      "Automated systems"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "0.1-2000 ml/min",
+      "Speed Range": "0.1-400 rpm",
+      "Control Input": "0-10V, 4-20mA",
+      "Power Supply": "24V DC",
+      "Protection Rating": "IP31",
+      "Communication": "RS485 optional"
+    },
+    additionalFeatures: [
+      "Custom programming",
+      "Multiple mounting options",
+      "Status outputs",
+      "Speed control",
+      "Integration support"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm12",
+    brand: "watson-marlow",
+    pumpType: "Bredel Hose Pumps",
+    name: "Bredel 10",
+    description: "The Bredel 10 hose pump delivers reliable continuous flow for industrial applications with minimal maintenance. Features robust design and long hose life.",
+    imageUrl: ["/bredel10.webp"],
+    features: [
+      "Direct coupled design",
+      "Long hose life",
+      "No mechanical seals",
+      "Low maintenance",
+      "Simple operation",
+      "Reliable performance",
+      "Industrial construction"
+    ],
+    applications: [
+      "Chemical transfer",
+      "Industrial processes",
+      "Slurry handling",
+      "Mining operations",
+      "Food processing",
+      "Water treatment",
+      "Paint and pigments"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 0.37 L/min",
+      "Pressure Rating": "up to 16 bar",
+      "Hose Options": "NR, NBR, F-NBR, EPDM",
+      "Speed Range": "5-97 rpm",
+      "Temperature": "-20 to 80°C",
+      "Connection Size": "1/4 inch"
+    },
+    additionalFeatures: [
+      "Precision machined rotor",
+      "Heavy duty bearings",
+      "Various hose materials",
+      "Multiple drive options",
+      "Simple maintenance"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm13",
+    brand: "watson-marlow",
+    pumpType: "Bredel Hose Pumps",
+    name: "Bredel 40",
+    description: "The Bredel 40 is a high-capacity hose pump designed for demanding industrial applications requiring continuous operation and abrasive fluid handling.",
+    imageUrl: ["/bredel40.webp"],
+    features: [
+      "High capacity design",
+      "Robust construction",
+      "Advanced hose compression",
+      "Industrial drive system",
+      "24/7 operation capability",
+      "Easy maintenance",
+      "Multiple mounting options"
+    ],
+    applications: [
+      "Mining and minerals",
+      "Industrial wastewater",
+      "Chemical processing",
+      "Ceramic manufacturing",
+      "Paint production",
+      "Food processing",
+      "Industrial automation"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 4.0 L/min",
+      "Pressure Rating": "up to 16 bar",
+      "Hose Materials": "Multiple options",
+      "Drive Power": "up to 1.5 kW",
+      "Protection": "IP55",
+      "Connection Size": "1 inch"
+    },
+    additionalFeatures: [
+      "Process optimization",
+      "Condition monitoring",
+      "Predictive maintenance",
+      "Multiple control options",
+      "Industrial communication"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm14",
+    brand: "watson-marlow",
+    pumpType: "Masosine Pumps",
+    name: "MR-125 Sine Pump",
+    description: "The MR-125 Sine pump is designed for gentle handling of sensitive products in sanitary applications. Features unique sinusoidal rotor for low-shear pumping.",
+    imageUrl: ["/masosine125.webp"],
+    features: [
+      "Low shear operation",
+      "Gentle product handling",
+      "CIP/SIP capable",
+      "Sanitary design",
+      "Easy maintenance",
+      "High suction capability",
+      "Self-draining design"
+    ],
+    applications: [
+      "Food processing",
+      "Dairy products",
+      "Beverage production",
+      "Confectionery",
+      "Personal care",
+      "Pharmaceutical",
+      "Cosmetics manufacturing"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 18,000 L/hr",
+      "Pressure Rating": "up to 15 bar",
+      "Temperature Range": "-20 to 100°C",
+      "Sanitary Standards": "3A, EHEDG",
+      "Surface Finish": "0.8μm Ra",
+      "Connection Type": "Sanitary fittings"
+    },
+    additionalFeatures: [
+      "EHEDG certified",
+      "FDA compliant materials",
+      "Quick strip design",
+      "Low pulsation",
+      "High efficiency"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm15",
+    brand: "watson-marlow",
+    pumpType: "Flexicon Fill/Finish Systems",
+    name: "PF7 Peristaltic Filling System",
+    description: "The PF7 is a precision filling system for aseptic applications in pharmaceutical and biotech industries. Features advanced control and validation capabilities.",
+    imageUrl: ["/flexiconpf7.webp"],
+    features: [
+      "Precision filling",
+      "Aseptic operation",
+      "Validation package",
+      "Clean room compatible",
+      "21 CFR Part 11 compliant",
+      "Multiple filling modes",
+      "Recipe management"
+    ],
+    applications: [
+      "Vaccine filling",
+      "Biopharmaceuticals",
+      "Cell media",
+      "Clinical trials",
+      "Laboratory filling",
+      "Small batch production",
+      "R&D applications"
+    ],
+    technicalSpecs: {
+      "Fill Range": "0.2-250ml",
+      "Accuracy": "±0.5%",
+      "Fill Speed": "up to 60/minute",
+      "Control System": "Touch screen HMI",
+      "Compliance": "GMP, GAMP",
+      "Protection": "IP54"
+    },
+    additionalFeatures: [
+      "Data logging",
+      "Batch reporting",
+      "User management",
+      "Calibration routines",
+      "Process validation"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm16",
+    brand: "watson-marlow",
+    pumpType: "APEX Hose Pumps",
+    name: "APEX 10",
+    description: "The APEX 10 is an industrial hose pump designed for reliable continuous duty in harsh environments. Features simplified maintenance and robust construction.",
+    imageUrl: ["/apex10.webp"],
+    features: [
+      "Simplified design",
+      "Cost-effective operation",
+      "Easy maintenance",
+      "Robust construction",
+      "Long hose life",
+      "Multiple hose options",
+      "Industrial reliability"
+    ],
+    applications: [
+      "Water treatment",
+      "Chemical dosing",
+      "Industrial processing",
+      "Mining operations",
+      "Construction sites",
+      "Waste handling",
+      "General industry"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 0.25 L/min",
+      "Pressure Rating": "up to 8 bar",
+      "Hose Materials": "NR, NBR, EPDM",
+      "Speed Range": "5-80 rpm",
+      "Power": "0.37 kW",
+      "Connection Size": "1/4 inch"
+    },
+    additionalFeatures: [
+      "Simple installation",
+      "Basic controls",
+      "Cost-effective spares",
+      "Low maintenance",
+      "Universal mounting"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm17",
+    brand: "watson-marlow",
+    pumpType: "Tubing and Hoses",
+    name: "Bioprene Tubing",
+    description: "Bioprene is a premium thermoplastic elastomer tubing designed specifically for biopharmaceutical applications. Features exceptional purity and long service life.",
+    imageUrl: ["/bioprene.webp"],
+    features: [
+      "USP Class VI certified",
+      "Long service life",
+      "Excellent chemical resistance",
+      "Low spallation",
+      "Consistent performance",
+      "Batch traceability",
+      "Validation support"
+    ],
+    applications: [
+      "Biopharmaceutical processing",
+      "Cell culture",
+      "Fermentation",
+      "Vaccine production",
+      "Media transfer",
+      "Sterile processing",
+      "Laboratory research"
+    ],
+    technicalSpecs: {
+      "Size Range": "0.5-25.4mm bore",
+      "Temperature Range": "-50 to 135°C",
+      "Pressure Rating": "up to 4 bar",
+      "Sterilization": "Autoclave, gamma",
+      "Material": "TPE",
+      "Compliance": "USP, FDA, ISO"
+    },
+    additionalFeatures: [
+      "Complete documentation",
+      "Lot traceability",
+      "Custom lengths",
+      "Sterile options",
+      "Validation support"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm18", 
+    brand: "watson-marlow",
+    pumpType: "Bredel Hose Pumps",
+    name: "Bredel 15",
+    description: "The Bredel 15 offers reliable hose pump performance for small to medium industrial applications. Features direct-coupled design and precision hose compression.",
+    imageUrl: ["/bredel15.webp"],
+    features: [
+      "Direct-coupled design",
+      "Precision hose compression",
+      "Low maintenance",
+      "Simple operation",
+      "Multiple hose options",
+      "Industrial reliability",
+      "Easy maintenance"
+    ],
+    applications: [
+      "Chemical dosing",
+      "Water treatment",
+      "Food processing",
+      "Industrial processes",
+      "Paint and pigments",
+      "Mining applications",
+      "Wastewater treatment"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 0.8 L/min",
+      "Pressure Rating": "up to 16 bar",
+      "Hose Options": "NR, NBR, EPDM, CSM",
+      "Speed Range": "5-100 rpm",
+      "Temperature": "-20 to 80°C",
+      "Connection Size": "3/8 inch"
+    },
+    additionalFeatures: [
+      "Sealed bearings",
+      "Optional speed control",
+      "Process optimization",
+      "Multiple mounting options",
+      "Global certification"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm19",
+    brand: "watson-marlow",
+    pumpType: "Bredel Hose Pumps",
+    name: "Bredel 25",
+    description: "The Bredel 25 is designed for medium-duty industrial applications requiring reliable continuous flow. Features robust construction and advanced hose compression technology.",
+    imageUrl: ["/bredel25.webp"],
+    features: [
+      "Heavy-duty design",
+      "Advanced compression",
+      "Industrial drive",
+      "Multiple hose materials",
+      "24/7 operation",
+      "Easy maintenance",
+      "Process monitoring"
+    ],
+    applications: [
+      "Mining operations",
+      "Chemical processing",
+      "Industrial manufacturing",
+      "Wastewater treatment",
+      "Food production",
+      "Paint manufacturing",
+      "Process integration"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 2.0 L/min",
+      "Pressure Rating": "up to 16 bar",
+      "Hose Materials": "Multiple options",
+      "Drive Power": "up to 1.1 kW",
+      "Protection": "IP55",
+      "Connection Size": "1/2 inch"
+    },
+    additionalFeatures: [
+      "Condition monitoring",
+      "Variable speed options",
+      "Network integration",
+      "Advanced diagnostics",
+      "Global support"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm20",
+    brand: "watson-marlow",
+    pumpType: "Bredel Hose Pumps",
+    name: "Bredel 65",
+    description: "The Bredel 65 delivers high-capacity flow for demanding industrial applications. Features advanced hose technology and robust industrial design.",
+    imageUrl: ["/bredel65.webp"],
+    features: [
+      "High capacity operation",
+      "Industrial construction",
+      "Advanced hose technology",
+      "Process integration",
+      "Continuous duty",
+      "Smart monitoring",
+      "Multiple drive options"
+    ],
+    applications: [
+      "Large scale processing",
+      "Mining operations",
+      "Chemical manufacturing",
+      "Industrial waste",
+      "Food production",
+      "Water treatment",
+      "Process automation"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 10.0 L/min",
+      "Pressure Rating": "up to 16 bar",
+      "Drive Options": "Multiple configurations",
+      "Power Range": "up to 5.5 kW",
+      "Protection": "IP55",
+      "Connection Size": "2 inch"
+    },
+    additionalFeatures: [
+      "Remote monitoring",
+      "Predictive maintenance",
+      "Process optimization",
+      "Advanced control options",
+      "Global certification"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm21",
+    brand: "watson-marlow",
+    pumpType: "Masosine Pumps",
+    name: "SPS Series",
+    description: "The SPS series sine pumps provide gentle product handling with high efficiency for sanitary applications. Features CIP/SIP capability and advanced seal technology.",
+    imageUrl: ["/masosinesps.webp"],
+    features: [
+      "Gentle product handling",
+      "High efficiency design",
+      "CIP/SIP capable",
+      "Advanced seal technology",
+      "Sanitary construction",
+      "Low pulsation",
+      "Easy maintenance"
+    ],
+    applications: [
+      "Food processing",
+      "Beverage production",
+      "Dairy manufacturing",
+      "Personal care products",
+      "Pharmaceutical",
+      "Cosmetics",
+      "Biotechnology"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 90,000 L/hr",
+      "Pressure Rating": "up to 15 bar",
+      "Temperature Range": "-20 to 120°C",
+      "Sanitary Standards": "3A, EHEDG",
+      "Surface Finish": "0.5μm Ra",
+      "Connection Type": "Sanitary fittings"
+    },
+    additionalFeatures: [
+      "EHEDG certification",
+      "3A certification",
+      "Front-loading seals",
+      "Multiple material options",
+      "Customizable ports"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm22",
+    brand: "watson-marlow",
+    pumpType: "Masosine Pumps",
+    name: "MR Series Industrial",
+    description: "The MR Series Industrial sine pumps are engineered for demanding industrial applications requiring efficient transfer of viscous products.",
+    imageUrl: ["/masosinemr.webp"],
+    features: [
+      "Industrial design",
+      "High efficiency",
+      "Viscous handling",
+      "Low shear operation",
+      "Easy maintenance",
+      "Robust construction",
+      "Multiple seal options"
+    ],
+    applications: [
+      "Industrial processing",
+      "Chemical transfer",
+      "Paint manufacturing",
+      "Adhesive production",
+      "Oil and lubricants",
+      "Waste processing",
+      "Manufacturing"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 100,000 L/hr",
+      "Pressure Rating": "up to 15 bar",
+      "Viscosity Range": "1-1,000,000 cP",
+      "Temperature": "-10 to 100°C",
+      "Drive Options": "Multiple available",
+      "Material Options": "Cast iron, steel"
+    },
+    additionalFeatures: [
+      "Process optimization",
+      "Various seal types",
+      "Multiple port options",
+      "Industrial controls",
+      "Global support"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm23",
+    brand: "watson-marlow",
+    pumpType: "Flexicon Fill/Finish Systems",
+    name: "PF6 Benchtop Filler",
+    description: "The PF6 is a compact peristaltic filling system designed for small-scale aseptic filling applications. Features precise control and validation capabilities.",
+    imageUrl: ["/flexiconpf6.webp"],
+    features: [
+      "Compact design",
+      "Precise filling",
+      "Validation ready",
+      "Clean room compatible",
+      "Easy operation",
+      "Multiple filling modes",
+      "Data recording"
+    ],
+    applications: [
+      "R&D filling",
+      "Clinical trials",
+      "Small batch production",
+      "Laboratory filling",
+      "Vaccine preparation",
+      "Diagnostic reagents",
+      "Biological materials"
+    ],
+    technicalSpecs: {
+      "Fill Range": "0.1-100ml",
+      "Accuracy": "±0.5%",
+      "Fill Speed": "up to 30/minute",
+      "Control": "Digital interface",
+      "Compliance": "GMP, GAMP",
+      "Protection": "IP54"
+    },
+    additionalFeatures: [
+      "Recipe storage",
+      "Batch reporting",
+      "Easy calibration",
+      "Multiple tube sizes",
+      "Validation support"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm24",
+    brand: "watson-marlow",
+    pumpType: "Flexicon Fill/Finish Systems",
+    name: "ASL1 Automated Syringe Line",
+    description: "The ASL1 is an automated syringe filling line for aseptic applications requiring high precision and complete process control.",
+    imageUrl: ["/flexiconasl1.webp"],
+    features: [
+      "Automated operation",
+      "High precision filling",
+      "Complete process control",
+      "21 CFR Part 11 compliant",
+      "Clean room ready",
+      "Process validation",
+      "Data management"
+    ],
+    applications: [
+      "Pharmaceutical production",
+      "Vaccine manufacturing",
+      "Biologics filling",
+      "Medical devices",
+      "Diagnostic products",
+      "Clinical production",
+      "Research applications"
+    ],
+    technicalSpecs: {
+      "Fill Range": "0.1-50ml",
+      "Accuracy": "±0.5%",
+      "Production Rate": "up to 2400/hour",
+      "Control System": "PLC with HMI",
+      "Compliance": "GMP, GAMP 5",
+      "Classification": "ISO 5/Grade A"
+    },
+    additionalFeatures: [
+      "Electronic batch records",
+      "Process monitoring",
+      "Automated cleaning",
+      "Environmental monitoring",
+      "Full validation package"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm25",
+    brand: "watson-marlow",
+    pumpType: "APEX Hose Pumps",
+    name: "APEX 15",
+    description: "The APEX 15 provides reliable hose pump operation for industrial applications requiring cost-effective continuous flow.",
+    imageUrl: ["/apex15.webp"],
+    features: [
+      "Cost-effective design",
+      "Reliable operation",
+      "Simple maintenance",
+      "Robust construction",
+      "Multiple hose options",
+      "Basic controls",
+      "Industrial reliability"
+    ],
+    applications: [
+      "Water treatment",
+      "Chemical transfer",
+      "Industrial processing",
+      "Waste handling",
+      "Manufacturing",
+      "Process integration",
+      "General industry"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 0.5 L/min",
+      "Pressure Rating": "up to 8 bar",
+      "Hose Materials": "NR, NBR, EPDM",
+      "Speed Range": "5-90 rpm",
+      "Power": "0.37 kW",
+      "Connection Size": "3/8 inch"
+    },
+    additionalFeatures: [
+      "Easy installation",
+      "Simple controls",
+      "Basic monitoring",
+      "Standard fittings",
+      "Universal mounting"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm26",
+    brand: "watson-marlow",
+    pumpType: "APEX Hose Pumps",
+    name: "APEX 28",
+    description: "The APEX 28 delivers medium-capacity flow for industrial applications requiring reliable and economical operation.",
+    imageUrl: ["/apex28.webp"],
+    features: [
+      "Medium capacity",
+      "Industrial design",
+      "Easy maintenance",
+      "Reliable operation",
+      "Cost-effective",
+      "Simple controls",
+      "Robust construction"
+    ],
+    applications: [
+      "Chemical dosing",
+      "Water treatment",
+      "Industrial processes",
+      "Waste handling",
+      "Manufacturing",
+      "General industry",
+      "Process integration"
+    ],
+    technicalSpecs: {
+      "Flow Rates": "up to 2.0 L/min",
+      "Pressure Rating": "up to 8 bar",
+      "Hose Options": "NR, NBR, EPDM",
+      "Speed Range": "5-100 rpm",
+      "Power": "0.75 kW",
+      "Connection Size": "3/4 inch"
+    },
+    additionalFeatures: [
+      "Basic monitoring",
+      "Standard controls",
+      "Easy servicing",
+      "Multiple mounting options",
+      "Industrial reliability"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm27",
+    brand: "watson-marlow",
+    pumpType: "Tubing and Hoses",
+    name: "Pumpsil Platinum-Cured Silicone",
+    description: "Pumpsil is a premium platinum-cured silicone tubing designed for high-purity applications requiring USP Class VI compliance and excellent chemical resistance.",
+    imageUrl: ["/pumpsil.webp"],
+    features: [
+      "USP Class VI certified",
+      "Platinum-cured silicone",
+      "High purity",
+      "Excellent life",
+      "Low extractables",
+      "Biocompatible",
+      "Laser marking"
+    ],
+    applications: [
+      "Biopharmaceutical",
+      "Pharmaceutical",
+      "Medical devices",
+      "Laboratory research",
+      "Diagnostic equipment",
+      "Sterile processing",
+      "High-purity transfer"
+    ],
+    technicalSpecs: {
+      "Size Range": "0.5-25.4mm bore",
+      "Temperature Range": "-50 to 230°C",
+      "Pressure Rating": "up to 3 bar",
+      "Sterilization": "Autoclave, gamma, EtO",
+      "Material": "Platinum-cured silicone",
+      "Compliance": "USP Class VI, ISO 10993"
+    },
+    additionalFeatures: [
+      "Full documentation",
+      "Lot traceability",
+      "Custom sizes",
+      "Validation support",
+      "Multiple packaging options"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm28",
+    brand: "watson-marlow",
+    pumpType: "Tubing and Hoses",
+    name: "Marprene Process Tubing",
+    description: "Marprene is a thermoplastic elastomer tubing designed for long life in process applications. Features excellent chemical resistance and durability.",
+    imageUrl: ["/marprene.webp"],
+    features: [
+      "Long service life",
+      "Chemical resistant",
+      "Temperature stable",
+      "Excellent flex life",
+      "Low spallation",
+      "Cost-effective",
+      "Process optimized"
+    ],
+    applications: [
+      "Chemical processing",
+      "Industrial applications",
+      "Food and beverage",
+      "Manufacturing",
+      "Process automation",
+      "Water treatment",
+      "General industry"
+    ],
+    technicalSpecs: {
+      "Size Range": "0.8-25.4mm bore",
+      "Temperature Range": "-40 to 80°C",
+      "Pressure Rating": "up to 4 bar",
+      "Chemical Resistance": "Broad spectrum",
+      "Material": "Thermoplastic elastomer",
+      "Compliance": "FDA, ISO"
+    },
+    additionalFeatures: [
+      "Cost effective",
+      "Multiple sizes",
+      "Industrial grade",
+      "Process validation",
+      "Standard lengths"
+    ],
+    datasheetUrl: "",
+    videoId: ""
+  },
+  {
+    id: "wm29",
+    brand: "watson-marlow",
+    pumpType: "Tubing and Hoses",
+    name: "PureWeld XL",
+    description: "PureWeld XL is a thermoplastic elastomer tubing specifically designed for biopharmaceutical welding applications. Features excellent weldability and biocompatibility.",
+    imageUrl: ["/pureweldxl.webp"],
+    features: [
+      "Superior weldability",
+      "USP Class VI",
+      "Animal-free",
+      "Excellent flex life",
+      "Low extractables",
+      "Consistent performance",
+      "Biocompatible"
+    ],
+    applications: [
+      "Biopharmaceutical processing",
+      "Single-use systems",
+      "Cell culture",
+      "Sterile processing",
+      "Media transfer",
+      "Downstream processing",
+      "Aseptic connections"
+    ],
+    technicalSpecs: {
+      "Size Range": "3.2-25.4mm bore",
+      "Temperature Range": "-40 to 135°C",
+      "Pressure Rating": "up to 4 bar",
+      "Sterilization": "Autoclave, gamma",
+      "Material": "TPE",
+      "Compliance": "USP Class VI, ISO 10993"
+    },
+    additionalFeatures: [
+      "Validated welding",
+      "Lot traceability",
+      "Custom lengths",
+      "Sterile options",
+      "Full documentation"
+    ],
+    datasheetUrl: "",
+    videoId: ""
   },
 
   // Leybold
@@ -157,7 +1290,7 @@ export const productData = [
       "Optional exhaust filters",
     ],
     datasheetUrl: "",
-    videoId: "ABC123", // Replace with actual video ID
+    videoId: "ABC123",
   },
   {
     id: "ley2",
@@ -3466,4 +4599,19 @@ export const productData = [
     videoId: "",
   },
   // End of Welch product series
-];
+].map(product => ({
+  id: product.id || '',
+  brand: product.brand || '',
+  pumpType: product.pumpType || '',
+  name: product.name || '',
+  description: product.description || '',
+  imageUrl: Array.isArray(product.imageUrl) 
+    ? product.imageUrl.map(url => url.startsWith('/') ? url : `/${url}`)
+    : [`/${product.imageUrl}`],
+  features: Array.isArray(product.features) ? product.features : [],
+  applications: Array.isArray(product.applications) ? product.applications : [],
+  technicalSpecs: product.technicalSpecs || {},
+  additionalFeatures: Array.isArray(product.additionalFeatures) ? product.additionalFeatures : [],
+  datasheetUrl: product.datasheetUrl || '',
+  videoId: product.videoId || ''
+}));
