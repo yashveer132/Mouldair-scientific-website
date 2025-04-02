@@ -38,12 +38,12 @@ const ProductDetail = () => {
     <Layout>
       <div className="bg-gradient-to-b from-indigo-100 via-purple-50 to-pink-100 min-h-screen py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          <div className="flex flex-col items-center justify-center mb-12">
             <motion.h1
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 md:mb-0 text-center md:text-left"
+              className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-8 text-center tracking-tight leading-tight"
             >
               {product.name}
             </motion.h1>
@@ -54,17 +54,17 @@ const ProductDetail = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-12"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <FaFileExcel className="mr-2" />
-                Download Datasheet
+                Download Document
               </motion.a>
             )}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mb-12 lg:mb-16">
+          <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-6 lg:gap-12 mb-12 lg:mb-16">
             {product.imageUrl.map((url, index) => (
               <motion.div
                 key={index}
@@ -72,7 +72,7 @@ const ProductDetail = () => {
                 animate={{ opacity: 1, x: 0 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
-                className="rounded-lg overflow-hidden shadow-lg"
+                className="rounded-lg overflow-hidden shadow-lg w-full lg:w-1/2"
               >
                 <img
                   src={url}
@@ -96,36 +96,6 @@ const ProductDetail = () => {
             <p className="text-gray-700 text-lg mb-6 text-center">
               {product.description}
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <motion.div
-                className="bg-indigo-100 p-4 rounded-lg text-center flex flex-col items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <FaLeaf className="text-4xl text-indigo-600 mb-2" />
-                <p className="text-sm font-semibold">Energy Efficient</p>
-              </motion.div>
-              <motion.div
-                className="bg-indigo-100 p-4 rounded-lg text-center flex flex-col items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <FaVolumeDown className="text-4xl text-indigo-600 mb-2" />
-                <p className="text-sm font-semibold">Low Noise Operation</p>
-              </motion.div>
-              <motion.div
-                className="bg-indigo-100 p-4 rounded-lg text-center flex flex-col items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <FaChartLine className="text-4xl text-indigo-600 mb-2" />
-                <p className="text-sm font-semibold">High Performance</p>
-              </motion.div>
-              <motion.div
-                className="bg-indigo-100 p-4 rounded-lg text-center flex flex-col items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <FaTools className="text-4xl text-indigo-600 mb-2" />
-                <p className="text-sm font-semibold">Easy Maintenance</p>
-              </motion.div>
-            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
@@ -255,21 +225,18 @@ const ProductDetail = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
-              className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16"
+              className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16 max-w-4xl mx-auto"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Product Demo Video
               </h3>
-              <div
-                className="w-full h-0 relative"
-                style={{ paddingBottom: "56.25%" }}
-              >
+              <div className="aspect-video relative rounded-lg overflow-hidden shadow-lg">
                 <iframe
                   src={`https://www.youtube.com/embed/${product.videoId}`}
                   title="Product Demo Video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  className="absolute top-0 left-0 w-full h-full"
                 ></iframe>
               </div>
             </motion.div>
