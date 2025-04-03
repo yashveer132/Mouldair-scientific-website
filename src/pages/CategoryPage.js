@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import AnimatedSection from "../components/AnimatedSection";
@@ -99,52 +99,52 @@ const leyboldApplications = [
   {
     title: "Analytical Instruments",
     content:
-      "Vacuum systems support devices like mass spectrometers and gas chromatography units, ensuring precise analysis and efficient operation.",
+      "Leybold's vacuum solutions power advanced analytical instruments with specialized products like TURBOVAC i/iX turbomolecular pumps and SCROLLVAC plus scroll pumps. These systems deliver ultimate pressures from 10^-3 to 10^-11 mbar with hydrocarbon-free operation and <45 dBA noise levels. The PHOENIX 3 helium leak detectors offer detection limits down to 5 × 10^-12 mbar l/s, while the GRAPHIX vacuum gauges provide precise pressure measurement from 1000 to 5 × 10^-10 mbar. Applications include mass spectrometers, electron microscopes, surface analyzers, and leak detection systems, with special configurations available for high magnetic field environments.",
   },
   {
     title: "Research & Development",
     content:
-      "Vacuum technology is integral in R&D labs, enabling high-precision experiments, material testing, and controlled environments.",
+      "Leybold's research solutions include MAGINTEGRA magnetic bearing turbomolecular pumps achieving 10^-11 mbar and TURBOVAC MAGiNTEGRA with pumping speeds up to 3000 l/s. The DRYVAC backing pump systems feature advanced temperature management and smart interfaces for Industry 4.0 integration. Specialized solutions support particle accelerators with TURBOVAC T variants resistant to radiation up to 107 Gy. For fusion research, custom-engineered systems handle tritium with leak rates below 10^-9 mbar l/s. Space simulation chambers utilize cryopumps and titanium sublimation pumps achieving pressures below 10^-12 mbar with hydrogen pumping speeds exceeding 50,000 l/s.",
   },
   {
     title: "Medical Applications",
     content:
-      "Vacuum systems power applications like proton therapy, medical imaging, and the sterilization of medical devices.",
+      "Leybold's medical vacuum systems include ISO 13485 certified SCROLLVAC plus pumps for mass spectrometry diagnostics achieving 10^-7 mbar. The ECODRY plus series offers <48 dBA operation for quiet hospital environments. Radiotherapy solutions feature specialized RUVAC Roots pumps maintaining 10^-7 mbar in proton beam lines with 99.99% uptime. Clean room compatible systems include NOVADRY pumps with FDA-compliant materials and IP54 protection. Sterilization applications utilize VARODRY pumps with oxygen compatibility and rapid cycle times. All systems feature real-time monitoring through LEYBONOL Connect for preventive maintenance.",
   },
   {
     title: "Furnace and Metallurgy",
     content:
-      "Vacuum environments enhance heat treatments, vacuum brazing, and metallurgy for stronger and higher-quality materials.",
+      "Leybold's metallurgical solutions support temperatures up to 2400°C with pressures from 10^-2 to 10^-6 mbar. The RUVAC WH/WS series provides pumping speeds up to 15,000 m³/h with advanced thermal management. Vacuum brazing applications utilize SOGEVAC NEO pumps with integrated oxygen monitoring. Heat treatment systems feature DRYVAC DV series with corrosion-resistant rotors and intelligent partial pressure control. Special options include controlled atmosphere systems for reactive processes, water-cooled roots pumps for continuous operation, and advanced thermal shields using molybdenum and tungsten construction. Systems comply with AMS 2750F standards for aerospace applications.",
   },
   {
     title: "Coating Applications",
     content:
-      "Used in optical coatings, wear protection, and glass or plastic coatings for advanced protective or decorative films.",
+      "Leybold's coating technology includes DRYVAC PowerBoost systems achieving 10^-8 mbar with ±2% coating uniformity. The TURBOVAC iX series provides hydrocarbon-free environments for optical coating with speeds up to 1650 l/s. PVD/CVD solutions feature SCREWLINE SP pumps handling high gas loads in metallization processes. Specialized configurations support diamond-like carbon coating using NOWAG pump technology. Advanced process control through GRAPHIX gauges enables precise layer thickness monitoring. Systems include options for reactive gas handling with LEYSPEC mass spectrometers for process analysis. All solutions meet ISO 14644-1 Class 5 clean room standards.",
   },
   {
     title: "Plastics and Composites",
     content:
-      "Vacuum degassing during manufacturing improves mechanical properties and enhances product strength and durability.",
+      "Leybold's plastics processing solutions center on VACUBE intelligent vacuum systems with capacities up to 2,000 m³/h. Variable speed VARODRY pumps reduce energy consumption by 50% compared to conventional systems. Thermoforming applications utilize DRYVAC systems with advanced vapor handling capabilities. Composite manufacturing benefits from CLAWVAC pumps with integrated dust filters and moisture separators. Systems feature precise vacuum control from atmospheric pressure to 0.1 mbar through GRAPHIX controllers. Special packages include thermal management for high-temperature degassing and optional heat recovery systems reducing operational costs.",
   },
   {
     title: "Solar Industry",
     content:
-      "Supports thin-film deposition and photovoltaic applications, improving efficiency in solar panel production.",
+      "Leybold's solar manufacturing solutions maintain 10^-3 to 10^-8 mbar clean vacuum with SCREWLINE dry compressing pumps. PECVD coating systems utilize DRYVAC FP pumps handling silane and NF3 process gases. Crystal pulling applications feature RUVAC WH roots pumps with 5,000 m³/h capacity. Lamination processes use oil-free SCROLLVAC plus pumps ensuring contamination-free operation. All systems integrate Industry 4.0 ready controllers with LEYBONOL Connect monitoring. Specialized configurations include fluorine-resistant materials, advanced abatement systems, and smart pressure control through CASCADE technology.",
   },
   {
     title: "Semiconductor and Electronics",
     content:
-      "Ensures clean and precise environments for producing microchips, integrated circuits, and sensitive electronic components.",
+      "Leybold's semiconductor solutions achieve 10^-9 mbar with particle counts <0.1µm using TURBOVAC MAGiNTEGRA pumps. Ion implantation utilizes SCREWLINE SP pumps with enhanced corrosion resistance. CVD processes benefit from DRYVAC intelligent systems handling complex process gases. The LEYSPEC RGA ensures process monitoring with mass range up to 200 amu. Systems feature advanced abatement through LEYCOLD cryopumps with regeneration management. Clean room compatibility meets ISO 14644-1 Class 1 standards. Special options include heated pump inlets, smart pressure control, and advanced monitoring through EtherCAT interfaces.",
   },
   {
     title: "Food and Packaging",
     content:
-      "Vacuum sealing and freeze-drying applications enhance shelf life and ensure the quality of perishable products.",
+      "Leybold's food industry solutions feature NOVADRY pumps with FDA-compliant materials achieving 0.5 mbar. MAP packaging utilizes VARODRY systems with rapid cycle times under 15 seconds. Freeze-drying applications employ RUVAC WH roots pumps with 1,600 m³/h capacity. All systems meet EHEDG hygienic design standards with IP65 protection. Specialized features include oxygen-free packaging capabilities, smart vacuum control through GRAPHIX interfaces, and optional heat recovery reducing energy costs by 40%. Systems comply with EC 1935/2004 for food contact materials and feature CIP-compatible designs.",
   },
   {
     title: "Vacuum Networks",
     content:
-      "Provides centralized vacuum systems to power diverse industrial applications efficiently across multiple locations.",
+      "Leybold's centralized vacuum networks utilize TURBOLINK monitoring supporting 32 simultaneous connections. Systems maintain 10^-3 mbar with VACUBE smart pump technology. The DRYVAC PowerBoost provides demand-based control reducing energy consumption by 40%. Networks feature advanced manifold design with minimal pressure drop using computational fluid dynamics optimization. Integration options include Building Management System (BMS) connectivity, predictive maintenance through AI algorithms, and remote monitoring via LEYBONOL Connect. Special packages include redundant pumping systems and automatic switchover for critical processes.",
   },
 ];
 
@@ -245,40 +245,32 @@ const brandDescriptions = {
   },
 };
 
-const leyboldBlogTopics = [
-  {
-    title: "Vacuum Technology in the Semiconductor Industry",
-    content:
-      "Explore the critical role of vacuum systems in producing microchips and semiconductors, ensuring precision and contamination-free environments.",
-  },
-  {
-    title: "Sustainable Manufacturing with Vacuum Pumps",
-    content:
-      "Learn how eco-friendly vacuum solutions are helping industries reduce their carbon footprint and energy consumption.",
-  },
-  {
-    title: "Vacuum Systems in Space Exploration",
-    content:
-      "Understand how Leybold’s vacuum technology supports spacecraft testing and simulations in extreme environments.",
-  },
-  {
-    title: "Advancements in High-Energy Physics Applications",
-    content:
-      "Discover how advanced vacuum systems power particle accelerators and high-energy physics experiments worldwide.",
-  },
-  {
-    title: "Innovations in Vacuum Coating for Industrial Applications",
-    content:
-      "See the latest breakthroughs in vacuum coating for optics, electronics, and protective applications.",
-  },
-];
-
 const CategoryPage = () => {
   const { brand } = useParams();
   const [searchTerm, setSearchTerm] = useState("");
   const [activeLeyboldApplication, setActiveLeyboldApplication] = useState(0);
   const [activeApplication, setActiveApplication] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
+  const leyboldApplicationsRef = useRef(null);
+  const applicationContentRef = useRef(null);
+
+  const scrollToElement = (ref, forceScroll = false) => {
+    if (ref.current && (forceScroll || window.innerWidth < 768)) {
+      const yOffset = -20;
+      const element = ref.current;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToApplications = () => {
+    scrollToElement(leyboldApplicationsRef, true); // Force scroll for all screen sizes
+  };
 
   const brandProducts = productData.filter(
     (product) => product.brand === brand
@@ -318,9 +310,35 @@ const CategoryPage = () => {
               transition={{ duration: 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8"
             >
-              <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
-                {brandInfo.aboutTitle}
-              </h2>
+              <div className="flex flex-col items-center space-y-4 mb-6">
+                <h2 className="text-3xl font-extrabold text-gray-900 text-center">
+                  {brandInfo.aboutTitle}
+                </h2>
+                {brand === "leybold" && (
+                  <motion.button
+                    onClick={scrollToApplications}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold hover:bg-indigo-700 transition-all duration-300 flex items-center space-x-2"
+                  >
+                    <span>View Applications</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </motion.button>
+                )}
+              </div>
               <div className="text-gray-700 text-lg sm:text-xl leading-relaxed">
                 {brandInfo.description}
               </div>
@@ -465,7 +483,10 @@ const CategoryPage = () => {
           </section>
         )}
         {brand === "leybold" && (
-          <section className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <section
+            ref={leyboldApplicationsRef}
+            className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"
+          >
             <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8">
               Applications of Leybold Vacuum Pumps
             </h2>
@@ -481,7 +502,14 @@ const CategoryPage = () => {
                   key={index}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveLeyboldApplication(index)}
+                  onClick={() => {
+                    setActiveLeyboldApplication(index);
+                    // Mobile-only scroll for individual applications
+                    setTimeout(
+                      () => scrollToElement(applicationContentRef),
+                      100
+                    );
+                  }}
                   className={`px-4 py-2 m-2 rounded-md text-lg font-medium transition-colors duration-300 ${
                     activeLeyboldApplication === index
                       ? "bg-indigo-600 text-white"
@@ -495,6 +523,7 @@ const CategoryPage = () => {
 
             <AnimatePresence mode="wait">
               <motion.div
+                ref={applicationContentRef}
                 key={activeLeyboldApplication}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -509,55 +538,6 @@ const CategoryPage = () => {
                 <p className="text-gray-700 text-lg leading-relaxed">
                   {leyboldApplications[activeLeyboldApplication]?.content ||
                     "No content available."}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </section>
-        )}
-
-        {brand === "leybold" && (
-          <section className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8">
-              Leybold Vacuum Blog Topics
-            </h2>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-wrap justify-center mb-6 sm:mb-8"
-            >
-              {leyboldBlogTopics.map((topic, index) => (
-                <motion.button
-                  key={index}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveApplication(index)}
-                  className={`px-4 py-2 m-2 rounded-md text-lg font-medium transition-colors duration-300 ${
-                    activeApplication === index
-                      ? "bg-indigo-600 text-white"
-                      : "bg-white text-indigo-600 hover:bg-indigo-100"
-                  }`}
-                >
-                  {topic.title}
-                </motion.button>
-              ))}
-            </motion.div>
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeApplication}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-lg shadow-xl p-6 min-h-[200px]"
-              >
-                <h3 className="text-2xl font-bold text-center text-gray-900 mb-4">
-                  {leyboldBlogTopics[activeApplication].title}
-                </h3>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  {leyboldBlogTopics[activeApplication].content}
                 </p>
               </motion.div>
             </AnimatePresence>

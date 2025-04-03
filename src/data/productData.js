@@ -1748,7 +1748,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "CLAWVAC B",
     description:
-      "CLAWVAC B is a robust dry claw vacuum pump designed for heavy-duty industrial applications. It offers reliable performance with minimal maintenance requirements and excellent energy efficiency.",
+      "CLAWVAC B is a robust dry claw vacuum pump designed for heavy-duty industrial applications. It offers reliable performance with minimal maintenance requirements and excellent energy efficiency. Extremely efficient air cooling for lowest operation temperature. Variable speed-ready to improve the process and generate energy savings.",
     imageUrl: ["/clawvacb.webp"],
     features: [
       "100% oil-free operation",
@@ -1781,8 +1781,8 @@ export const productData = [
       "Self-draining design",
       "Easy access for maintenance",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611230502_CLAWVAC_B_Flyer_EN_web.pdf",
+    videoId: "ytu7r2stB0s",
   },
   {
     id: "ley13",
@@ -1790,8 +1790,8 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "DRYVAC",
     description:
-      "DRYVAC series are high-performance dry compressing screw vacuum pumps engineered for demanding industrial processes. They combine superior vacuum performance with advanced control capabilities.",
-    imageUrl: ["/dryvac.webp", "/pump4.png"],
+      "DRYVAC series are high-performance dry compressing screw vacuum pumps engineered for demanding industrial processes. They combine superior vacuum performance with advanced control capabilities. Compact and easy-to-install, DRYVAC vacuum pumps are equipped with onboard intelligent Frequency Converter for easy monitoring.",
+    imageUrl: ["/dryvac.webp"],
     features: [
       "Dry screw technology",
       "Innovative rotor design",
@@ -1823,8 +1823,8 @@ export const productData = [
       "Modular design concept",
       "Emergency power backup options",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611003902_DRYVAC_web.pdf",
+    videoId: "xth1guTJxgc",
   },
   {
     id: "ley14",
@@ -1832,7 +1832,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "DRYVAC DV FP-r",
     description:
-      "DRYVAC DV FP-r is a specialized dry pump designed for demanding flat panel display and solar manufacturing processes. It features enhanced corrosion resistance and superior process compatibility.",
+      "DRYVAC DV FP-r is a specialized dry pump designed for demanding flat panel display and solar manufacturing processes. It features enhanced corrosion resistance and superior process compatibility. The hygienic design and washdown-ready variants of the DRYVAC DV 650 and DV 800 can be installed in close proximity to your production line.",
     imageUrl: ["/dryvacdv.webp"],
     features: [
       "Corrosion-resistant design",
@@ -1865,8 +1865,8 @@ export const productData = [
       "Predictive maintenance",
       "High uptime reliability",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611230102_DRYVAC_FP-r _web.pdf",
+    videoId: "YRApO60PWRo",
   },
   {
     id: "ley15",
@@ -1874,7 +1874,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "DURADRY",
     description:
-      "DURADRY is a rugged dry pump designed for harsh industrial environments and demanding processes. It features superior durability and resistance to aggressive media while maintaining consistent performance.",
+      "DURADRY is a rugged dry pump designed for harsh industrial environments and demanding processes. It features superior durability and resistance to aggressive media while maintaining consistent performance. The pumps also have a Smart Drive which monitors critical parameters like rotor frequency, temperatures etc.",
     imageUrl: ["/duradry.webp"],
     features: [
       "Harsh process compatible",
@@ -1907,8 +1907,8 @@ export const productData = [
       "Horizontal or vertical mounting",
       "Low maintenance intervals",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611240602_DURADRY_EN_web.pdf",
+    videoId: "BXtnsBt6ozY",
   },
   {
     id: "ley16",
@@ -1916,7 +1916,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "LEYVAC",
     description:
-      "LEYVAC is a versatile dry compressing vacuum pump designed for industrial applications requiring reliable and stable vacuum performance. It offers excellent value with robust construction and proven technology.",
+      "LEYVAC is a versatile dry compressing vacuum pump designed for industrial applications requiring reliable and stable vacuum performance. It offers excellent value with robust construction and proven technology.  They can simply be assembled by adapters to various vacuum systems, particularly the RUVAC WH700 and WS(U) and WA(U) series.",
     imageUrl: ["/leyvac.webp"],
     features: [
       "Oil-free compression",
@@ -1950,7 +1950,7 @@ export const productData = [
       "Easy installation",
     ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: "JibMo3ngXXE",
   },
   {
     id: "ley17",
@@ -1958,7 +1958,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "NOVADRY",
     description:
-      "NOVADRY is a new generation of dry screw vacuum pumps specifically designed for food and packaging applications. It offers oil-free operation with superior performance and reliability in demanding environments.",
+      "NOVADRY is a new generation of dry screw vacuum pumps specifically designed for food and packaging applications. It offers oil-free operation with superior performance and reliability in demanding environments. It has a fully air-cooled design to ensure high standards of hygiene which goes further by using corrosion-resistant materials.",
     imageUrl: ["/novadry.webp"],
     features: [
       "100% oil-free operation",
@@ -1991,8 +1991,8 @@ export const productData = [
       "Self-draining design",
       "Optional oxygen operation",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611043902_NOVADRY_web.pdf",
+    videoId: "SHamqTPtP9k",
   },
   {
     id: "ley18",
@@ -2000,7 +2000,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "SCREWLINE SP",
     description:
-      "SCREWLINE SP is a robust dry screw vacuum pump engineered for demanding industrial processes. It features a unique screw design optimized for harsh applications and continuous operation.",
+      "SCREWLINE SP is a robust dry screw vacuum pump engineered for demanding industrial processes. It features a unique screw design optimized for harsh applications and continuous operation. Based on the screw principle, the standard versions of the SCREWLINE pumps are air-cooled from the outside for industrial applications.",
     imageUrl: ["/screwlinesp.webp"],
     features: [
       "Heavy-duty construction",
@@ -2033,8 +2033,8 @@ export const productData = [
       "High uptime reliability",
       "Easy serviceability",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611 0109 02_SCREWLINE_Broschure_EN_web.pdf",
+    videoId: "8_cZLLMww2M",
   },
   {
     id: "ley19",
@@ -2042,7 +2042,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "VARODRY",
     description:
-      "VARODRY is an innovative dry compressing vacuum pump designed for industrial applications. It offers reliable performance with low maintenance requirements and excellent energy efficiency.",
+      "VARODRY is an innovative dry compressing vacuum pump designed for industrial applications. It offers reliable performance with low maintenance requirements. VARODRY HD/O2 variant is specifically designed with a stainless steel exhaust and built-in purge module. The optimised temperature profile ensures handling high amount of water vapor safely.",
     imageUrl: ["/varodry.webp"],
     features: [
       "100% oil-free operation",
@@ -2075,8 +2075,8 @@ export const productData = [
       "Easy maintenance access",
       "Long service intervals",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611008102_VARODRY_web.pdf",
+    videoId: "60WiScdBDUU",
   },
   {
     id: "ley20",
@@ -2084,7 +2084,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "NOVADRY NDi System",
     description:
-      "NOVADRY NDi System is an integrated vacuum solution featuring advanced control capabilities and smart monitoring for food packaging and processing applications.",
+      "NOVADRY NDi System is an integrated vacuum solution featuring advanced control capabilities and smart monitoring for food packaging and processing applications. The smart control via our VAControl CAB allows operation at the selected target pressure to not waste any performance or energy. All pump data is available anytime – from anywhere.",
     imageUrl: ["/novadryndi.webp"],
     features: [
       "Integrated control system",
@@ -2117,8 +2117,8 @@ export const productData = [
       "Data logging",
       "System redundancy",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611220102_NOVADRY Systems_web.pdf",
+    videoId: "SHamqTPtP9k",
   },
   {
     id: "ley21",
@@ -2126,7 +2126,7 @@ export const productData = [
     pumpType: "Industrial Dry Vacuum Pumps",
     name: "VARODRY VDi System",
     description:
-      "VARODRY VDi System is a complete vacuum solution with integrated controls designed for industrial applications requiring reliable and efficient vacuum generation.",
+      "VARODRY VDi System is a complete vacuum solution with integrated controls designed for industrial applications requiring reliable and efficient vacuum generation. Intelligent software functions such as maintenance and service alerts or the set up of different user profiles guarantee best operation performance.",
     imageUrl: ["/varodryvdi.webp"],
     features: [
       "Integrated pump control",
@@ -2159,8 +2159,8 @@ export const productData = [
       "System diagnostics",
       "Flexible configuration",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3611220202_VARODRY Systems_web.pdf",
+    videoId: "KeN3hj4ynac",
   },
   {
     id: "ley22",
@@ -2168,8 +2168,8 @@ export const productData = [
     pumpType: "Roots Blowers",
     name: "RUVAC WH / WHU",
     description:
-      "RUVAC WH/WHU series are high-performance Roots vacuum pumps designed for industrial applications requiring high pumping speeds. These pumps feature advanced rotor technology and reliable operation.",
-    imageUrl: ["/ruvacwh.webp", "/pump5.png"],
+      "RUVAC WH/WHU series are high-performance Roots vacuum pumps designed for industrial applications requiring high pumping speeds. These pumps feature advanced rotor technology and reliable operation. RUVAC WHU pumps are equipped with a bypass line and may be operated at its maximum power from atmospheric pressure.",
+    imageUrl: ["/ruvacwh.webp"],
     features: [
       "Advanced rotor design",
       "High pumping speed",
@@ -2202,7 +2202,7 @@ export const productData = [
       "Various flange sizes",
     ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: "ON_PAtybIaY",
   },
   {
     id: "ley23",
@@ -2210,7 +2210,7 @@ export const productData = [
     pumpType: "Roots Blowers",
     name: "RUVAC WA / WAU",
     description:
-      "RUVAC WA/WAU series are compact Roots pumps offering efficient vacuum performance for medium-sized applications. They combine reliability with cost-effective operation.",
+      "RUVAC WA/WAU series are compact Roots pumps offering efficient vacuum performance for medium-sized applications. They combine reliability with cost-effective operation. RUVAC WA / WAU roots blowers are equipped with radial shaft sealing rings made of FPM (FKM) for longer service intervals. These being dry roots blowers are environmentally friendly.",
     imageUrl: ["/ruvacwa.webp"],
     features: [
       "Compact design",
@@ -2244,7 +2244,7 @@ export const productData = [
       "Standardized connections",
     ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: "BGoIR4uQjZk",
   },
   {
     id: "ley24",
@@ -2252,7 +2252,7 @@ export const productData = [
     pumpType: "Roots Blowers",
     name: "RUVAC WS / WSU",
     description:
-      "RUVAC WS/WSU series are specialized Roots pumps designed for high-throughput applications. These pumps feature enhanced performance capabilities and robust construction for demanding processes.",
+      "RUVAC WS/WSU series are specialized Roots pumps designed for high-throughput applications. These pumps feature enhanced performance capabilities and robust construction for demanding processes. Roots vacuum pumps of the series RUVAC WSU are provided with an additional integrated pressure equalization line and a differential pressure valve.",
     imageUrl: ["/ruvacws.webp"],
     features: [
       "High throughput design",
@@ -2286,7 +2286,7 @@ export const productData = [
       "System integration ready",
     ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: "IH8_M-G5XW0",
   },
   {
     id: "ley25",
@@ -2295,7 +2295,7 @@ export const productData = [
     name: "TURBOVAC i",
     description:
       "TURBOVAC i series are high-performance turbomolecular pumps with integrated drive electronics. These pumps provide excellent vacuum performance and reliability for demanding high and ultra-high vacuum applications.",
-    imageUrl: ["/turbovaci.webp", "/pump6.png"],
+    imageUrl: ["/turbovaci.webp"],
     features: [
       "Integrated controller and drive electronics",
       "Advanced rotor design",
@@ -2327,8 +2327,8 @@ export const productData = [
       "Venting options",
       "Various flange sizes available",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3610 0041 02_TURBOVACi_LR.pdf",
+    videoId: "ZXO5bN2eJp8",
   },
   {
     id: "ley26",
@@ -2336,7 +2336,7 @@ export const productData = [
     pumpType: "Turbomolecular Vacuum Pumps",
     name: "TURBOVAC MAG",
     description:
-      "TURBOVAC MAG series are advanced magnetic bearing turbomolecular pumps designed for ultra-high vacuum applications. These pumps offer maintenance-free operation with superior reliability.",
+      "TURBOVAC MAG series are advanced magnetic bearing turbomolecular pumps designed for ultra-high vacuum applications. These pumps offer maintenance-free operation with superior reliability. Weighing in at under 60 kg they are the lightest.",
     imageUrl: ["/turbovacmag.webp"],
     features: [
       "Magnetic bearing technology",
@@ -2369,8 +2369,8 @@ export const productData = [
       "Backing pump protection",
       "Temperature management",
     ],
-    datasheetUrl: "",
-    videoId: "",
+    datasheetUrl: "/3610-0079-02-TURBOVAC-MAG-Integra.pdf",
+    videoId: "sNYTu6nYLt8",
   },
   {
     id: "ley27",
@@ -2378,7 +2378,7 @@ export const productData = [
     pumpType: "Oil Diffusion Vacuum Pumps",
     name: "DIFFVAC DP",
     description:
-      "DIFFVAC DP series are high-performance oil diffusion pumps designed for high and ultra-high vacuum applications. These pumps provide excellent pumping speeds with reliable operation.",
+      "DIFFVAC DP series are high-performance oil diffusion pumps designed for high and ultra-high vacuum applications. These pumps provide excellent pumping speeds with reliable operation. The DP series oil diffusion pumps are also low maintenance due to no wear caused by revolving parts.",
     imageUrl: ["/diffvacdp.webp"],
     features: [
       "High pumping speed",
@@ -2411,7 +2411,7 @@ export const productData = [
       "Fractionating jet system",
       "Optional accessories",
     ],
-    datasheetUrl: "",
+    datasheetUrl: "/OnePager_DIFFVAC_DP_web.pdf",
     videoId: "",
   },
   {
@@ -2420,7 +2420,7 @@ export const productData = [
     pumpType: "Oil Diffusion Vacuum Pumps",
     name: "DIFFVAC OB",
     description:
-      "DIFFVAC OB series are optimized oil diffusion pumps for industrial applications requiring consistent high vacuum performance. These pumps feature advanced design for improved efficiency.",
+      "DIFFVAC OB series are optimized oil diffusion pumps for industrial applications requiring consistent high vacuum performance. These pumps feature advanced design for improved efficiency. This series of oil vapor boosters are ideally suited for processes where you need pumping speed and gas-throughputs.",
     imageUrl: ["/diffvacob.webp"],
     features: [
       "Optimized jet design",
@@ -2453,7 +2453,7 @@ export const productData = [
       "Multiple mounting options",
       "Industrial controls",
     ],
-    datasheetUrl: "",
+    datasheetUrl: "/OnePager_DIFFVAC_OB_web.pdf",
     videoId: "",
   },
   {
@@ -2496,7 +2496,7 @@ export const productData = [
       "Multiple compressor options",
     ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: "4HALO8Q8HiQ",
   },
   {
     id: "ley30",
@@ -2504,7 +2504,7 @@ export const productData = [
     pumpType: "Cryogenic Systems",
     name: "COOLPOWER e",
     description:
-      "COOLPOWER e series are compact cold heads designed for cryogenic cooling applications. These units provide efficient and reliable cooling for various scientific and industrial applications.",
+      "COOLPOWER e series are compact cold heads designed for cryogenic cooling applications. These units provide reliable cooling for various scientific and industrial applications. Maintenance for the mechanically driven cold heads is easy as well.",
     imageUrl: ["/coolpowere.webp"],
     features: [
       "High reliability design",
@@ -2538,7 +2538,7 @@ export const productData = [
       "Compatibility options",
     ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: "k3D2HHXTUss",
   },
   {
     id: "ley31",
@@ -2546,8 +2546,8 @@ export const productData = [
     pumpType: "Cryogenic Systems",
     name: "COOLVAC e",
     description:
-      "COOLVAC e series are high-performance cryopumps providing ultra-high vacuum capabilities. These pumps offer superior pumping speeds and extremely low ultimate pressures for demanding applications.",
-    imageUrl: ["/coolvace.webp", "/pump7.png"],
+      "COOLVAC e series are high-performance cryopumps providing ultra-high vacuum capabilities. These pumps offer superior pumping speeds and extremely low ultimate pressures for demanding applications. The controller is easy to operate.",
+    imageUrl: ["/coolvace.webp"],
     features: [
       "High pumping speed",
       "Ultra-high vacuum capable",
@@ -2580,7 +2580,7 @@ export const productData = [
       "Multiple mounting configurations",
     ],
     datasheetUrl: "",
-    videoId: "",
+    videoId: "6IxFH7nnbUc",
   },
 
   // Welch
