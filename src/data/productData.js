@@ -2592,7 +2592,7 @@ export const productData = [
     name: "SCSpro 15",
 
     description:
-      "The SCSpro 15 is a high-performance, oil-free scroll vacuum pump designed for clean applications requiring deep vacuum. It features advanced scroll technology with a hermetically sealed design and low maintenance requirements.",
+      "The SCSpro 15 is a high-performance, oil-free scroll vacuum pump designed for clean applications requiring deep vacuum. It features advanced scroll technology with a hermetically sealed design and low maintenance requirements. Welch SCSpro 15 has a built-in self-cleaning air flush that removes liquefied vapors that can condense in pump from a trapped application.",
     imageUrl: ["/scroll.jpg"],
     features: [
       "100% oil-free operation",
@@ -2616,7 +2616,7 @@ export const productData = [
     ],
     technicalSpecs: {
       "Pumping Speed": "15.0 m³/h (250 L/min)",
-      "Ultimate Pressure": "< 0.01 mbar (< 7.5 x 10⁻³ Torr)",
+      "Ultimate Pressure": "< 7.5 x 10⁻³ Torr",
       "Power Consumption": "0.75 kW",
       "Noise Level": "< 55 dB(A)",
       "Operating Temperature": "10-40°C",
@@ -2633,7 +2633,7 @@ export const productData = [
       "Two-year warranty",
     ],
     datasheetUrl:
-      "https://www.welchvacuum.com/products/scroll-vacuum-pumps/scspro-15",
+      "/2023_11_Welch_B_SCpro15 Scroll.pdf",
     videoId: "",
   },
   {
@@ -2681,7 +2681,7 @@ export const productData = [
       "Optional inlet filter",
       "Multiple voltage options",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro4",
+    datasheetUrl: "/2020 CRVProBrochure(2-65).pdf",
     videoId: "",
   },
   {
@@ -2729,7 +2729,7 @@ export const productData = [
       "Multiple voltage configurations",
       "Extended warranty options",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro6",
+    datasheetUrl: "/2021-02_welch_b_crvproemea_en.pdf",
     videoId: "",
   },
   {
@@ -2777,7 +2777,7 @@ export const productData = [
       "Multiple mounting positions",
       "Global voltage compatibility",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro8",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/rotary-vane-pumps/rotary-vane-pump-crv-pro-8",
     videoId: "",
   },
   {
@@ -2825,7 +2825,7 @@ export const productData = [
       "Safety valve protection",
       "Optional water cooling",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro16",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/rotary-vane-pumps/rotary-vane-pump-crv-pro-16",
     videoId: "",
   },
   {
@@ -2857,8 +2857,8 @@ export const productData = [
       "Research facilities",
     ],
     technicalSpecs: {
-      "Pumping Speed": "24.0 m³/h (400 L/min)",
-      "Ultimate Pressure": "8 × 10⁻⁴ mbar",
+      "Pumping Speed": "26.2 m³/h (400 L/min)",
+      "Ultimate Pressure": "3 × 10⁻3 mbar",
       "Motor Power": "1.1 kW",
       "Noise Level": "60 dB(A)",
       "Oil Capacity": "1.5 L",
@@ -2873,7 +2873,7 @@ export const productData = [
       "Energy efficiency options",
       "Extended warranty available",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro24",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/rotary-vane-pumps/rotary-vane-pump-crv-pro-24",
     videoId: "",
   },
   {
@@ -2905,8 +2905,8 @@ export const productData = [
       "Central vacuum supply",
     ],
     technicalSpecs: {
-      "Pumping Speed": "30.0 m³/h (500 L/min)",
-      "Ultimate Pressure": "5 × 10⁻⁴ mbar",
+      "Pumping Speed": "33.1 m³/h (500 L/min)",
+      "Ultimate Pressure": "3 × 10⁻3 mbar",
       "Motor Power": "1.5 kW",
       "Noise Level": "62 dB(A)",
       "Oil Capacity": "2.0 L",
@@ -2921,7 +2921,7 @@ export const productData = [
       "Variable frequency drive compatible",
       "Industrial communication protocols",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro30",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/rotary-vane-pumps/rotary-vane-pump-crv-pro-30",
     videoId: "",
   },
   {
@@ -2953,7 +2953,7 @@ export const productData = [
       "Multiple point extraction",
     ],
     technicalSpecs: {
-      "Pumping Speed": "48.0 m³/h (800 L/min)",
+      "Pumping Speed": "55.7 m³/h (800 L/min)",
       "Ultimate Pressure": "3 × 10⁻⁴ mbar",
       "Motor Power": "2.2 kW",
       "Noise Level": "65 dB(A)",
@@ -2969,7 +2969,7 @@ export const productData = [
       "Energy efficiency optimization",
       "Extended warranty options",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro48",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/rotary-vane-pumps/rotary-vane-pump-crv-pro-48",
     videoId: "",
   },
   {
@@ -3001,8 +3001,8 @@ export const productData = [
       "Process manufacturing",
     ],
     technicalSpecs: {
-      "Pumping Speed": "65.0 m³/h (1083 L/min)",
-      "Ultimate Pressure": "2 × 10⁻⁴ mbar",
+      "Pumping Speed": "74.3 m³/h (1083 L/min)",
+      "Ultimate Pressure": "3 × 10-3 mbar",
       "Motor Power": "3.0 kW",
       "Noise Level": "68 dB(A)",
       "Oil Capacity": "4.0 L",
@@ -3017,7 +3017,7 @@ export const productData = [
       "Remote monitoring and control",
       "Advanced protection features",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/crvpro65",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/rotary-vane-pumps/rotary-vane-pump-crv-pro-65",
     videoId: "",
   },
   {
@@ -3049,7 +3049,7 @@ export const productData = [
       "Vacuum drying",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "160 L/min",
+      "Free Air Capacity": "25 L/min",
       "Ultimate Pressure": "1 × 10⁻⁴ Torr",
       "Motor Power": "0.33 HP",
       "Oil Capacity": "1.0 L",
@@ -3065,8 +3065,8 @@ export const productData = [
       "Isolation valve option",
       "Multiple voltage options",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/duoseal1400",
-    videoId: "",
+    datasheetUrl: "/Belt_Drive_DuoSeal_1374_1376_1397_1400_1402_1405.pdf",
+    videoId: "mZfY115hiSo",
   },
   {
     id: "wel11",
@@ -3097,7 +3097,7 @@ export const productData = [
       "Vacuum drying systems",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "200 L/min",
+      "Free Air Capacity": "160 L/min",
       "Ultimate Pressure": "1 × 10⁻⁴ Torr",
       "Motor Power": "0.5 HP",
       "Oil Capacity": "1.5 L",
@@ -3113,7 +3113,7 @@ export const productData = [
       "Belt tension adjustment",
       "Extended warranty available",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/duoseal1402",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/belt-driven-pump/duoseal-1402",
     videoId: "",
   },
   {
@@ -3145,8 +3145,8 @@ export const productData = [
       "Analytical instrumentation",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "275 L/min",
-      "Ultimate Pressure": "5 × 10⁻⁵ Torr",
+      "Free Air Capacity": "90 L/min",
+      "Ultimate Pressure": "1.3 × 10⁻⁵ Torr",
       "Motor Power": "0.75 HP",
       "Oil Capacity": "2.0 L",
       "Inlet Connection": '1-1/4" NPT',
@@ -3161,7 +3161,7 @@ export const productData = [
       "Safety features",
       "Research-grade construction",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/duoseal1405",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/belt-driven-pump/duoseal-1405",
     videoId: "",
   },
   {
@@ -3193,7 +3193,7 @@ export const productData = [
       "Process manufacturing",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "400 L/min",
+      "Free Air Capacity": "300 L/min",
       "Ultimate Pressure": "1 × 10⁻⁴ Torr",
       "Motor Power": "1.0 HP",
       "Oil Capacity": "3.0 L",
@@ -3209,7 +3209,7 @@ export const productData = [
       "Easy servicing design",
       "Industrial warranty",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/duoseal1376",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/belt-driven-pump/duoseal-1376",
     videoId: "",
   },
   {
@@ -3241,7 +3241,7 @@ export const productData = [
       "Industrial drying",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "350 L/min",
+      "Free Air Capacity": "500 L/min",
       "Ultimate Pressure": "2 × 10⁻⁴ Torr",
       "Motor Power": "0.85 HP",
       "Oil Capacity": "2.5 L",
@@ -3257,7 +3257,7 @@ export const productData = [
       "Industrial-grade filtration",
       "Continuous duty rating",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/duoseal1397",
+    datasheetUrl: "/duoseal-manual.pdf",
     videoId: "",
   },
   {
@@ -3289,8 +3289,8 @@ export const productData = [
       "Scientific applications",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "300 L/min",
-      "Ultimate Pressure": "8 × 10⁻⁵ Torr",
+      "Free Air Capacity": "35 L/min",
+      "Ultimate Pressure": "1.5 × 10⁻2 Torr",
       "Motor Power": "0.8 HP",
       "Oil Capacity": "2.2 L",
       "Inlet Connection": '1-1/4" NPT',
@@ -3305,7 +3305,7 @@ export const productData = [
       "Extended reliability features",
       "Professional installation options",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/duoseal1399",
+    datasheetUrl: "/duoseal-belt-drive-model-1399.pdf",
     videoId: "",
   },
   {
@@ -3353,7 +3353,7 @@ export const productData = [
       "Rubber feet",
       "Multiple voltage options",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2522",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2522",
     videoId: "",
   },
   {
@@ -3401,7 +3401,7 @@ export const productData = [
       "Temperature management",
       "Service indicators",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2534",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2534",
     videoId: "",
   },
   {
@@ -3449,7 +3449,7 @@ export const productData = [
       "Multiple mounting options",
       "Global certification",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2546",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2546",
     videoId: "",
   },
   {
@@ -3497,7 +3497,7 @@ export const productData = [
       "Safety features",
       "Extended warranty options",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2561",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2561",
     videoId: "",
   },
   {
@@ -3545,7 +3545,7 @@ export const productData = [
       "Multiple protection features",
       "Global certifications",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2562",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2562",
     videoId: "",
   },
   {
@@ -3593,7 +3593,7 @@ export const productData = [
       "Multiple safety features",
       "Extended service intervals",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2563",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2563",
     videoId: "",
   },
   {
@@ -3641,7 +3641,7 @@ export const productData = [
       "Protection systems",
       "Industrial reliability",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2567",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2567",
     videoId: "",
   },
   {
@@ -3689,7 +3689,7 @@ export const productData = [
       "Industrial controls",
       "Extended service life",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/wob2581",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/wob-l-piston-pumps/piston-pump-wob-l-2581",
     videoId: "",
   },
   {
@@ -3746,7 +3746,7 @@ export const productData = [
     pumpType: "Diaphragm Pumps",
     name: "Chemistry Diaphragm Pumps (MPC)",
     description:
-      "The Chemistry Diaphragm Pumps (MPC) series are specifically designed for handling aggressive chemicals and vapors. Features 100% oil-free operation with PTFE-coated components for maximum chemical resistance.",
+      "The Chemistry Diaphragm Pumps (MPC) series are specifically designed for handling aggressive chemicals and vapors. Features 100% oil-free operation with PTFE-coated components.",
     imageUrl: ["/chem.jpg"],
     features: [
       "100% oil-free operation",
@@ -3785,8 +3785,8 @@ export const productData = [
       "Inlet catch pot available",
       "Safety overpressure valve",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/mpc",
-    videoId: "",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/diaphragm-pumps/chemical-resistant-diaphragm-pumps",
+    videoId: "oMiwu1MXOws",
   },
   {
     id: "wel26",
@@ -3833,7 +3833,7 @@ export const productData = [
       "Multiple voltage options",
       "CE certification",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/mp",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/diaphragm-pumps/standard-duty-diaphragm-pumps",
     videoId: "",
   },
   {
@@ -3881,7 +3881,7 @@ export const productData = [
       "Customizable programs",
       "Maintenance tracking",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/lvs",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/laboratory-vacuum-systems",
     videoId: "",
   },
   {
@@ -3929,7 +3929,7 @@ export const productData = [
       "Auto calibration",
       "Extended battery packs",
     ],
-    datasheetUrl: "https://welchvacuum.com/products/gemini",
+    datasheetUrl: "https://www.welchvacuum.com/en-in/gemini-pumps",
     videoId: "",
   },
   {

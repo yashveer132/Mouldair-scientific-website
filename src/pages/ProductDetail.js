@@ -11,6 +11,7 @@ import {
   FaTools,
   FaShieldAlt,
   FaFileExcel,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { productData } from "../data/productData";
 
@@ -50,7 +51,17 @@ const ProductDetail = () => {
             {product.datasheetUrl && (
               <motion.a
                 href={product.datasheetUrl}
-                download
+                download={!product.datasheetUrl.startsWith("https:")}
+                target={
+                  product.datasheetUrl.startsWith("https:")
+                    ? "_blank"
+                    : undefined
+                }
+                rel={
+                  product.datasheetUrl.startsWith("https:")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -58,8 +69,14 @@ const ProductDetail = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaFileExcel className="mr-2" />
-                Download Document
+                {product.datasheetUrl.startsWith("https:") ? (
+                  <FaExternalLinkAlt className="mr-2" />
+                ) : (
+                  <FaFileExcel className="mr-2" />
+                )}
+                {product.datasheetUrl.startsWith("https:")
+                  ? "Visit Website"
+                  : "Download Document"}
               </motion.a>
             )}
           </div>

@@ -236,9 +236,13 @@ const brandDescriptions = {
     description: (
       <div>
         <p>
-          Welch delivers robust vacuum solutions, including rotary vane,
-          diaphragm, and scroll pumps, designed to meet the stringent needs of
-          laboratory and industrial environments.
+          Welch is a leading pump manufacturer of high quality, durable, vacuum
+          products, which includes diaphragm pumps, rotary vane pumps, and
+          vacuum systems. Welch pumps are designed for a wide range of
+          applications, including laboratory, industrial, and medical uses. With
+          a focus on reliability and performance, Welch provides innovative
+          solutions for various industries, ensuring efficient and effective
+          vacuum processes.
         </p>
       </div>
     ),
