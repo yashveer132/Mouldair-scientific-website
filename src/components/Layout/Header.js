@@ -37,7 +37,6 @@ const brandLabels = {
   welch: "Welch",
 };
 
-// Map the product data for nested dropdowns
 const brandMap = productData.reduce((acc, product) => {
   const { brand, pumpType } = product;
   if (!acc[brand]) {

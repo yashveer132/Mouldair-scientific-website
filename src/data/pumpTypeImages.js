@@ -18,4 +18,9 @@ export const pumpTypeImages = {
   "Cryogenic Pumps": "/original.png",
   "Scroll Vacuum Pump": "/scroll.jpg",
   "WOB-L Piston Pumps": "/wobl.jpg",
+  "Specialty Vacuum Pumps": "/1400N-50_medium.avif",
+  "Vacuum Pump Oils": "/directorr-premium-vacuum-oil-5l.jpg",
+  "Fluid Aspiration Systems":
+    "/aspiration-system-biovac-106-with-4l-bottle.jpg",
+  "Vacuum Gauges and Controllers": "/vcpro-601.png",
 };

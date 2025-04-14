@@ -51,7 +51,6 @@ const Home = () => {
     }
   };
 
-  // Add preload effect
   useEffect(() => {
     const img = new Image();
     img.src = "/original.png";
