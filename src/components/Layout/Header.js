@@ -90,7 +90,6 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md z-50 sticky top-0">
-      {/* Top bar with email, phone, and social links */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -145,7 +144,6 @@ const Header = () => {
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16 sm:h-20">
-                {/* Logo */}
                 <div className="flex flex-1 items-center space-x-2 sm:space-x-3">
                   <Link to="/">
                     <motion.div
@@ -165,9 +163,7 @@ const Header = () => {
                   </Link>
                 </div>
 
-                {/* Desktop Nav */}
                 <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6 xl:space-x-8 mr-32">
-                  {/* Home */}
                   <motion.div className="transition duration-300">
                     <Link
                       to="/"
@@ -181,7 +177,6 @@ const Header = () => {
                     </Link>
                   </motion.div>
 
-                  {/* PRODUCTS (DESKTOP) */}
                   <div
                     className="relative"
                     onMouseEnter={handleProductsEnter}
@@ -254,7 +249,7 @@ const Header = () => {
                               >
                                 <Link
                                   to={`/categories/${brand}`}
-                                  className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                                 >
                                   {brandLabels[brand]}
                                 </Link>
@@ -320,7 +315,7 @@ const Header = () => {
                                             >
                                               <Link
                                                 to={`/categories/${brand}/${pumpType}`}
-                                                className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap"
                                               >
                                                 {pumpTypeLabels[pumpType] ||
                                                   pumpType}
@@ -397,7 +392,7 @@ const Header = () => {
                                                         >
                                                           <Link
                                                             to={`/products/${prod.id}`}
-                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                                                            className="block px-3 py-1.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap"
                                                           >
                                                             {prod.name}
                                                           </Link>
@@ -422,7 +417,6 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
 
-                  {/* TECHNICAL CORNER (DESKTOP) */}
                   <div
                     className="relative"
                     onMouseEnter={() => setIsTechnicalOpen(true)}
@@ -474,7 +468,6 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
 
-                  {/* Additional Nav Items */}
                   {otherNav.map((item) => (
                     <motion.div
                       key={item.name}
@@ -494,7 +487,6 @@ const Header = () => {
                   ))}
                 </div>
 
-                {/* Mobile menu button */}
                 <div className="flex items-center md:hidden">
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-indigo-600 focus:outline-none">
                     {open ? (
@@ -513,7 +505,6 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Mobile Nav */}
             <AnimatePresence>
               {open && (
                 <Disclosure.Panel
@@ -526,7 +517,6 @@ const Header = () => {
                   className="md:hidden bg-indigo-50 overflow-hidden"
                 >
                   <div className="px-2 pt-2 pb-3 space-y-1">
-                    {/* Home (Mobile) */}
                     <Link
                       to="/"
                       className={`${
@@ -538,7 +528,6 @@ const Header = () => {
                       Home
                     </Link>
 
-                    {/* PRODUCTS (MOBILE) */}
                     <Disclosure>
                       {({ open: productsOpen }) => (
                         <>
@@ -643,7 +632,7 @@ const Header = () => {
                                                                 <Link
                                                                   key={prod.id}
                                                                   to={`/products/${prod.id}`}
-                                                                  className="block px-4 py-2 text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition-colors"
+                                                                  className="block px-3 py-1.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap"
                                                                 >
                                                                   {prod.name}
                                                                 </Link>
@@ -670,7 +659,6 @@ const Header = () => {
                       )}
                     </Disclosure>
 
-                    {/* TECHNICAL CORNER (MOBILE) */}
                     <Disclosure>
                       {({ open: technicalOpen }) => (
                         <>
@@ -716,7 +704,6 @@ const Header = () => {
                       )}
                     </Disclosure>
 
-                    {/* Additional Nav Items (Mobile) */}
                     {otherNav.map((item) => (
                       <Link
                         key={item.name}

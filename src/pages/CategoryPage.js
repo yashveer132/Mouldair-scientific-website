@@ -169,42 +169,47 @@ const watsonMarlowSectors = [
   {
     title: "Pharmaceutical and Biotechnology",
     content:
-      "Supporting critical fluid transfer in pharmaceutical production, drug manufacturing, and biotechnology processes with precision and sterility.",
+      "Watson-Marlow's solutions for pharma and biotech include Quantum peristaltic pump for aseptic filling with ±0.5% accuracy, 400/600 series pumps for powder transfer, and 700 series for sterile fluid path operations. The 800 series bioprocessing pumps handle flows up to 8000 L/hr for vaccine production and cell culture. Key applications include: vaccine manufacturing, cell culture media transfer, buffer preparation, sterile filling, and harvest collection. Features include single-use technology integration, validation packages per BPOG/BPSA/ASME-BPE standards, and USP Class VI compliance.",
   },
   {
-    title: "Medical and Diagnostic Devices",
+    title: "Food and Beverage Processing",
     content:
-      "Reliable fluid handling solutions for diagnostic equipment and medical devices, ensuring safe and precise liquid transport.",
+      "For food and beverage production, Watson-Marlow offers PROFINET-enabled 530 series for precise ingredient dosing, Qdos series for pH control and CIP chemical metering, and MasoSine sinusoidal pumps for high-viscosity products up to 1,000,000 cP. Applications include: dairy processing with 3A-certified pumps, beverage additive dosing, confectionery manufacturing, and bakery ingredient transfer. MasoSine pumps handle delicate products with minimal shear and maintain product integrity. All pumps meet FDA, EC 1935/2004, and 3-A sanitary standards.",
   },
   {
-    title: "Food and Beverage",
+    title: "Industrial Process",
     content:
-      "Hygienic and contamination-free fluid handling for the production of dairy, beverages, sauces, and processed food products.",
+      "Industrial solutions include 530 industrial pumps for chemical dosing, Bredel heavy-duty hose pumps for abrasive slurries, and 701 series for high-pressure applications up to 7 bar. The Bredel APEX series handles particulate-laden fluids with hose life monitoring. Applications cover: mining process reagents, wastewater treatment, ceramic slip transfer, and pigment dosing. Features include SCADA integration, remote operation via PROFIBUS/PROFINET, and chemical-resistant materials like Marprene and Gore.",
   },
   {
-    title: "Industrial Applications",
+    title: "Environmental and Water Treatment",
     content:
-      "Robust pump solutions for manufacturing processes such as chemical production, adhesives, and polymer applications.",
+      "Watson-Marlow's water treatment solutions feature Qdos chemical metering pumps with ReNu single-use fluid paths, 620 series for polymer dosing achieving 99.5% accuracy, and 720 pumps for lime slurry transfer. Applications include: municipal water treatment, pH adjustment, flocculation, chlorine dioxide dosing, and phosphate removal. Systems offer flow rates from 0.1 to 4000 mL/min with integration into SCADA/PLC systems and remote monitoring capabilities.",
   },
   {
-    title: "Water and Wastewater",
+    title: "Biofuel Production",
     content:
-      "Efficient fluid control systems for dosing chemicals, water treatment, and sludge transfer in municipal and industrial applications.",
+      "For biofuel processes, Watson-Marlow provides 700 series pumps for enzyme dosing, Bredel APEX for spent grain transfer, and 530 series for precise chemical addition. Applications include: cellulosic ethanol production, biodiesel catalyst dosing, and biomass transfer. Pumps handle high-viscosity materials and abrasive slurries with flow rates up to 80m³/hr. Features include explosion-proof options meeting ATEX requirements and chemical-resistant hose materials.",
   },
   {
-    title: "Mining",
+    title: "Chemical Processing",
     content:
-      "Pumps designed to handle abrasive slurries, mine water, and chemical dosing in mineral extraction processes.",
+      "Chemical processing solutions include Qdos 60 for acid/alkali dosing, 630 series for solvent transfer, and Bredel APEX for corrosive chemical handling. Flow rates range from microliters to 80m³/hr. Applications include: polymer production, chlor-alkali processing, and specialty chemical manufacturing. All pumps feature chemical-resistant materials, seal-less designs for safety, and options for hazardous area operation meeting IECEx standards.",
   },
   {
-    title: "Automotive",
+    title: "Mining and Minerals",
     content:
-      "Fluid handling solutions for the precise application of paints, coatings, and chemical fluids in automotive manufacturing.",
+      "Mining solutions feature Bredel heavy-duty hose pumps handling slurries up to 80% solids content, APEX hose pumps for reagent dosing, and 530 industrial pumps for precise chemical metering. Applications include: thickener dosing, flotation reagents, cyanide transfer, and tailings treatment. Pumps offer abrasion resistance with hose materials like NR Endurance and NBR, with flow monitoring and predictive maintenance capabilities.",
   },
   {
-    title: "OEM (Original Equipment Manufacturer)",
+    title: "Print and Packaging",
     content:
-      "Custom-engineered fluid transfer solutions integrated into specialized equipment across various industries.",
+      "The print sector utilizes 520 series pumps for ink transfer, 620 series for coating applications, and Qdos for chemical dosing in plate processing. Flow rates from 0.001 to 3,500 mL/min with ±0.5% accuracy. Applications include: flexographic printing, coating delivery, ink dispensing, and fountain solution circulation. Features include pulsation-free flow, rapid color changing capabilities, and integration with printing machine controls.",
+  },
+  {
+    title: "Agricultural Processing",
+    content:
+      "Agricultural solutions include 520 series for pesticide dosing, Bredel pumps for fertilizer transfer, and 701 series for irrigation chemical injection. Applications cover: hydroponics nutrient dosing, pesticide application, and fertilizer concentrate metering. Systems feature weather-resistant enclosures, solar power compatibility for remote operation, and precision dosing for nutrient management with flow rates from 0.1 μL/min to 80m³/hr.",
   },
 ];
 
@@ -212,15 +217,62 @@ const brandDescriptions = {
   "watson-marlow": {
     aboutTitle: "About Watson-Marlow Pumps",
     description: (
-      <div>
-        <p className="mb-4">
-          Watson-Marlow Fluid Technology Solutions is the world leader in
-          peristaltic pumps and associated fluid path technologies for the life
-          science and process industries.
+      <div className="space-y-6">
+        <p className="mb-4 text-lg text-gray-800">
+          <span className="font-semibold text-indigo-700">
+            Watson-Marlow Fluid Technology Solutions
+          </span>{" "}
+          is the world leader in peristaltic pumps and associated fluid path
+          technologies for the life science and process industries.
+          Watson-Marlow's peristaltic pumps, which fall under the positive
+          displacement pump category, are designed to provide exceptional value,
+          low cost of ownership, outstanding reliability, ease of maintenance,
+          and proven after-sales service.
         </p>
-        <p className="mt-4 font-bold">
-          We, Mouldair Scientific, work closely with Watson Marlow’s Engineering
-          Team to help our customers find the right solutions.
+        <p className="text-lg text-gray-800">
+          We work closely with our customers to demonstrate how our PD pumps
+          ensure accurate metering, transfer, and filling, delivering
+          significant process efficiency over the lifetime of the equipment.
+        </p>
+        <div className="bg-indigo-50 rounded-xl p-6 shadow-inner flex flex-col items-center">
+          <h4 className="font-semibold text-indigo-800 mb-2 text-lg">
+            Key Factors to Consider When Choosing a Pump:
+          </h4>
+          <ul className="space-y-2 text-base text-gray-700 w-64">
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+              Flow rate
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+              System pressure
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+              Fluid viscosity
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+              Abrasiveness of the fluid
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+              Operating temperature
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+              Suction conditions
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+              Size of any particulates
+            </li>
+          </ul>
+        </div>
+        <p className="mt-6 font-bold text-indigo-900 text-xl text-center">
+          We, <span className="text-indigo-700">Mouldair Scientific</span>,
+          collaborate closely with Watson-Marlow's Engineering Team to help our
+          customers find the right solutions.
         </p>
       </div>
     ),
@@ -256,6 +308,7 @@ const CategoryPage = () => {
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
   const leyboldApplicationsRef = useRef(null);
   const welchApplicationsRef = useRef(null);
+  const watsonMarlowSectorsRef = useRef(null);
   const applicationContentRef = useRef(null);
 
   const scrollToElement = (ref, forceScroll = false) => {
@@ -277,6 +330,8 @@ const CategoryPage = () => {
       scrollToElement(leyboldApplicationsRef, true);
     } else if (brand === "welch") {
       scrollToElement(welchApplicationsRef, true);
+    } else if (brand === "watson-marlow") {
+      scrollToElement(watsonMarlowSectorsRef, true);
     }
   };
 
@@ -322,7 +377,9 @@ const CategoryPage = () => {
                 <h2 className="text-3xl font-extrabold text-gray-900 text-center">
                   {brandInfo.aboutTitle}
                 </h2>
-                {(brand === "leybold" || brand === "welch") && (
+                {(brand === "leybold" ||
+                  brand === "welch" ||
+                  brand === "watson-marlow") && (
                   <motion.button
                     onClick={scrollToApplications}
                     initial={{ opacity: 0 }}
@@ -331,7 +388,11 @@ const CategoryPage = () => {
                     whileTap={{ scale: 0.95 }}
                     className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold hover:bg-indigo-700 transition-all duration-300 flex items-center space-x-2"
                   >
-                    <span>View Applications</span>
+                    <span>
+                      {brand === "watson-marlow"
+                        ? "View Sectors and Products"
+                        : "View Applications"}
+                    </span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
@@ -563,8 +624,10 @@ const CategoryPage = () => {
 
         {brand === "watson-marlow" && (
           <>
-            {/* Sectors and Products Section */}
-            <section className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <section
+              ref={watsonMarlowSectorsRef}
+              className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"
+            >
               <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8">
                 Sectors and Products
               </h2>
@@ -606,54 +669,6 @@ const CategoryPage = () => {
                   </h3>
                   <p className="text-gray-700 text-lg leading-relaxed">
                     {watsonMarlowSectors[activeApplication].content}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-            </section>
-
-            {/* Existing Case Studies Section */}
-            <section className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-              <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8">
-                Watson-Marlow Case Studies
-              </h2>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="flex flex-wrap justify-center mb-6 sm:mb-8"
-              >
-                {watsonMarlowCaseStudies.map((caseStudy, index) => (
-                  <motion.button
-                    key={index}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setActiveCaseStudy(index)}
-                    className={`px-4 py-2 m-2 rounded-md text-lg font-medium transition-colors duration-300 ${
-                      activeCaseStudy === index
-                        ? "bg-indigo-600 text-white"
-                        : "bg-white text-indigo-600 hover:bg-indigo-100"
-                    }`}
-                  >
-                    {caseStudy.title}
-                  </motion.button>
-                ))}
-              </motion.div>
-
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeCaseStudy}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-white rounded-lg shadow-xl p-6 min-h-[200px]"
-                >
-                  <h3 className="text-2xl font-bold text-center text-gray-900 mb-4">
-                    {watsonMarlowCaseStudies[activeCaseStudy].title}
-                  </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    {watsonMarlowCaseStudies[activeCaseStudy].content}
                   </p>
                 </motion.div>
               </AnimatePresence>
