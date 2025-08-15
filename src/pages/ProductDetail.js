@@ -5,9 +5,6 @@ import { motion } from "framer-motion";
 import {
   FaIndustry,
   FaCog,
-  FaLeaf,
-  FaVolumeDown,
-  FaChartLine,
   FaTools,
   FaShieldAlt,
   FaFileExcel,
@@ -247,7 +244,7 @@ const ProductDetail = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Product Demo Video
               </h3>
-              <div className="aspect-video relative rounded-lg overflow-hidden shadow-lg">
+              <div className="relative rounded-lg overflow-hidden shadow-lg h-60 sm:aspect-video sm:h-auto">
                 <iframe
                   src={`https://www.youtube.com/embed/${product.videoId}`}
                   title="Product Demo Video"

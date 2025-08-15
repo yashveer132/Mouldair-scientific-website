@@ -3,10 +3,8 @@ import Layout from "../components/Layout/Layout";
 import { motion } from "framer-motion";
 import {
   companyInfo,
-  stats,
-  videoId,
+  videoIds,
   heroContent,
-  contentSection,
   ctaSection,
 } from "../data/aboutData";
 
@@ -14,13 +12,14 @@ const About = () => {
   return (
     <Layout>
       <div className="min-h-screen flex flex-col bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100">
-        <section className="relative flex items-center justify-center px-4 py-16 sm:py-24 md:py-32 lg:py-40 overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen">
+        <section className="relative flex items-center justify-center px-4 py-2 pb-10 sm:py-4 sm:pb-16 md:py-6 md:pb-20 lg:py-8 lg:pb-28 overflow-hidden min-h-[20vh] sm:min-h-[25vh] md:min-h-[30vh] lg:min-h-[35vh]">
           <div className="relative z-10 text-center text-black max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h1
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6"
+              style={{ fontWeight: 800 }}
             >
               {heroContent.title}
             </motion.h1>
@@ -28,12 +27,12 @@ const About = () => {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold"
+              style={{ fontWeight: 400 }}
             >
               {heroContent.subtitle}
             </motion.p>
           </div>
-
           <div className="absolute inset-0 z-0 overflow-hidden">
             <motion.div
               className="absolute rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-30 blur-2xl"
@@ -61,176 +60,58 @@ const About = () => {
           </div>
         </section>
 
-        <section className="relative px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-12 sm:mb-14 lg:mb-20 text-gray-900"
+              style={{ fontWeight: 800 }}
             >
-              {contentSection.title}
+              Our Authorised Principals{" "}
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl text-gray-700 mb-8"
-            >
-              {contentSection.content}
-            </motion.p>
-
-            <motion.div
-              className="h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full mb-8"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              style={{ transformOrigin: "left center" }}
-            ></motion.div>
-          </div>
-        </section>
-
-        <section className="relative px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-              {["/pump3.jpg", "/pump3.jpg", "/pump3.jpg"].map((src, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
+              {companyInfo.map((info, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="relative overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9"
+                  className="bg-gradient-to-br from-white via-indigo-50 to-purple-100 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center border border-indigo-100 hover:shadow-indigo-200 transition-shadow duration-300"
+                  style={{
+                    boxShadow:
+                      "0 8px 32px 0 rgba(80, 72, 229, 0.10), 0 1.5px 6px 0 rgba(80, 72, 229, 0.08)",
+                  }}
                 >
-                  <motion.img
-                    src={src}
-                    alt={`Company Image ${index + 1}`}
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                  <motion.div
-                    className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                  >
-                    <p className="text-white text-lg font-semibold">
-                      Learn More
+                  <div className="flex flex-col items-center p-8 flex-grow w-full">
+                    <div className="w-44 h-44 flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-md mb-6">
+                      <img
+                        src={info.image}
+                        alt={info.title}
+                        className="object-contain w-full h-full"
+                        style={{ maxHeight: "160px", maxWidth: "160px" }}
+                      />
+                    </div>
+                    <h3
+                      className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center"
+                      style={{ fontWeight: 800 }}
+                    >
+                      {info.title}
+                    </h3>
+                    <p
+                      className="text-base sm:text-lg text-gray-700 text-center font-bold"
+                      style={{ fontWeight: 400 }}
+                    >
+                      {info.content}
                     </p>
-                  </motion.div>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>
-
-        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-10 sm:mb-12 lg:mb-16 text-gray-900"
-            >
-              Our Company
-            </motion.h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
-              {companyInfo.map((info, index) => {
-                const IconComponent = info.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                    className="bg-white rounded-lg shadow-xl overflow-hidden flex flex-col"
-                  >
-                    <div className="p-6 flex-grow">
-                      <div className="flex items-center mb-4">
-                        <IconComponent className="text-2xl sm:text-3xl text-indigo-600 mr-3" />
-                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
-                          {info.title}
-                        </h3>
-                      </div>
-                      <p className="text-sm sm:text-base text-gray-700">
-                        {info.content}
-                      </p>
-                    </div>
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative aspect-w-16 aspect-h-9"
-                    >
-                      <img
-                        src={info.image}
-                        alt={info.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </motion.div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-indigo-700 text-white relative overflow-hidden">
-          <div className="max-w-7xl mx-auto relative z-10">
-            <motion.h2
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-12 sm:mb-16"
-            >
-              Mouldair Scientific by the Numbers
-            </motion.h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
-              {stats.map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.2, duration: 0.5 }}
-                  >
-                    <IconComponent className="mx-auto text-3xl sm:text-4xl md:text-5xl mb-4" />
-                    <motion.div
-                      className="text-2xl sm:text-3xl md:text-4xl font-bold"
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{
-                        delay: index * 0.2 + 0.3,
-                        duration: 0.5,
-                        type: "spring",
-                      }}
-                    >
-                      {stat.value}
-                    </motion.div>
-                    <p className="text-base sm:text-lg md:text-xl">
-                      {stat.label}
-                    </p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-          <motion.div
-            className="absolute inset-0 bg-indigo-600 opacity-50"
-            initial={{ scale: 0, borderRadius: "100%" }}
-            whileInView={{ scale: 2, borderRadius: "0%" }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
-          />
         </section>
 
         <motion.div
@@ -238,26 +119,41 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-lg shadow-xl p-6 sm:p-8 lg:p-10 mb-12 sm:mb-16 lg:mb-20 max-w-7xl  mt-12 sm:mt-16 lg:mt-20 mx-4 sm:mx-6 lg:mx-8"
+          className="bg-white rounded-2xl shadow-2xl p-6 sm:p-10 lg:p-14 mb-12 sm:mb-16 lg:mb-20 max-w-7xl mt-12 sm:mt-16 lg:mt-20 mx-4 sm:mx-6 lg:mx-8"
         >
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
+          <h3
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8 sm:mb-10 text-center"
+            style={{ fontWeight: 800 }}
+          >
             Experience Mouldair Scientific
           </h3>
-          <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 lg:mb-12 text-gray-700 text-center">
-            Watch our corporate video to learn more about our innovative
+          <p
+            className="text-base sm:text-lg md:text-xl mb-10 sm:mb-12 text-gray-700 text-center font-semibold"
+            style={{ fontWeight: 600 }}
+          >
+            Watch our corporate videos to learn more about our innovative
             solutions and global impact.
           </p>
-          <div
-            className="w-full h-0 relative rounded-lg overflow-hidden"
-            style={{ paddingBottom: "56.25%" }}
-          >
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title="Corporate Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute top-0 left-0 w-full h-full"
-            ></iframe>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {videoIds.map((id, idx) => (
+              <div
+                key={id}
+                className="rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-indigo-100 via-white to-purple-50 border border-indigo-100 flex flex-col"
+              >
+                <div
+                  className="relative w-full"
+                  style={{ paddingBottom: "56.25%" }}
+                >
+                  <iframe
+                    src={`https://www.youtube.com/embed/${id}`}
+                    title={`Corporate Video ${idx + 1}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full rounded-2xl"
+                  ></iframe>
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
 
@@ -268,10 +164,16 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 sm:mb-20 px-4 sm:px-6 lg:px-8"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h2
+            className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6"
+            style={{ fontWeight: 400 }}
+          >
             {ctaSection.title}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p
+            className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto font-semibold"
+            style={{ fontWeight: 600 }}
+          >
             {ctaSection.content}
           </p>
           <div className="flex justify-center">
@@ -279,6 +181,7 @@ const About = () => {
               href={ctaSection.buttonLink}
               className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
+              style={{ fontWeight: 700 }}
             >
               {ctaSection.buttonText}
             </motion.a>

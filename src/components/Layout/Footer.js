@@ -56,7 +56,7 @@ const Footer = () => {
                 <FaTwitter className="h-6 w-6" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/santosh-singh-65290431?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 className="text-gray-400 hover:text-indigo-500 transition"
                 whileHover={{ scale: 1.3, rotate: 10 }}
               >

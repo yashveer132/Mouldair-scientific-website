@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { motion, useTransform, useScroll, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import Layout from "../components/Layout/Layout";
 import AnimatedSection from "../components/AnimatedSection";
 import {
@@ -25,7 +25,6 @@ const Home = () => {
   const heroRef = useRef(null);
   const categoriesRef = useRef(null);
   const { hash } = useLocation();
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     if (hash === "#categories" && categoriesRef.current) {
@@ -33,18 +32,6 @@ const Home = () => {
     }
   }, [hash]);
 
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
-  const scaleSpring = useSpring(scale, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
   const handleScrollToCategories = () => {
     if (categoriesRef.current) {
       categoriesRef.current.scrollIntoView({ behavior: "smooth" });
@@ -64,16 +51,13 @@ const Home = () => {
           className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden min-h-[90vh] flex items-center"
         >
           <div className="absolute inset-0 bg-black opacity-10"></div>
-          <motion.div
-            style={{ opacity, scale: scaleSpring, y }}
-            className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10"
-          >
+          <motion.div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               <motion.div
                 initial="hidden"
                 animate="show"
                 variants={staggerContainer}
-                className="lg:w-1/2"
+                className="lg:w-1/2 lg:-mt-6"
               >
                 <motion.h1
                   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6"
@@ -90,7 +74,7 @@ const Home = () => {
                 <motion.div variants={fadeInUp}>
                   <button
                     onClick={handleScrollToCategories}
-                    className="group inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-indigo-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                    className="group flex sm:inline-flex justify-center items-center mx-auto sm:mx-0 lg:ml-20 bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-indigo-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                   >
                     {heroContent.buttonText}
                     <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -98,7 +82,7 @@ const Home = () => {
                 </motion.div>
               </motion.div>
               <motion.div
-                className="lg:w-1/2 relative"
+                className="lg:w-1/2 relative lg:-mt-28"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -174,8 +158,7 @@ const Home = () => {
         <AnimatedSection className="bg-gray-900 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
-              className="relative rounded-lg overflow-hidden shadow-2xl"
-              style={{ paddingBottom: "56.25%", height: 0 }}
+              className="relative rounded-lg overflow-hidden shadow-2xl pb-[75%] sm:pb-[56.25%] h-0"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -189,8 +172,7 @@ const Home = () => {
               ></iframe>
             </motion.div>
             <motion.div
-              className="relative rounded-lg overflow-hidden shadow-2xl"
-              style={{ paddingBottom: "56.25%", height: 0 }}
+              className="relative rounded-lg overflow-hidden shadow-2xl pb-[75%] sm:pb-[56.25%] h-0"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >

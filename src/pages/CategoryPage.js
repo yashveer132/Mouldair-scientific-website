@@ -148,23 +148,6 @@ const leyboldApplications = [
   },
 ];
 
-const watsonMarlowCaseStudies = [
-  {
-    title: "Case Study 1: Optimizing Fluid Transfer",
-    content:
-      "A major pharmaceutical company optimized fluid transfer during production, reducing downtime by 25% using Watson-Marlow’s peristaltic pumps, ensuring reliable and consistent output.",
-  },
-  {
-    title: "Case Study 2: Enhanced Chemical Processing",
-    content:
-      "A chemical plant saw a 30% increase in production efficiency after implementing Watson-Marlow pumps, thanks to superior resistance to corrosion and reliable flow control.",
-  },
-  {
-    title: "Case Study 3: Dairy Industry Efficiency",
-    content:
-      "In the dairy industry, Watson-Marlow pumps improved product consistency and hygiene, leading to a 20% decrease in maintenance costs and increased production reliability.",
-  },
-];
 const watsonMarlowSectors = [
   {
     title: "Pharmaceutical and Biotechnology",
@@ -305,7 +288,6 @@ const CategoryPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeLeyboldApplication, setActiveLeyboldApplication] = useState(0);
   const [activeApplication, setActiveApplication] = useState(0);
-  const [activeCaseStudy, setActiveCaseStudy] = useState(0);
   const leyboldApplicationsRef = useRef(null);
   const welchApplicationsRef = useRef(null);
   const watsonMarlowSectorsRef = useRef(null);
@@ -643,7 +625,14 @@ const CategoryPage = () => {
                     key={index}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => setActiveApplication(index)}
+                    onClick={() => {
+                      setActiveApplication(index);
+                      // scroll to the content (use same pattern as leybold/welch)
+                      setTimeout(
+                        () => scrollToElement(applicationContentRef),
+                        100
+                      );
+                    }}
                     className={`px-4 py-2 m-2 rounded-md text-lg font-medium transition-colors duration-300 ${
                       activeApplication === index
                         ? "bg-indigo-600 text-white"
@@ -657,6 +646,7 @@ const CategoryPage = () => {
 
               <AnimatePresence mode="wait">
                 <motion.div
+                  ref={applicationContentRef}
                   key={activeApplication}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

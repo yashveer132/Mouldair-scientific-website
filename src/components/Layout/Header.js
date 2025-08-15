@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -26,7 +22,10 @@ const otherNav = [
 const socialMedia = [
   { icon: FaFacebook, href: "#" },
   { icon: FaTwitter, href: "#" },
-  { icon: FaLinkedin, href: "#" },
+  {
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/in/santosh-singh-65290431?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
   { icon: FaInstagram, href: "#" },
 ];
 
@@ -97,8 +96,8 @@ const Header = () => {
         className="bg-indigo-600 text-white py-2 sm:py-3"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 sm:mb-0">
+          <div className="flex flex-row justify-center sm:justify-between items-center">
+            <div className="flex flex-row items-center space-x-4 mb-0">
               <a
                 href="mailto:info@mouldairscientific.com"
                 className="flex items-center text-sm sm:text-base lg:text-lg hover:text-indigo-200 transition-colors duration-300"
@@ -117,7 +116,7 @@ const Header = () => {
                 +076986 60715
               </a>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="hidden sm:flex sm:items-center sm:space-x-4">
               <span className="text-sm sm:text-base lg:text-lg mr-2">
                 Follow us:
               </span>
@@ -163,7 +162,8 @@ const Header = () => {
                   </Link>
                 </div>
 
-                <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6 xl:space-x-8 mr-32">
+                <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6 xl:space-x-8 md:ml-auto lg:mr-2">
+                  {" "}
                   <motion.div className="transition duration-300">
                     <Link
                       to="/"
@@ -176,7 +176,6 @@ const Header = () => {
                       Home
                     </Link>
                   </motion.div>
-
                   <div
                     className="relative"
                     onMouseEnter={handleProductsEnter}
@@ -416,7 +415,6 @@ const Header = () => {
                       )}
                     </AnimatePresence>
                   </div>
-
                   <div
                     className="relative"
                     onMouseEnter={() => setIsTechnicalOpen(true)}
@@ -467,7 +465,6 @@ const Header = () => {
                       )}
                     </AnimatePresence>
                   </div>
-
                   {otherNav.map((item) => (
                     <motion.div
                       key={item.name}
@@ -516,14 +513,14 @@ const Header = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="md:hidden bg-indigo-50 overflow-hidden"
                 >
-                  <div className="px-2 pt-2 pb-3 space-y-1">
+                  <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col items-center text-center">
                     <Link
                       to="/"
                       className={`${
                         location.pathname === "/"
                           ? "bg-indigo-100 text-indigo-700"
                           : "text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
-                      } block px-3 py-2 rounded-md text-base font-medium`}
+                      } w-full block px-4 py-2 rounded-md text-base font-medium text-center`}
                     >
                       Home
                     </Link>
@@ -531,8 +528,8 @@ const Header = () => {
                     <Disclosure>
                       {({ open: productsOpen }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-lg font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center">
-                            Products
+                          <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                            <span className="flex-1 text-center">Products</span>
                             <ChevronDownIcon
                               className={`${
                                 productsOpen ? "transform rotate-180" : ""
@@ -555,10 +552,10 @@ const Header = () => {
                                   <Disclosure key={brand}>
                                     {({ open: brandOpen }) => (
                                       <>
-                                        <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                                        <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
                                           <Link
                                             to={`/categories/${brand}`}
-                                            className="flex-1"
+                                            className="flex-1 text-center"
                                           >
                                             {brandLabels[brand]}
                                           </Link>
@@ -589,10 +586,10 @@ const Header = () => {
                                                       open: pumpTypeOpen,
                                                     }) => (
                                                       <>
-                                                        <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                                                        <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
                                                           <Link
                                                             to={`/categories/${brand}/${pumpType}`}
-                                                            className="flex-1"
+                                                            className="flex-1 text-center"
                                                           >
                                                             {pumpTypeLabels[
                                                               pumpType
@@ -632,7 +629,7 @@ const Header = () => {
                                                                 <Link
                                                                   key={prod.id}
                                                                   to={`/products/${prod.id}`}
-                                                                  className="block px-3 py-1.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap"
+                                                                  className="w-full block px-3 py-1.5 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap text-center"
                                                                 >
                                                                   {prod.name}
                                                                 </Link>
@@ -662,8 +659,10 @@ const Header = () => {
                     <Disclosure>
                       {({ open: technicalOpen }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between w-full px-4 py-3 rounded-md text-lg font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
-                            Technical Corner
+                          <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                            <span className="flex-1 text-center">
+                              Technical Corner
+                            </span>
                             <ChevronDownIcon
                               className={`${
                                 technicalOpen ? "transform rotate-180" : ""
@@ -683,17 +682,17 @@ const Header = () => {
                                   duration: 0.3,
                                   ease: "easeInOut",
                                 }}
-                                className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md text-center"
+                                className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md"
                               >
                                 <Link
                                   to="/technical#articles"
-                                  className="block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                                  className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
                                 >
                                   Latest Articles
                                 </Link>
                                 <Link
                                   to="/technical#case-studies"
-                                  className="block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                                  className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
                                 >
                                   Case Studies
                                 </Link>
@@ -712,7 +711,7 @@ const Header = () => {
                           location.pathname === item.href
                             ? "bg-indigo-100 text-indigo-700"
                             : "text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
-                        } block px-3 py-2 rounded-md text-base font-medium`}
+                        } w-full block px-4 py-2 rounded-md text-base font-medium text-center`}
                       >
                         {item.name}
                       </Link>
