@@ -45,6 +45,1117 @@ export const productData = [
     videoId: "/gjjoFTmX9xo",
   },
   {
+    id: "cintex_vacuum_oven",
+    brand: "cintex",
+    pumpType: "Ovens & Furnaces",
+    name: "Vacuum Oven (Round – Rectangular)",
+    description:
+      'Vacuum ovens with round and rectangular chambers featuring radiant warm wall heating for uniform temperature, PID control with dual digital indicator, and vacuum to 30"Hg. Regular and GMP models available.',
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Vacuum_Oven.png",
+    ],
+    features: [
+      "Heaters concealed for smooth chamber surfaces",
+      "Tempered inner glass viewing window",
+      "Radiant warm wall heating",
+      "304 SS chamber; GMP with SS inside/out",
+      "Two SS valves for evacuation and purge",
+      "Food-grade silicone gasket",
+      "PID controller with PT-100 sensor",
+    ],
+    applications: [
+      "Drying under vacuum",
+      "Degassing",
+      "Heat treatment",
+      "Material testing",
+    ],
+    technicalSpecs: {
+      "Vacuum Range": '1" to 30" Hg',
+      "Temp. Range (Rectangular)": "up to 250–450°C (model dependent)",
+      "Temp. Range (Round)": "up to 250–350°C (model dependent)",
+      Construction:
+        "304 SS chamber; Regular GI powder coated exterior; GMP full SS",
+    },
+    additionalFeatures: [
+      "Touch-screen HMI (optional)",
+      "Safety controller for overshoot",
+      "Printer output, 5000-line memory",
+      "21 CFR Part 11 compliance software",
+      "Audio alarm, timer",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/vacuum-oven.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_furnace_apm",
+    brand: "cintex",
+    pumpType: "Ovens & Furnaces",
+    name: "Furnace (APM Series)",
+    description:
+      "Front-loading laboratory furnace, 1200°C/1400°C, microprocessor PID control with safety fuse, ceramic insulation, door interlock and exhaust system. Regular and GMP models.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/furnace.png",
+    ],
+    features: [
+      "Ceramic board chamber with high-efficiency insulation",
+      "PID controller with CR/AL or Pt/Pt-Rh sensor",
+      "Solid-state safety fuse",
+      "Exhaust fan for gas extraction",
+      "Door interlock limit switch",
+    ],
+    applications: [
+      "Heat treatment",
+      "Ashing",
+      "Ceramic firing",
+      "Material testing",
+    ],
+    technicalSpecs: {
+      "Working Temp.": "1150°C (1200°C max) or 1350°C (1400°C max)",
+      Power: "230/440 V models",
+      Construction: "GI powder coated (Regular) or SS 304 (GMP)",
+    },
+    additionalFeatures: [
+      "Programmable PID controller",
+      "Printer output with logging",
+      "21 CFR Part 11 compliance software",
+      "Audio alarm",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/furnace.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_muffle_furnace",
+    brand: "cintex",
+    pumpType: "Ovens & Furnaces",
+    name: "Muffle Furnace",
+    description:
+      "Compact muffle furnaces for heat treatment, ashing and calibration. Kanthal A-1 elements, ceramic insulation, PID control. Regular and GMP models.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Muffle_furnace.png",
+    ],
+    features: [
+      "Kanthal A-1 heating elements (no exposed coils)",
+      "High-efficiency ceramic insulation",
+      "PID controller with dual display",
+      "Solid-state safety fuse",
+    ],
+    applications: [
+      "Ashing",
+      "Heat treatment",
+      "Ceramic",
+      "Thermocouple calibration",
+    ],
+    technicalSpecs: {
+      "Max Temp.": "1200°C (1400°C option)",
+      "Working Temp.": "400°C to 1160°C",
+      Construction: "Powder-coated exterior (Regular) / SS 304/316 (GMP)",
+    },
+    additionalFeatures: [
+      "Programmable PID",
+      "Printer output",
+      "21 CFR Part 11 software",
+      "Audio alarm",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/muffle-furnace.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_orbital_shaking_incubator",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "Orbital Shaking Incubator",
+    description:
+      'Bench-top incubator with dynamically balanced 1" orbit shaker, heating or cooling versions, PID temperature and RPM indication, balanced air circulation.',
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Orbital_shaking_Incubator.png",
+    ],
+    features: [
+      'Triple eccentric drive, 1" orbit',
+      "Heating or cooling model options",
+      "CFC-free cooling system",
+      "Microprocessor PID with digital RPM",
+      "Motorized blower air circulation",
+      "Viewing window with illumination",
+    ],
+    applications: ["Biological cultures", "Chemical solution shaking"],
+    technicalSpecs: {
+      "Speed Range": "50–200 RPM (25 mm orbit)",
+      "Temp. Range (Cooling)": "2°C to 60°C",
+      "Temp. Range (Heating)": "5°C above ambient to 60°C",
+    },
+    additionalFeatures: ["Interchangeable platforms"],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/orbital-shaking-incubator.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_orbital_shaker",
+    brand: "cintex",
+    pumpType: "Shakers & Stirrers",
+    name: "Orbital Shaker",
+    description:
+      "Bench-top orbital shaker for culture growth with SS platform and clamps, PMDC geared motor, 50–200 RPM adjustable speed.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Orbital_Shaker.png",
+    ],
+    features: [
+      "Compact, portable design",
+      "Digital RPM indicator",
+      "Multiple platform options",
+      "cGMP SS housing option",
+    ],
+    applications: ["Microorganism cultures", "Tissue cells"],
+    technicalSpecs: {
+      Speed: "50–200 RPM",
+      Orbit: "25 mm",
+      "Platform Sizes": "16–19 inch options",
+    },
+    additionalFeatures: ["2-tier/3-tier models available"],
+    datasheetUrl: "https://www.cintexindia.com/products/orbital-shaker.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_colony_counter",
+    brand: "cintex",
+    pumpType: "Lab Instruments",
+    name: "Colony Counter",
+    description:
+      "Digital colony counter with 4-digit resettable display, illumination, magnifier and pen probe for marking and counting.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/colony-counter.png",
+    ],
+    features: [
+      "4-digit resettable counter",
+      "Cool light illumination",
+      "Magnifying lens and Wolffhuegel grid",
+      "Probe pen for marking",
+    ],
+    applications: ["Bacteriology", "Pathology", "General labs"],
+    technicalSpecs: {
+      "Maximum Count": "9999",
+      "Lens Diameter": "4 inch",
+      Power: "230 VAC",
+    },
+    additionalFeatures: ["Printer output on model CIC-53 (optional)"],
+    datasheetUrl: "https://www.cintexindia.com/products/colony-counter.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_digital_colony_counter",
+    brand: "cintex",
+    pumpType: "Lab Instruments",
+    name: "Digital Colony Counter (Touch Screen)",
+    description:
+      "Touch-screen colony counter with password levels, batch data, average calculations, and printer/USB output for records.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Digital_Colony_Counter.png",
+    ],
+    features: [
+      "Touch-screen control",
+      "Admin/Supervisor/Operator levels",
+      "Printer and USB output",
+      "Magnifier with cool light",
+    ],
+    applications: ["Microbiology labs", "Pharma QA/QC"],
+    technicalSpecs: {
+      "Max Count": "9999",
+      Lens: "4 inch",
+      "Data Fields":
+        "Date/Time/Batch/Room/Samples, Avg Min/Max, Created/Checked by",
+    },
+    additionalFeatures: ["21 CFR Part 11 software (optional)"],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/digital-colony-counter.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_hot_air_oven",
+    brand: "cintex",
+    pumpType: "Ovens & Furnaces",
+    name: "Hot Air Oven / LOD Oven",
+    description:
+      "Triple-walled hot air ovens with SS inner, blower air circulation, PID control, and shelves. 5°C above ambient to 250°C (400°C option).",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Hot_Air_Oven.png",
+    ],
+    features: [
+      "Triple-walled construction",
+      "Motorized blower circulation",
+      "U-type SS heaters",
+      "SS rod shelves",
+      "PID controller with PT-100",
+    ],
+    applications: ["Drying", "Baking", "LOD testing"],
+    technicalSpecs: {
+      "Temp. Range": "Ambient +5°C to 250°C (400°C available)",
+      Accuracy: "±1°C",
+      Models: "Regular, GMP, cGMP",
+    },
+    additionalFeatures: [
+      "PLC touchscreen with printer",
+      "Safety controller",
+      "Printer output with memory",
+      "21 CFR Part 11 software",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/hot-air-oven.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_bod_incubator",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "BOD Incubator (Cooling Incubator)",
+    description:
+      "Cooled incubators with SS inner, glass inner door, CFC-free refrigeration, blower circulation, and PID temperature control.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Bod_Incubator.png",
+    ],
+    features: [
+      "PUF insulated construction",
+      "CFC-free cooling kit",
+      "Glass inner observation door",
+      "Motorized blower circulation",
+      "Removable SS rod shelves",
+    ],
+    applications: ["BOD testing", "Microbiology incubation"],
+    technicalSpecs: {
+      "Temp. Range": "5°C to 60°C",
+      Accuracy: "±1°C",
+      Models: "Regular, GMP, cGMP",
+    },
+    additionalFeatures: [
+      "Safety controller",
+      "Printer output",
+      "PLC touchscreen",
+      "21 CFR Part 11 software",
+      "Standby cooling, scanners",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/bod-incubator.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_photostability",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "Photostability Chamber",
+    description:
+      "Photostability chamber per ICH Q1B guidelines with visible and UV light sources, PID temp/RH control, safety interlocks and logging.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Photostability_Chamber.png",
+    ],
+    features: [
+      "Visible light (LUX) and 365 nm UV",
+      "Door interlock for UV safety",
+      "Steam injection humidification",
+      "Motorized blower air circulation",
+    ],
+    applications: ["ICH stability photostudies", "Pharma QA/QC"],
+    technicalSpecs: {
+      "Temp. Range": "10°C to 40°C (±1°C)",
+      "RH Range": "40%–80% (±2–3% RH)",
+    },
+    additionalFeatures: [
+      "Printer output & memory",
+      "21 CFR Part 11 software",
+      "Audio alarms",
+      "Calibrated LUX & UV meters",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/photostability-chamber.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_humidity_chamber",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "Humidity Chamber / Stability Chamber",
+    description:
+      "Stability chambers compliant with ICH/WHO/USFDA, microprocessor PID temp & RH control, steam humidification and robust construction.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Photostability_Chamber.png",
+    ],
+    features: [
+      "Steam injection humidification",
+      "CFC-free cooling kit",
+      "Air circulation system",
+      "Two-pane view window with heater",
+    ],
+    applications: [
+      "Stability studies",
+      "Shelf-life testing",
+      "Electronics testing",
+    ],
+    technicalSpecs: {
+      "Temp. Range": "10–60°C",
+      "Humidity Range": "40%–95% RH",
+      "Humidity Stability": "±2–3% RH",
+    },
+    additionalFeatures: [
+      "Printer output",
+      "Temp/RH scanner",
+      "PLC touchscreen",
+      "21 CFR Part 11 software",
+      "GSM alerts, alarms",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/humidity-chamber.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_walkin_stability",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "Walk-In Stability Chamber",
+    description:
+      "Walk-in chambers for ICH/WHO/USFDA stability testing with steam humidification, CFC-free cooling and PID temp/RH controls.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/walk_in_stability_chamber.png",
+    ],
+    features: [
+      "Microprocessor PID temp & RH control",
+      "Air circulation for uniformity",
+      "Boiler tank with auto cut-off",
+      "View window with anti-condensation heater",
+    ],
+    applications: ["Pharma stability", "Shelf-life", "Packaging tests"],
+    technicalSpecs: {
+      "Temp. Range": "20–60°C (±1°C)",
+      "Humidity Range": "40%–90% RH (±2–3% RH)",
+    },
+    additionalFeatures: [
+      "Printer output",
+      "4/8-channel temp scanner",
+      "Touch-screen HMI",
+      "Auto changeover standby cooling",
+      "GSM alerts",
+      "21 CFR Part 11 software",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/walk-in-stability-chamber.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_walkin_bod",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "Walk-In BOD Incubator",
+    description:
+      "Walk-in cooled incubators with PUF insulation, CFC-free refrigeration, blower circulation and PID controls.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/walk_in_bod_incubator.png",
+    ],
+    features: [
+      "PUF insulation",
+      "Heavy-duty blower circulation",
+      "Glass view window",
+      "SS racks and shelves",
+    ],
+    applications: ["BOD incubation", "Microbiology"],
+    technicalSpecs: {
+      "Temp. Range": "5–60°C (±1°C)",
+    },
+    additionalFeatures: [
+      "Safety controller",
+      "Printer output",
+      "Touch-screen HMI",
+      "21 CFR Part 11 software",
+      "Standby cooling",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/walk-in-bod-incubator.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_ultrasonic_bath",
+    brand: "cintex",
+    pumpType: "Baths & Circulators",
+    name: "Ultrasonic Bath",
+    description:
+      "Digital ultrasonic cleaners with SS304 tank and exterior, timer, degassing and heater. Cooling models and large capacities available.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Ultrasonic_bath.png",
+    ],
+    features: [
+      "Solid-state circuitry, digital timer",
+      "Auto degassing",
+      "Digital temperature controller (max 60°C)",
+      "PSP for uniform ultrasonic energy",
+      "SS cover lid",
+    ],
+    applications: ["Glassware cleaning", "Instrument cleaning"],
+    technicalSpecs: {
+      "Tank Capacities": "2–50 L standard",
+      "Inner Sizes": "Multiple (per model)",
+    },
+    additionalFeatures: ["Cooling models", "Large capacity units"],
+    datasheetUrl: "https://www.cintexindia.com/products/ultrasonic-bath.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_low_temp_bath",
+    brand: "cintex",
+    pumpType: "Baths & Circulators",
+    name: "Low Temp. Bath",
+    description:
+      "Low-temperature baths with internal/external circulation pump, CFC-free cooling and PID control. Multiple temperature ranges.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Low_temp_bath.png",
+    ],
+    features: [
+      "PUF insulation",
+      "Microprocessor PID with PT-100",
+      "U-type SS heaters",
+      "Pump-stirrer assembly (5/7 LPM)",
+      "Cooling coil in chamber",
+    ],
+    applications: ["Viscosity tests", "Temperature control", "Calibration"],
+    technicalSpecs: {
+      "Temp. Ranges": "-20 to +60°C, -40 to +60°C, -70 to +50°C",
+      Accuracy: "±0.5 to ±1°C",
+    },
+    additionalFeatures: [
+      "Alarms",
+      "Printer output",
+      "Low-level detection",
+      "Flame-proof versions",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/low-temp-bath.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_oil_bath_circulator",
+    brand: "cintex",
+    pumpType: "Baths & Circulators",
+    name: "Oil Bath (Circulator)",
+    description:
+      "Oil bath with circulation pump for internal/external circulation, PID control and long-life SS heaters.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Oil_bath_circulator.png",
+    ],
+    features: [
+      "Leak-proof welded SS tank",
+      "PID controller with dual display",
+      "Pump output 5–7 LPM",
+      "Drainage cock",
+    ],
+    applications: ["Constant temperature baths", "External loops"],
+    technicalSpecs: {
+      "Temp. Range": "50–300°C",
+      Accuracy: "±1–2°C",
+      "Inner Sizes": "10×10×8 to 14×12×12 in",
+    },
+    additionalFeatures: [
+      "Alarm",
+      "Printer output",
+      "Low oil level detection",
+      "Higher flow pump options",
+      "Flame-proof versions",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/oil-bath-circulator.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_cloud_pour_point",
+    brand: "cintex",
+    pumpType: "Baths & Circulators",
+    name: "Cloud And Pour Point Bath (Cooling)",
+    description:
+      "ASTM D2500/D97 compliant multi-compartment cooling bath with independent PID control per compartment and CFC-free systems.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Cloud_&_pour_pint_bath.png",
+    ],
+    features: [
+      "4 compartments with dedicated cooling",
+      "Copper test jackets, glass test jars",
+      "Independent PID controllers",
+    ],
+    applications: ["Cloud/pour point testing of oils"],
+    technicalSpecs: {
+      "Standard Ranges": "-1 to -2°C; -15 to -18°C; -32 to -34°C; -47 to -51°C",
+    },
+    additionalFeatures: [
+      "Safety controller",
+      "Printer output",
+      "Audio/timer alarms",
+      "21 CFR Part 11 software",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/cloud-pour-point-bath.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_block_heater",
+    brand: "cintex",
+    pumpType: "Lab Instruments",
+    name: "Block Heater",
+    description:
+      "Aluminum alloy block heaters for test tubes with PID control. Ideal for activation, incubations, enzyme analysis and more.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/block_heater.png",
+    ],
+    features: [
+      "High uniformity aluminum block",
+      "PID controller with dual display",
+      "Powder-coated GI exterior",
+    ],
+    applications: ["Clinical tests", "Enzyme analysis", "Sample prep"],
+    technicalSpecs: {
+      "Temp. Range": "Ambient +5°C to 250°C",
+      Accuracy: "±1–2°C",
+    },
+    additionalFeatures: ["Printer output with logging"],
+    datasheetUrl: "https://www.cintexindia.com/products/block-heater.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_melting_point_high_temp",
+    brand: "cintex",
+    pumpType: "Lab Instruments",
+    name: "Digital Melting Point Apparatus (High Temp.)",
+    description:
+      "High-temperature melting point apparatus with programmable heating rate and options for oil bath or dry block.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/digital_melting_point_apparatus.png",
+    ],
+    features: [
+      "Programmable heating rate 0.5–5°C",
+      "PT-100 sensor, digital display",
+      "Capillary tube samples",
+    ],
+    applications: ["Chemicals", "Pharmaceuticals", "Foods", "Plastics"],
+    technicalSpecs: {
+      "Temp. Range": "40–300°C",
+      Accuracy: "0.1–0.5°C depending on model",
+    },
+    additionalFeatures: [],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/digital-melting-point-apparatus.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_freeze_dryer",
+    brand: "cintex",
+    pumpType: "Freeze Dryers",
+    name: "Freeze Dryer (Lyophilizer)",
+    description:
+      "Benchtop lyophilizers with -50°C or -80°C condensers, manifold or chamber types, and optional printing and digital vacuum gauge.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Freeze_dryer2.png",
+    ],
+    features: [
+      "SS 304 chamber, powder-coated exterior",
+      "PID controller, PT-100 sensor",
+      "Multiple manifold options",
+      "Compatible with suitable vacuum pump",
+    ],
+    applications: ["Lyophilization", "Sample preservation"],
+    technicalSpecs: {
+      "Condenser Temp.": "-50°C or -80°C",
+      Capacities: "3 L / 6 L / chamber",
+    },
+    additionalFeatures: ["Printer output", "Digital vacuum gauge"],
+    datasheetUrl: "https://www.cintexindia.com/products/freeze-dryer.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_deep_freezer",
+    brand: "cintex",
+    pumpType: "Refrigeration",
+    name: "Deep Freezer",
+    description:
+      "Laboratory deep freezers for blood components, serum, vaccines and medicines. CFC-free cooling, PID control and insulated construction.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/deep_freezer3.png",
+    ],
+    features: [
+      "PUF insulation",
+      "Low-watt heater on door",
+      "Adjustable SS shelves or lockable drawers",
+    ],
+    applications: ["Cold storage", "Medical refrigeration"],
+    technicalSpecs: {
+      "Temp. Ranges": "0 to -20°C; -10 to -50°C (models)",
+      Accuracy: "±1–2°C",
+    },
+    additionalFeatures: [
+      "Printer output",
+      "PLC touchscreen",
+      "Alarms",
+      "21 CFR Part 11 software",
+      "Temp scanner options",
+      "-86°C models available",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/deep-freezer.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_tube_furnace",
+    brand: "cintex",
+    pumpType: "Ovens & Furnaces",
+    name: "Tube Furnace",
+    description:
+      "Laboratory tube furnace with ceramic fiber insulation and microprocessor PID temperature control for excellent radial and uniform heating.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Tube_furnace.png",
+    ],
+    features: [
+      "Ceramic fiber insulation",
+      "PID temperature controller with dual display",
+      "Over-temperature solid state safety fuse",
+      "Regular and GMP models",
+    ],
+    applications: ["Heat treatment", "Material testing", "Research"],
+    technicalSpecs: {
+      "Max Temperature": "1200°C (model dependent)",
+      "Working Temperature": "400°C to 1160°C",
+      Power: "230 V",
+    },
+    additionalFeatures: [
+      "Printer output logging (optional)",
+      "21 CFR Part 11 software (optional)",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/tube-furnace.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_wrist_action_shaker",
+    brand: "cintex",
+    pumpType: "Shakers & Stirrers",
+    name: "Wrist Action Shaker",
+    description:
+      "Controlled wrist action shaker providing constant motion from gentle shaking to vigorous agitation with adjustable amplitude and speed.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/writst_action_shaker.png",
+    ],
+    features: [
+      "Side arm for amplitude and speed adjustment",
+      "Up to 300 strokes per minute",
+      "MS/GI housing (Regular) or SS 316/304 (GMP)",
+    ],
+    applications: ["Mixing", "Extraction", "General lab shaking"],
+    technicalSpecs: {
+      "Max Strokes": "300 spm",
+      Power: "230 V",
+    },
+    additionalFeatures: [
+      "Digital timer (optional)",
+      "Digital speed indicator/controller (optional)",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/wrist-action-shaker.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_magnetic_stirrer_hot_plate",
+    brand: "cintex",
+    pumpType: "Shakers & Stirrers",
+    name: "Magnetic Stirrer with Hot Plate",
+    description:
+      "Stainless steel hot plate with magnetic stirring and solid-state speed control; optional PID temperature control.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/magnetic_strirrer_with_hot_plate.png",
+    ],
+    features: [
+      "SS housing and plate",
+      "Teflon-coated magnetic paddle",
+      "Energy regulator or PID controller",
+    ],
+    applications: ["Sample heating", "Solution stirring"],
+    technicalSpecs: {
+      Capacities: "0.5 L to 20 L models",
+      "Max RPM": "700–1200 (per model)",
+      "Max Surface Temp": "300°C",
+    },
+    additionalFeatures: ["Digital RPM indicator (optional)"],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/magnetic-stirrer-with-hot-plate.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_flp_hot_air_oven",
+    brand: "cintex",
+    pumpType: "Ovens & Furnaces",
+    name: "Flameproof Hot Air Oven",
+    description:
+      "Flameproof hot air ovens with SS 304 inner, FLP PID temperature control and blower-assisted air circulation for uniform drying.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Flame_proof_hot_air_oven.png",
+    ],
+    features: [
+      "FLP PID controller with FLP PT-100 sensor",
+      "Heavy-duty FLP motorized blower",
+      "SS rod shelves, insulated door with silicone gasket",
+    ],
+    applications: ["Drying", "Baking", "Stability at elevated temps"],
+    technicalSpecs: {
+      "Temp Range": "50°C to 250°C",
+      Accuracy: "±1–2°C",
+      Power: "440 V / 3-Phase",
+    },
+    additionalFeatures: [
+      "PLC touchscreen with printer (optional)",
+      "Safety controller",
+      "21 CFR Part 11 software",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/flameproof-hot-air-oven.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_dual_chamber",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "Dual Chamber",
+    description:
+      "Dual-compartment chamber with independent PID temperature control and motorized air circulation for uniform conditions.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Dual_chember.png",
+    ],
+    features: [
+      "SS 304 inner, robust insulation",
+      "CFC-free cooling available",
+      "Removable SS rod shelves",
+      "Independent PID controllers with PT-100",
+    ],
+    applications: ["Incubation", "Stability", "Storage"],
+    technicalSpecs: {
+      Capacities: "192 L and 456 L (typical)",
+      "Air Circulation": "Motorized blower",
+    },
+    additionalFeatures: [
+      "Printer output & memory",
+      "Safety controller",
+      "Temp scanner",
+      "PLC touchscreen",
+      "21 CFR Part 11 software",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/dual-chamber.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_heating_mantle",
+    brand: "cintex",
+    pumpType: "Lab Instruments",
+    name: "Heating Mantle",
+    description:
+      "Aluminum housing heating mantle with fiberglass netting and energy regulator; available in Regular and GMP models.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Heating_mantle.png",
+    ],
+    features: [
+      "Powder coated (Regular) or SS 304 (GMP)",
+      "High-quality insulation",
+      "Booster heaters for larger sizes",
+    ],
+    applications: ["Heating round-bottom flasks"],
+    technicalSpecs: {
+      "Max Surface Temp": "350°C",
+      "Flask Sizes": "50 mL to 100 L+",
+      Power: "230/440 V models",
+    },
+    additionalFeatures: ["Microprocessor PID controller (optional)"],
+    datasheetUrl: "https://www.cintexindia.com/products/heating-mantle.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_co2_incubator",
+    brand: "cintex",
+    pumpType: "Incubators & Chambers",
+    name: "Automatic CO2 Incubator (Water Jacketed)",
+    description:
+      "Water-jacketed CO2 incubator with microprocessor PID temperature control, humidity pan, and alarms for precise cell culture conditions.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/CO2-Incubator.png",
+    ],
+    features: [
+      "Online filters for contamination prevention",
+      "Audible/visual alarms for CO2 and temperature",
+      "Automatic gas shutoff on power fail",
+    ],
+    applications: ["Cell culture", "Microbiology"],
+    technicalSpecs: {
+      "Temp Range": "Ambient +5°C to 60°C",
+      "Temp Accuracy": "±0.1°C",
+      "CO2 Range": "0–20%",
+      "CO2 Uniformity": "±0.2%",
+    },
+    additionalFeatures: [
+      "Printer output",
+      "21 CFR Part 11 software",
+      "CO2 regulator and charging line",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/automatic-co2-incubator.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_hot_plate",
+    brand: "cintex",
+    pumpType: "Lab Instruments",
+    name: "Hot Plate (Rectangular / Round)",
+    description:
+      "Rectangular or round hot plates with insulated control compartment and nichrome heating elements; Regular and GMP models.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Hot_plate.png",
+    ],
+    features: [
+      "Air-insulated control compartment",
+      "Nichrome elements",
+      "Energy regulator or PID controller",
+    ],
+    applications: ["Sample heating", "Evaporation"],
+    technicalSpecs: {
+      "Max Surface Temp": "300°C",
+      Sizes: "Round 8–12 in; Rectangular 10x16 to 18x24 in",
+    },
+    additionalFeatures: ["Heavy-duty 350–400°C models available"],
+    datasheetUrl: "https://www.cintexindia.com/products/hot-plate.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_water_bath_stirrer_model",
+    brand: "cintex",
+    pumpType: "Baths & Circulators",
+    name: "Water Bath (Stirrer Model)",
+    description:
+      "GMP SS construction water bath with stirrer motor for internal circulation and superior temperature uniformity.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Water_bath_stirrer_model.png",
+    ],
+    features: [
+      "Microprocessor PID with PT-100",
+      "Perforated false bottom and SS lid",
+      "Drainage cock",
+      "Auto heater cut-off",
+    ],
+    applications: ["Calibration", "General warming"],
+    technicalSpecs: {
+      "Temp Range": "Ambient +5°C to 99°C",
+      Accuracy: "±0.3°C",
+    },
+    additionalFeatures: [
+      "Audio alarm",
+      "Timer",
+      "Low water level alarm",
+      "Printer output and logging",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/water-bath-stirrer-model.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_water_bath_serological",
+    brand: "cintex",
+    pumpType: "Baths & Circulators",
+    name: "Water Bath (Serological)",
+    description:
+      "Double-walled serological water bath with PID control and SS construction; suitable for Khan rack usage.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Water_bath_serological.png",
+    ],
+    features: [
+      "PUF/Glasswool insulation",
+      "PT-100 sensor",
+      "SS water heater",
+      "Drainage cock",
+      "Auto heater cut-off",
+    ],
+    applications: ["Serological tests", "Sample warming"],
+    technicalSpecs: {
+      "Temp Range": "Ambient +5°C to 70°C",
+      Accuracy: "±0.5°C",
+    },
+    additionalFeatures: [
+      "Audio alarm",
+      "Timer",
+      "Low water level alarm",
+      "Printer output",
+      "Pyramid lid, Khan rack",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/water-bath-serological.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_antibiotic_zone_reader",
+    brand: "cintex",
+    pumpType: "Lab Instruments",
+    name: "Antibiotic Zone Reader",
+    description:
+      "Compact instrument for measuring zone diameters in petri dishes with 0.1 mm accuracy; available in Regular and GMP models.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/antibotic_zone_reader.png",
+    ],
+    features: [
+      "Precision optical system",
+      "0.1 mm accuracy",
+      "SS construction in GMP model",
+    ],
+    applications: ["Antibiotic potency testing", "Microbiology"],
+    technicalSpecs: {
+      "Measurement Range": "0–80 mm",
+      Accuracy: "0.1 mm",
+      Power: "230 V",
+    },
+    additionalFeatures: [],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/antibiotic-zone-reader.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_multi_magnetic_stirrer",
+    brand: "cintex",
+    pumpType: "Shakers & Stirrers",
+    name: "Multi Magnetic Stirrer",
+    description:
+      "Low-profile multi-position magnetic stirrer for simultaneous stirring of 1000–2000 ml vessels with individual speed control.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Multi_magnetic_stirrer.png",
+    ],
+    features: [
+      "Solid-state drive",
+      "Soft start and restart",
+      "Stepless variable speed",
+      "Centering marks",
+    ],
+    applications: ["Parallel stirring", "Sample preparation"],
+    technicalSpecs: {
+      Stages: "4 or 6 positions",
+      Capacity: "Up to 2000 ml per position",
+      "Max Speed": "1200 RPM",
+    },
+    additionalFeatures: ["Individual controllers (per position)"],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/multi-magnetic-stirrer.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_autoclave_single_lever",
+    brand: "cintex",
+    pumpType: "Sterilizers & Autoclaves",
+    name: "Autoclave (Steam Sterilizer) Single Lever Lock",
+    description:
+      "Fully automatic single-lever lock autoclave with PID temperature control, automatic cycles, and safety interlocks.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Autoclave.png",
+    ],
+    features: [
+      "Double-walled SS chamber",
+      "Unique single lever lock lid",
+      "Automatic steam and air exhaust",
+      "Low water level alarm and cut-off",
+    ],
+    applications: ["Sterilization of glassware", "Liquids"],
+    technicalSpecs: {
+      Temp: "Up to 121°C",
+      Pressure: "0–20 PSI",
+      Control: "PID with PT-100",
+    },
+    additionalFeatures: [
+      "Printer output",
+      "F0 calculation software",
+      "Digital pressure indication",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/autoclave-steam-sterilizer.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_autoclave_fully_automatic",
+    brand: "cintex",
+    pumpType: "Sterilizers & Autoclaves",
+    name: "Autoclave / Steam Sterilizer (Fully Automatic)",
+    description:
+      "Fully automatic autoclave with microprocessor control, automatic cycle start, and efficient heaters to reduce power consumption.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Autoclave.png",
+    ],
+    features: [
+      "Press-to-start automatic cycle",
+      "Automatic steam/air exhaust",
+      "Removable SS carriers",
+    ],
+    applications: ["Sterilization", "Biotech & Pharma"],
+    technicalSpecs: {
+      Temp: "Up to 121°C",
+      Pressure: "0–20 PSI",
+      "Chamber Sizes": "35–186 L typical",
+    },
+    additionalFeatures: ["Printer output", "21 CFR Part 11 software"],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/autoclave-steam-sterilizer.html",
+    videoId: "",
+  },
+  // Placeholders for items with unavailable pages on manufacturer site
+  {
+    id: "cintex_flp_vacuum_oven",
+    brand: "cintex",
+    pumpType: "Ovens & Furnaces",
+    name: "Flame Proof Vacuum Oven",
+    description:
+      "Flame-proof vacuum oven with SS 304 chamber, FLP PID temperature control, flame junction control box, and vacuum up to 30'' Hg for safe drying under hazardous conditions.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Flame_Proof_Vacuum_Oven2.png",
+    ],
+    features: [
+      "Inner SS 304 chamber; outer GI powder-coated (Regular) or SS 304 (GMP)",
+      "High-grade Glasswool/Cerawool insulation",
+      "FLP PID temperature controller with FLP PT-100 sensor",
+      "Vacuum gauge on top, vacuum and gas inert valves",
+      "Controls grouped in flame junction control box",
+      "Adjustable SS 304 non-perforated trays",
+      "Heaters enclosed in pocket with flame-proof junction box",
+    ],
+    applications: ["Drying under vacuum", "Degassing", "Heat treatment"],
+    technicalSpecs: {
+      "Max Vacuum": "30'' Hg (loss ~1'' after 24 hrs)",
+      "Temp. Range": "50°C to 200°C",
+      Accuracy: "±1°C to ±2°C",
+      "Chamber Types": "Round or Rectangular",
+    },
+    additionalFeatures: [
+      "FLP safety controller for overshoot",
+      "PLC touch screen with printer output",
+    ],
+    datasheetUrl:
+      "https://www.cintexindia.com/products/flame-proof-vacuum-oven.html",
+    videoId: "",
+  },
+  {
+    id: "cintex_oil_bath_round",
+    brand: "cintex",
+    pumpType: "Baths & Circulators",
+    name: "Oil Bath (Round)",
+    description:
+      "Round oil bath with welded SS tank, glass-wool insulation, drainage cock and PID temperature control. Suitable for stability testing, conditioning and tempering.",
+    imageUrl: [
+      "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Oil_bath.png",
+    ],
+    features: [
+      "Leak-proof welded SS chamber",
+      "GI powder-coated (Regular) or SS 304 (GMP) exterior",
+      "1–2 inch insulation to minimize heat loss",
+      "Side handles for lifting and drainage cock",
+      "Special SS heater, easily replaceable",
+      "PID temperature controller with dual display and PT-100",
+      "Auto-tuning and auto heater cut-off after set temp",
+    ],
+    applications: ["Stability testing", "Pre-heating", "Tempering"],
+    technicalSpecs: {
+      "Temp. Range": "Ambient +5°C to 300°C",
+      Accuracy: "±2°C",
+      "Power Ratings": "1.0–3.0 kW (model dependent)",
+    },
+    additionalFeatures: [
+      "Printer output with logging",
+      "Audio alarm for overshoot/undershoot",
+      "Timer",
+      "Low oil level alarm",
+    ],
+    datasheetUrl: "https://www.cintexindia.com/products/oil-bath-round.html",
+    videoId: "",
+  },
+  {
     id: "wm2",
     brand: "watson-marlow",
     pumpType: "Chemical Metering Pumps",
@@ -4130,8 +5241,16 @@ export const productData = [
   name: product.name || "",
   description: product.description || "",
   imageUrl: Array.isArray(product.imageUrl)
-    ? product.imageUrl.map((url) => (url.startsWith("/") ? url : `/${url}`))
-    : [`/${product.imageUrl}`],
+    ? product.imageUrl.map((url) =>
+        url.startsWith("/") || url.startsWith("http") ? url : `/${url}`
+      )
+    : [
+        product.imageUrl &&
+        (product.imageUrl.startsWith("/") ||
+          product.imageUrl.startsWith("http"))
+          ? product.imageUrl
+          : `/${product.imageUrl}`,
+      ],
   features: Array.isArray(product.features) ? product.features : [],
   applications: Array.isArray(product.applications) ? product.applications : [],
   technicalSpecs: product.technicalSpecs || {},

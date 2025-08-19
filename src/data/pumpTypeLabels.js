@@ -16,4 +16,12 @@ export const pumpTypeLabels = {
   "Diaphragm Pumps": "Diaphragm Pumps",
   "Turbomolecular Pumps": "Turbomolecular Pumps",
   "Cryogenic Pumps": "Cryogenic Pumps",
+  "Ovens & Furnaces": "Ovens & Furnaces",
+  "Incubators & Chambers": "Incubators & Chambers",
+  "Baths & Circulators": "Baths & Circulators",
+  "Shakers & Stirrers": "Shakers & Stirrers",
+  "Lab Instruments": "Lab Instruments",
+  "Freeze Dryers": "Freeze Dryers",
+  Refrigeration: "Refrigeration",
+  "Sterilizers & Autoclaves": "Sterilizers & Autoclaves",
 };

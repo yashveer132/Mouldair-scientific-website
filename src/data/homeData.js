@@ -20,6 +20,13 @@ export const categories = [
     imageUrl: "/home_image3.png",
     link: "/categories/welch",
   },
+  {
+    id: "cintex",
+    name: "Cintex Lab Equipment",
+    description: "Ovens, chambers, incubators, baths and more.",
+    imageUrl: "/laboratory.jpg",
+    link: "/categories/cintex",
+  },
 ];
 
 export const features = [

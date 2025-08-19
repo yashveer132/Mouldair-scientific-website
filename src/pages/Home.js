@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import AnimatedSection from "../components/AnimatedSection";
 import {
@@ -85,21 +85,21 @@ const Home = () => {
         <div ref={categoriesRef} id="categories" className="relative">
           <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-white opacity-50"></div>
           <AnimatedSection className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 relative">
-            <div className="text-center mb-12 sm:mb-16">
+            <div className="text-center mb-12 sm:mb-16 transform -translate-y-8 sm:-translate-y-12">
               <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
                 Our Pump Categories
               </h2>
             </div>
-            <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 xl:gap-x-8">
+            <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-6 xl:gap-x-8 items-stretch -mt-6 sm:-mt-8">
               {categories.map((cat) => (
                 <div
                   key={cat.id}
-                  className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300"
+                  className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 h-full overflow-hidden"
                 >
                   <img
                     src={cat.imageUrl}
                     alt={cat.name}
-                    className="w-full h-40 object-cover mb-4 rounded"
+                    className="w-full h-48 sm:h-56 object-cover object-top mb-4 rounded"
                   />
                   <h3 className="text-xl font-semibold mb-2 text-gray-700">
                     {cat.name}
@@ -107,13 +107,13 @@ const Home = () => {
                   <p className="text-gray-500 mb-4 text-center">
                     {cat.description}
                   </p>
-                  <a
-                    href={cat.link}
+                  <Link
+                    to={cat.link}
                     className="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition duration-300"
                   >
                     View {cat.name}
                     <FaArrowRight className="ml-2" />
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -211,13 +211,13 @@ const Home = () => {
             </h2>
             <p className="text-lg sm:text-xl mb-8">{ctaSection.content}</p>
             <div className="inline-block hover:scale-105 transition-transform duration-300">
-              <a
-                href={ctaSection.buttonLink}
+              <Link
+                to={ctaSection.buttonLink}
                 className="inline-flex items-center bg-white text-indigo-700 px-6 sm:px-8 py-2 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-indigo-50 transition duration-300"
               >
                 {ctaSection.buttonText}
                 <FaArrowRight className="ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </AnimatedSection>

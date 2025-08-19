@@ -281,6 +281,11 @@ const brandDescriptions = {
       </div>
     ),
   },
+  cintex: {
+    aboutTitle: "About Cintex Laboratory Equipment",
+    description:
+      "Cintex manufactures laboratory and pharma equipment such as ovens, furnaces, incubators, stability chambers, baths, shakers and allied instruments. Their systems feature microprocessor PID control, robust stainless-steel construction, CFC‑free cooling kits, and optional 21 CFR Part 11 compliant data logging and HMI controls to meet ICH, WHO and US‑FDA requirements.",
+  },
 };
 
 const CategoryPage = () => {
@@ -359,9 +364,14 @@ const CategoryPage = () => {
                 <h2 className="text-3xl font-extrabold text-gray-900 text-center">
                   {brandInfo.aboutTitle}
                 </h2>
-                {(brand === "leybold" ||
-                  brand === "welch" ||
-                  brand === "watson-marlow") && (
+              </div>
+              <div className="text-gray-700 text-lg sm:text-xl leading-relaxed">
+                {brandInfo.description}
+              </div>
+              {(brand === "leybold" ||
+                brand === "welch" ||
+                brand === "watson-marlow") && (
+                <div className="flex justify-center mt-8">
                   <motion.button
                     onClick={scrollToApplications}
                     initial={{ opacity: 0 }}
@@ -388,11 +398,8 @@ const CategoryPage = () => {
                       />
                     </svg>
                   </motion.button>
-                )}
-              </div>
-              <div className="text-gray-700 text-lg sm:text-xl leading-relaxed">
-                {brandInfo.description}
-              </div>
+                </div>
+              )}
             </motion.div>
           </AnimatedSection>
         )}
@@ -404,7 +411,9 @@ const CategoryPage = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 sm:mb-8 text-center capitalize"
           >
-            {brand.replace("-", " ")} Vacuum Pumps
+            {brand === "cintex"
+              ? "Cintex Laboratory Equipment"
+              : `${brand.replace("-", " ")} Vacuum Pumps`}
           </motion.h1>
 
           <motion.div
@@ -627,7 +636,6 @@ const CategoryPage = () => {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
                       setActiveApplication(index);
-                      // scroll to the content (use same pattern as leybold/welch)
                       setTimeout(
                         () => scrollToElement(applicationContentRef),
                         100

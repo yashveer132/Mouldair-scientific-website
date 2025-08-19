@@ -1,6 +1,11 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import { companyInfo, videoIds, heroContent, ctaSection } from "../data/aboutData";
+import {
+  companyInfo,
+  videoIds,
+  heroContent,
+  ctaSection,
+} from "../data/aboutData";
 
 const About = () => {
   return (
@@ -9,7 +14,7 @@ const About = () => {
         <section className="relative flex items-center justify-center px-4 py-2 pb-10 sm:py-4 sm:pb-16 md:py-6 md:pb-20 lg:py-8 lg:pb-28 overflow-hidden min-h-[20vh] sm:min-h-[25vh] md:min-h-[30vh] lg:min-h-[35vh]">
           <div className="relative z-10 text-center text-black max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 mt-6 sm:mt-0"
               style={{ fontWeight: 800 }}
             >
               {heroContent.title}
@@ -110,7 +115,9 @@ const About = () => {
               >
                 <div
                   className="relative w-full"
-                  style={{ paddingBottom: "56.25%" }}
+                  style={{
+                    paddingBottom: "70%",
+                  }}
                 >
                   <iframe
                     src={`https://www.youtube.com/embed/${id}`}
@@ -118,6 +125,9 @@ const About = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="absolute top-0 left-0 w-full h-full rounded-2xl"
+                    style={{
+                      minHeight: "260px",
+                    }}
                   ></iframe>
                 </div>
               </div>
@@ -139,13 +149,13 @@ const About = () => {
             {ctaSection.content}
           </p>
           <div className="flex justify-center">
-            <a
-              href={ctaSection.buttonLink}
+            <Link
+              to={ctaSection.buttonLink}
               className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-sm sm:text-base"
               style={{ fontWeight: 700 }}
             >
               {ctaSection.buttonText}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

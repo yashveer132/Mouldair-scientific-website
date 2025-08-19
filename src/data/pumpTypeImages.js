@@ -23,12 +23,29 @@ export const pumpTypeImages = {
     "/aspiration-system-biovac-106-with-4l-bottle.jpg",
   "Vacuum Gauges and Controllers": "/vcpro-601.png",
   "Chemical Metering Pumps": "/watson9.webp",
-  "Bioprocessing Pumps":'/watson10.webp',
-  "High Flow Industrial Pumps":'/watson13.webp',
-  "OEM Pumps":'/watson15.webp',
-  "Bredel Hose Pumps":'/watson16.webp',
-  "Masosine Pumps":'/watson21.webp',
-  "Flexicon aseptic liquid filling":"/watson24.jpg",
-  "APEX Hose Pumps":'/watson27.webp',
-  "Tubing":"/watson31.jpg"
+  "Bioprocessing Pumps": "/watson10.webp",
+  "High Flow Industrial Pumps": "/watson13.webp",
+  "OEM Pumps": "/watson15.webp",
+  "Bredel Hose Pumps": "/watson16.webp",
+  "Masosine Pumps": "/watson21.webp",
+  "Flexicon aseptic liquid filling": "/watson24.jpg",
+  "APEX Hose Pumps": "/watson27.webp",
+  Tubing: "/watson31.jpg",
+  "Ovens & Furnaces":
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Hot_Air_Oven.png",
+  "Incubators & Chambers":
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Photostability_Chamber.png",
+  "Baths & Circulators":
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Low_temp_bath.png",
+  "Shakers & Stirrers":
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Orbital_Shaker.png",
+  "Lab Instruments":
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/block_heater.png",
+  "Freeze Dryers":
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Freeze_dryer2.png",
+  Refrigeration:
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/deep_freezer3.png",
+  "Sterilizers & Autoclaves":
+    "https://www.cintexindia.com/assets/cintexindia-images/products/Single-Product/Autoclave.png",
+  "Compliance Software": "/Monochrome on Transparent.png",
 };

@@ -10,7 +10,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-
 import { productData } from "../../data/productData";
 import { pumpTypeLabels } from "../../data/pumpTypeLabels";
 
@@ -29,11 +28,12 @@ const socialMedia = [
   { icon: FaInstagram, href: "#" },
 ];
 
-const brandOrder = ["watson-marlow", "leybold", "welch"];
+const brandOrder = ["watson-marlow", "leybold", "welch", "cintex"];
 const brandLabels = {
   "watson-marlow": "Watson Marlow",
   leybold: "Leybold",
   welch: "Welch",
+  cintex: "Cintex",
 };
 
 const brandMap = productData.reduce((acc, product) => {
@@ -53,14 +53,12 @@ const Header = () => {
 
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [hoveredBrand, setHoveredBrand] = useState(null);
-  const [hoveredPumpType, setHoveredPumpType] = useState(null);
 
   const [isTechnicalOpen, setIsTechnicalOpen] = useState(false);
 
   useEffect(() => {
     setIsProductsOpen(false);
     setHoveredBrand(null);
-    setHoveredPumpType(null);
     setIsTechnicalOpen(false);
 
     if (!location.hash) {
@@ -75,16 +73,10 @@ const Header = () => {
   const handleProductsLeave = () => {
     setIsProductsOpen(false);
     setHoveredBrand(null);
-    setHoveredPumpType(null);
   };
 
   const handleBrandEnter = (brand) => {
     setHoveredBrand(brand);
-    setHoveredPumpType(null);
-  };
-
-  const handlePumpTypeEnter = (pumpType) => {
-    setHoveredPumpType(pumpType);
   };
 
   return (
@@ -162,8 +154,7 @@ const Header = () => {
                   </Link>
                 </div>
 
-                <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6 xl:space-x-8 md:ml-auto lg:mr-2">
-                  {" "}
+                <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6 xl:space-x-8 md:-ml-auto lg:mr-2">
                   <motion.div className="transition duration-300">
                     <Link
                       to="/"
@@ -253,161 +244,71 @@ const Header = () => {
                                   {brandLabels[brand]}
                                 </Link>
 
-                                <AnimatePresence>
-                                  {hoveredBrand === brand && (
-                                    <motion.div
-                                      initial={{ opacity: 0, x: "100%" }}
-                                      animate={{ opacity: 1, x: "100%" }}
-                                      exit={{ opacity: 0, x: "110%" }}
-                                      transition={{ duration: 0.2 }}
-                                      className="absolute top-0 left-100 w-56 bg-white shadow-lg rounded-lg z-50"
+                                {hoveredBrand === brand && (
+                                  <motion.div
+                                    initial={{ opacity: 0, x: "100%" }}
+                                    animate={{ opacity: 1, x: "100%" }}
+                                    exit={{ opacity: 0, x: "110%" }}
+                                    transition={{ duration: 0.2 }}
+                                    className="absolute top-0 left-100 w-56 bg-white shadow-lg rounded-lg z-50"
+                                  >
+                                    <motion.ul
+                                      className="py-3"
+                                      initial="closed"
+                                      animate="open"
+                                      variants={{
+                                        open: {
+                                          transition: {
+                                            staggerChildren: 0.05,
+                                            delayChildren: 0.1,
+                                          },
+                                        },
+                                        closed: {
+                                          transition: {
+                                            staggerChildren: 0.05,
+                                            staggerDirection: -1,
+                                          },
+                                        },
+                                      }}
                                     >
-                                      <motion.ul
-                                        className="py-3"
-                                        initial="closed"
-                                        animate="open"
-                                        variants={{
-                                          open: {
-                                            transition: {
-                                              staggerChildren: 0.05,
-                                              delayChildren: 0.1,
-                                            },
-                                          },
-                                          closed: {
-                                            transition: {
-                                              staggerChildren: 0.05,
-                                              staggerDirection: -1,
-                                            },
-                                          },
-                                        }}
-                                      >
-                                        {Object.keys(brandMap[brand]).map(
-                                          (pumpType) => (
-                                            <motion.li
-                                              key={pumpType}
-                                              onMouseEnter={() =>
-                                                handlePumpTypeEnter(pumpType)
-                                              }
-                                              onMouseLeave={() =>
-                                                setHoveredPumpType(null)
-                                              }
-                                              variants={{
-                                                open: {
-                                                  y: 0,
-                                                  opacity: 1,
-                                                  transition: {
-                                                    y: {
-                                                      stiffness: 1000,
-                                                      velocity: -100,
-                                                    },
+                                      {Object.keys(brandMap[brand]).map(
+                                        (pumpType) => (
+                                          <motion.li
+                                            key={pumpType}
+                                            variants={{
+                                              open: {
+                                                y: 0,
+                                                opacity: 1,
+                                                transition: {
+                                                  y: {
+                                                    stiffness: 1000,
+                                                    velocity: -100,
                                                   },
                                                 },
-                                                closed: {
-                                                  y: 50,
-                                                  opacity: 0,
-                                                  transition: {
-                                                    y: { stiffness: 1000 },
-                                                  },
+                                              },
+                                              closed: {
+                                                y: 50,
+                                                opacity: 0,
+                                                transition: {
+                                                  y: { stiffness: 1000 },
                                                 },
-                                              }}
-                                              className="relative"
+                                              },
+                                            }}
+                                            className="relative"
+                                          >
+                                            <Link
+                                              to={`/categories/${brand}/${pumpType}`}
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap"
                                             >
-                                              <Link
-                                                to={`/categories/${brand}/${pumpType}`}
-                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap"
-                                              >
-                                                {pumpTypeLabels[pumpType] ||
-                                                  pumpType}
-                                              </Link>
-
-                                              <AnimatePresence>
-                                                {hoveredPumpType ===
-                                                  pumpType && (
-                                                  <motion.div
-                                                    initial={{
-                                                      opacity: 0,
-                                                      x: "100%",
-                                                    }}
-                                                    animate={{
-                                                      opacity: 1,
-                                                      x: "100%",
-                                                    }}
-                                                    exit={{
-                                                      opacity: 0,
-                                                      x: "110%",
-                                                    }}
-                                                    transition={{
-                                                      duration: 0.2,
-                                                    }}
-                                                    className="absolute top-0 left-100 w-48 bg-white shadow-lg rounded-lg z-50  max-h-64 overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-indigo-600 hover:scrollbar-thumb-indigo-700 "
-                                                  >
-                                                    <motion.ul
-                                                      className="py-3"
-                                                      initial="closed"
-                                                      animate="open"
-                                                      variants={{
-                                                        open: {
-                                                          transition: {
-                                                            staggerChildren: 0.05,
-                                                            delayChildren: 0.1,
-                                                          },
-                                                        },
-                                                        closed: {
-                                                          transition: {
-                                                            staggerChildren: 0.05,
-                                                            staggerDirection:
-                                                              -1,
-                                                          },
-                                                        },
-                                                      }}
-                                                    >
-                                                      {brandMap[brand][
-                                                        pumpType
-                                                      ].map((prod) => (
-                                                        <motion.li
-                                                          key={prod.id}
-                                                          variants={{
-                                                            open: {
-                                                              y: 0,
-                                                              opacity: 1,
-                                                              transition: {
-                                                                y: {
-                                                                  stiffness: 1000,
-                                                                  velocity:
-                                                                    -100,
-                                                                },
-                                                              },
-                                                            },
-                                                            closed: {
-                                                              y: 50,
-                                                              opacity: 0,
-                                                              transition: {
-                                                                y: {
-                                                                  stiffness: 1000,
-                                                                },
-                                                              },
-                                                            },
-                                                          }}
-                                                        >
-                                                          <Link
-                                                            to={`/products/${prod.id}`}
-                                                            className="block px-3 py-1.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap"
-                                                          >
-                                                            {prod.name}
-                                                          </Link>
-                                                        </motion.li>
-                                                      ))}
-                                                    </motion.ul>
-                                                  </motion.div>
-                                                )}
-                                              </AnimatePresence>
-                                            </motion.li>
-                                          )
-                                        )}
-                                      </motion.ul>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                                              {pumpTypeLabels[pumpType] ||
+                                                pumpType}
+                                            </Link>
+                                          </motion.li>
+                                        )
+                                      )}
+                                    </motion.ul>
+                                  </motion.div>
+                                )}
                               </motion.li>
                             ))}
                           </motion.ul>
@@ -424,8 +325,9 @@ const Header = () => {
                       <Link
                         to="/technical"
                         className={`${
-                          isTechnicalOpen
-                            ? "text-indigo-600 font-semibold"
+                          isTechnicalOpen ||
+                          location.pathname.startsWith("/technical")
+                            ? "text-indigo-600 font-semibold border-b-2 border-indigo-600"
                             : "text-gray-600 hover:text-indigo-600"
                         } flex items-center text-center`}
                       >
@@ -449,7 +351,7 @@ const Header = () => {
                                 to="/technical#articles"
                                 className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                               >
-                                Latest Articles
+                                Articles
                               </Link>
                             </motion.li>
                             <motion.li>
@@ -581,65 +483,14 @@ const Header = () => {
                                             >
                                               {Object.keys(brandMap[brand]).map(
                                                 (pumpType) => (
-                                                  <Disclosure key={pumpType}>
-                                                    {({
-                                                      open: pumpTypeOpen,
-                                                    }) => (
-                                                      <>
-                                                        <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
-                                                          <Link
-                                                            to={`/categories/${brand}/${pumpType}`}
-                                                            className="flex-1 text-center"
-                                                          >
-                                                            {pumpTypeLabels[
-                                                              pumpType
-                                                            ] || pumpType}
-                                                          </Link>
-                                                          <ChevronDownIcon
-                                                            className={`${
-                                                              pumpTypeOpen
-                                                                ? "transform rotate-180"
-                                                                : ""
-                                                            } w-5 h-5 text-gray-500 ml-2`}
-                                                          />
-                                                        </Disclosure.Button>
-
-                                                        <AnimatePresence>
-                                                          {pumpTypeOpen && (
-                                                            <Disclosure.Panel
-                                                              static
-                                                              as={motion.div}
-                                                              initial={{
-                                                                height: 0,
-                                                              }}
-                                                              animate={{
-                                                                height: "auto",
-                                                              }}
-                                                              exit={{
-                                                                height: 0,
-                                                              }}
-                                                              transition={{
-                                                                duration: 0.3,
-                                                              }}
-                                                              className="pl-6 pr-3 pt-1 pb-2 space-y-2 bg-indigo-50 rounded-md"
-                                                            >
-                                                              {brandMap[brand][
-                                                                pumpType
-                                                              ].map((prod) => (
-                                                                <Link
-                                                                  key={prod.id}
-                                                                  to={`/products/${prod.id}`}
-                                                                  className="w-full block px-3 py-1.5 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors whitespace-nowrap text-center"
-                                                                >
-                                                                  {prod.name}
-                                                                </Link>
-                                                              ))}
-                                                            </Disclosure.Panel>
-                                                          )}
-                                                        </AnimatePresence>
-                                                      </>
-                                                    )}
-                                                  </Disclosure>
+                                                  <Link
+                                                    key={pumpType}
+                                                    to={`/categories/${brand}/${pumpType}`}
+                                                    className="w-full block px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
+                                                  >
+                                                    {pumpTypeLabels[pumpType] ||
+                                                      pumpType}
+                                                  </Link>
                                                 )
                                               )}
                                             </Disclosure.Panel>
@@ -660,9 +511,16 @@ const Header = () => {
                       {({ open: technicalOpen }) => (
                         <>
                           <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
-                            <span className="flex-1 text-center">
+                            <Link
+                              to="/technical"
+                              className={`flex-1 text-center ${
+                                location.pathname.startsWith("/technical")
+                                  ? "bg-indigo-100 text-indigo-700"
+                                  : ""
+                              }`}
+                            >
                               Technical Corner
-                            </span>
+                            </Link>
                             <ChevronDownIcon
                               className={`${
                                 technicalOpen ? "transform rotate-180" : ""
@@ -688,7 +546,7 @@ const Header = () => {
                                   to="/technical#articles"
                                   className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
                                 >
-                                  Latest Articles
+                                  Articles
                                 </Link>
                                 <Link
                                   to="/technical#case-studies"

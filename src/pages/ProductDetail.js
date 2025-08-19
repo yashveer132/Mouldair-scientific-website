@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import { motion } from "framer-motion";
 import {
@@ -184,24 +184,24 @@ const ProductDetail = () => {
                   Technical Specifications
                 </h3>
               </div>
-              <ul className="space-y-2">
+              <div className="space-y-2">
                 {Object.entries(product.technicalSpecs).map(
                   ([key, value], index) => (
-                    <motion.li
+                    <motion.div
                       key={index}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 * index }}
-                      className="flex items-center justify-between"
+                      className="grid grid-cols-2 gap-4 items-start"
                     >
-                      <span className="font-semibold text-indigo-600">
+                      <span className="font-semibold text-indigo-600 break-words">
                         {key}:
                       </span>
-                      <span className="text-gray-700">{value}</span>
-                    </motion.li>
+                      <span className="text-gray-700 break-words">{value}</span>
+                    </motion.div>
                   )
                 )}
-              </ul>
+              </div>
             </motion.div>
           </div>
 
@@ -244,14 +244,16 @@ const ProductDetail = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Product Demo Video
               </h3>
-              <div className="relative rounded-lg overflow-hidden shadow-lg h-60 sm:aspect-video sm:h-auto">
-                <iframe
-                  src={`https://www.youtube.com/embed/${product.videoId}`}
-                  title="Product Demo Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute top-0 left-0 w-full h-full"
-                ></iframe>
+              <div className="flex justify-center items-center">
+                <div className="relative rounded-lg overflow-hidden shadow-lg h-72 md:h-64 lg:h-72 xl:h-80 sm:aspect-video w-full max-w-2xl">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${product.videoId}`}
+                    title="Product Demo Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full"
+                  ></iframe>
+                </div>
               </div>
             </motion.div>
           )}
@@ -271,13 +273,14 @@ const ProductDetail = () => {
               you find the perfect solution for your needs.
             </p>
             <div className="flex justify-center gap-4">
-              <motion.a
-                href="/contact"
-                className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                whileHover={{ scale: 1.05 }}
-              >
-                Contact Us
-              </motion.a>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Link
+                  to="/contact"
+                  className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         </div>
