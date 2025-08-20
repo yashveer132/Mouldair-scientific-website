@@ -161,7 +161,7 @@ const Header = () => {
                       className={`${
                         location.pathname === "/"
                           ? "text-indigo-600 font-semibold border-b-2 border-indigo-600"
-                          : "text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                          : "text-gray-600 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600 transition-colors duration-300"
                       } text-sm lg:text-base xl:text-lg font-medium`}
                     >
                       Home
@@ -177,8 +177,8 @@ const Header = () => {
                         to="/#categories"
                         className={`${
                           isProductsOpen
-                            ? "text-indigo-600 font-semibold"
-                            : "text-gray-600 hover:text-indigo-600"
+                            ? "text-indigo-600 font-semibold border-b-2 border-indigo-600"
+                            : "text-gray-600 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600"
                         } flex items-center text-center`}
                       >
                         Products
@@ -328,7 +328,7 @@ const Header = () => {
                           isTechnicalOpen ||
                           location.pathname.startsWith("/technical")
                             ? "text-indigo-600 font-semibold border-b-2 border-indigo-600"
-                            : "text-gray-600 hover:text-indigo-600"
+                            : "text-gray-600 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600"
                         } flex items-center text-center`}
                       >
                         Technical Corner
@@ -377,7 +377,7 @@ const Header = () => {
                         className={`${
                           location.pathname === item.href
                             ? "text-indigo-600 font-semibold border-b-2 border-indigo-600"
-                            : "text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                            : "text-gray-600 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600 transition-colors duration-300"
                         } text-sm lg:text-base xl:text-lg font-medium`}
                       >
                         {item.name}

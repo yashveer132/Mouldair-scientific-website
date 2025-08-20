@@ -27,7 +27,7 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
-            <div className="bg-white shadow-xl rounded-lg overflow-hidden flex flex-col h-full">
+            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer">
               <div className="p-6 sm:p-8 flex-1 flex flex-col justify-center">
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                   Contact Information
@@ -71,7 +71,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white shadow-xl rounded-lg overflow-hidden flex flex-col h-full">
+            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer">
               <div className="p-6 sm:p-8 flex-1 flex flex-col items-center justify-center">
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                   Follow Us
@@ -79,13 +79,13 @@ const Contact = () => {
                 <div className="flex justify-center space-x-3 sm:space-x-4 mb-6">
                   <a
                     href="#"
-                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full hover:bg-indigo-700 transition duration-200"
+                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
                   >
                     <FaFacebookF className="text-lg sm:text-xl" />
                   </a>
                   <a
                     href="#"
-                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full hover:bg-indigo-700 transition duration-200"
+                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
                   >
                     <FaTwitter className="text-lg sm:text-xl" />
                   </a>
@@ -93,13 +93,13 @@ const Contact = () => {
                     href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full hover:bg-indigo-700 transition duration-200"
+                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
                   >
                     <FaLinkedinIn className="text-lg sm:text-xl" />
                   </a>
                   <a
                     href="#"
-                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full hover:bg-indigo-700 transition duration-200"
+                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
                   >
                     <FaInstagram className="text-lg sm:text-xl" />
                   </a>
@@ -112,7 +112,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white shadow-xl rounded-lg overflow-hidden flex flex-col h-full">
+            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer">
               <div className="flex-1 w-full">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14825.231225323734!2d73.0288011!3d21.7295895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f8b428ea21a85%3A0xb6a14a7dfb8db901!2sMouldAir%20Scientific%20%26%20Lab%20Equipments!5e0!3m2!1sen!2sin!4v1684659417317!5m2!1sen!2sin"

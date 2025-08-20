@@ -59,7 +59,7 @@ const About = () => {
               {companyInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-white via-indigo-50 to-purple-100 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center border border-indigo-100 hover:shadow-indigo-200 transition-shadow duration-300"
+                  className="bg-gradient-to-br from-white via-indigo-50 to-purple-100 rounded-2xl overflow-hidden flex flex-col items-center border border-indigo-100 transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
                   style={{
                     boxShadow:
                       "0 8px 32px 0 rgba(80, 72, 229, 0.10), 0 1.5px 6px 0 rgba(80, 72, 229, 0.08)",
@@ -104,14 +104,14 @@ const About = () => {
             className="text-base sm:text-lg md:text-xl mb-10 sm:mb-12 text-gray-700 text-center font-semibold"
             style={{ fontWeight: 600 }}
           >
-            Watch our corporate videos to learn more about our innovative
-            solutions and global impact.
+            Watch our videos to learn more about our innovative solutions and
+            global impact.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {videoIds.map((id, idx) => (
               <div
                 key={id}
-                className="rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-indigo-100 via-white to-purple-50 border border-indigo-100 flex flex-col"
+                className="rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-100 via-white to-purple-50 border border-indigo-100 flex flex-col transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
               >
                 <div
                   className="relative w-full"

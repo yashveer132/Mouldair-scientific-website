@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import AnimatedSection from "../components/AnimatedSection";
 import {
   FaArrowRight,
   FaIndustry,
@@ -35,11 +34,6 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = "/original.png";
-  }, []);
-
   return (
     <Layout>
       <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
@@ -50,7 +44,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-              <div className="lg:w-1/2 lg:-mt-6">
+              <div className="lg:w-1/2">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
                   {heroContent.title}
                 </h1>
@@ -60,19 +54,19 @@ const Home = () => {
                 <div>
                   <button
                     onClick={handleScrollToCategories}
-                    className="group flex sm:inline-flex justify-center items-center mx-auto sm:mx-0 lg:ml-20 bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-indigo-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                    className="flex sm:inline-flex justify-center items-center mx-auto sm:mx-0 lg:ml-20 bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-medium transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
                   >
                     {heroContent.buttonText}
-                    <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <FaArrowRight className="ml-2" />
                   </button>
                 </div>
               </div>
-              <div className="lg:w-1/2 relative lg:-mt-28">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="lg:w-1/2 relative">
+                <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
                   <img
                     src="/original.png"
                     alt="ModuVac Vacuum Pump"
-                    className="w-full aspect-[4/3] object-cover rounded-2xl transform hover:scale-105 transition-transform duration-700"
+                    className="w-full aspect-[4/3] object-cover rounded-2xl"
                     loading="eager"
                     fetchpriority="high"
                   />
@@ -83,23 +77,22 @@ const Home = () => {
         </section>
 
         <div ref={categoriesRef} id="categories" className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-white opacity-50"></div>
-          <AnimatedSection className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 relative">
-            <div className="text-center mb-12 sm:mb-16 transform -translate-y-8 sm:-translate-y-12">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
+          <div className="max-w-7xl mx-auto pt-12 pb-20 px-4 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28 sm:px-6 lg:px-8 relative">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="-mt-6 sm:-mt-8 mb-6 sm:mb-8 text-3xl sm:text-4xl font-extrabold text-gray-900">
                 Our Pump Categories
               </h2>
             </div>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-6 xl:gap-x-8 items-stretch -mt-6 sm:-mt-8">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-6 xl:gap-x-8 items-stretch justify-center">
               {categories.map((cat) => (
                 <div
                   key={cat.id}
-                  className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 h-full overflow-hidden"
+                  className="bg-white rounded-lg p-4 sm:p-6 lg:p-4 flex flex-col items-center h-full w-full max-w-[320px] md:max-w-[360px] mx-auto transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
                 >
                   <img
                     src={cat.imageUrl}
                     alt={cat.name}
-                    className="w-full h-48 sm:h-56 object-cover object-top mb-4 rounded"
+                    className="w-full h-36 sm:h-48 lg:h-40 object-contain sm:object-cover object-top mb-4 rounded bg-white"
                   />
                   <h3 className="text-xl font-semibold mb-2 text-gray-700">
                     {cat.name}
@@ -109,19 +102,19 @@ const Home = () => {
                   </p>
                   <Link
                     to={cat.link}
-                    className="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition duration-300"
+                    className="inline-flex items-center justify-center bg-indigo-600 text-white px-4 py-2 rounded-md font-medium w-full max-w-[220px] text-center mb-6 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer"
                   >
-                    View {cat.name}
+                    <span className="inline-block">View {cat.name}</span>
                     <FaArrowRight className="ml-2" />
                   </Link>
                 </div>
               ))}
             </div>
-          </AnimatedSection>
+          </div>
         </div>
-        <AnimatedSection className="bg-gray-900 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div className="bg-gray-900 py-16 px-4 sm:py-24 sm:px-6 lg:px-8 -mt-8 lg:-mt-16">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative rounded-lg overflow-hidden shadow-2xl pb-[75%] sm:pb-[56.25%] h-0 hover:scale-102 transition-transform duration-300">
+            <div className="relative rounded-lg overflow-hidden pb-[66%] sm:pb-[50%] h-0 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <iframe
                 src="https://www.youtube.com/embed/8OpkLSdy7ms"
                 frameBorder="0"
@@ -131,7 +124,7 @@ const Home = () => {
                 className="absolute top-0 left-0 w-full h-full"
               ></iframe>
             </div>
-            <div className="relative rounded-lg overflow-hidden shadow-2xl pb-[75%] sm:pb-[56.25%] h-0 hover:scale-102 transition-transform duration-300">
+            <div className="relative rounded-lg overflow-hidden pb-[66%] sm:pb-[50%] h-0 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <iframe
                 src="https://www.youtube.com/embed/vrJlsgag26M"
                 frameBorder="0"
@@ -142,8 +135,8 @@ const Home = () => {
               ></iframe>
             </div>
           </div>
-        </AnimatedSection>
-        <AnimatedSection className="bg-gray-100 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        </div>
+        <div className="bg-gray-100 py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 sm:mb-12">
               Why Choose Mouldair Scientific?
@@ -152,7 +145,7 @@ const Home = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                  className="bg-white p-6 rounded-lg transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
                 >
                   <div className="flex items-center justify-center mb-4">
                     {index === 0 && (
@@ -176,9 +169,9 @@ const Home = () => {
               ))}
             </div>
           </div>
-        </AnimatedSection>
+        </div>
 
-        <AnimatedSection className="bg-white py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div className="bg-white py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 sm:mb-12 text-center">
               What Our Clients Say
@@ -187,7 +180,7 @@ const Home = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-gray-100 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                  className="bg-gray-100 p-6 rounded-lg transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
                 >
                   <p className="italic text-gray-700 mb-4">
                     "{testimonial.feedback}"
@@ -202,25 +195,25 @@ const Home = () => {
               ))}
             </div>
           </div>
-        </AnimatedSection>
+        </div>
 
-        <AnimatedSection className="bg-indigo-700 text-white py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div className="bg-indigo-700 text-white py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               {ctaSection.title}
             </h2>
             <p className="text-lg sm:text-xl mb-8">{ctaSection.content}</p>
-            <div className="inline-block hover:scale-105 transition-transform duration-300">
+            <div className="inline-block">
               <Link
                 to={ctaSection.buttonLink}
-                className="inline-flex items-center bg-white text-indigo-700 px-6 sm:px-8 py-2 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-indigo-50 transition duration-300"
+                className="inline-flex items-center bg-white text-indigo-700 px-6 sm:px-8 py-2 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-indigo-50 transition-transform duration-200 transform hover:-translate-y-1 hover:shadow-md cursor-pointer"
               >
                 {ctaSection.buttonText}
                 <FaArrowRight className="ml-2" />
               </Link>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
     </Layout>
   );

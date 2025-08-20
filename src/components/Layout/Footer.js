@@ -21,12 +21,9 @@ const Footer = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-8 text-center lg:text-left"
+            className="space-y-8 text-center"
           >
-            <Link
-              to="/"
-              className="flex items-center justify-center lg:justify-start space-x-2"
-            >
+            <Link to="/" className="flex items-center justify-center space-x-2">
               <motion.span
                 className="text-4xl font-bold text-indigo-500"
                 whileHover={{ scale: 1.1 }}
@@ -40,7 +37,7 @@ const Footer = () => {
               research and industry solutions.
             </p>
 
-            <div className="flex justify-center lg:justify-start space-x-6">
+            <div className="flex justify-center space-x-6">
               <motion.a
                 href="https://facebook.com"
                 className="text-gray-400 hover:text-indigo-500 transition"
@@ -78,10 +75,10 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-12 sm:mt-0"
           >
-            <h3 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4 text-center lg:text-left">
+            <h3 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4 text-center">
               Quick Links
             </h3>
-            <ul className="space-y-4 text-center lg:text-left">
+            <ul className="space-y-4 text-center">
               <motion.li
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -150,10 +147,10 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-12 sm:mt-0"
           >
-            <h3 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4 text-center lg:text-left">
+            <h3 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4 text-center">
               Address
             </h3>
-            <p className="text-base text-gray-400 mb-4 text-center lg:text-left">
+            <p className="text-base text-gray-400 mb-4 text-center">
               44 Happy Residency B/H Narmada Hotel, Zadeshwar, Bharuch, Gujarat
               392011, India
             </p>
@@ -180,7 +177,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-12 sm:mt-0"
           >
-            <h3 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4 text-center lg:text-left">
+            <h3 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4 text-center">
               Opening Hours
             </h3>
             <motion.div

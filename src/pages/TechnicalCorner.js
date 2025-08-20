@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 
@@ -322,6 +321,31 @@ const TechnicalCorner = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [activeArticle, setActiveArticle] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
+  const sectionContentRef = useRef(null);
+  const articleContentRef = useRef(null);
+  const caseStudyContentRef = useRef(null);
+
+  const scrollToRef = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  const handleSelectSection = (index) => {
+    setActiveSection(index);
+    // ensure the content panel is visible on both desktop and mobile
+    setTimeout(() => scrollToRef(sectionContentRef), 50);
+  };
+
+  const handleSelectArticle = (index) => {
+    setActiveArticle(index);
+    setTimeout(() => scrollToRef(articleContentRef), 50);
+  };
+
+  const handleSelectCaseStudy = (index) => {
+    setActiveCaseStudy(index);
+    setTimeout(() => scrollToRef(caseStudyContentRef), 50);
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -336,71 +360,112 @@ const TechnicalCorner = () => {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
-        <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-gray-900 mb-8 sm:mb-12"
-        >
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-gray-900 mb-8 sm:mb-12">
           Technical Corner
-        </motion.h1>
+        </h1>
 
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6 sm:mb-8 justify-center"
-          >
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6 sm:mb-8 justify-center">
             {technicalSections.map((section, index) => (
-              <motion.button
+              <button
                 key={index}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => setActiveSection(index)}
-                className={`px-3 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-base font-semibold transition-all duration-300 flex items-center justify-center text-center shadow-sm border overflow-hidden ${
+                onClick={() => handleSelectSection(index)}
+                className={`px-3 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-base font-semibold flex items-center justify-center text-center shadow-sm border overflow-hidden transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer ${
                   activeSection === index
                     ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white ring-2 ring-indigo-300 shadow-lg"
-                    : "bg-white text-gray-800 hover:bg-gray-50 hover:shadow-md"
+                    : "bg-white text-gray-800"
                 }`}
               >
                 <div className="text-center break-words whitespace-normal px-1 leading-tight">
                   {section.title}
                 </div>
-              </motion.button>
+              </button>
             ))}
-          </motion.div>
+          </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeSection}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 sm:p-10 lg:p-12 border border-indigo-50 mx-auto max-w-4xl"
+          <div
+            ref={sectionContentRef}
+            className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 lg:p-12 border border-indigo-50 mx-auto max-w-4xl transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
+          >
+            <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
+                {technicalSections[activeSection].title}
+              </h2>
+              <div className="h-1 w-28 bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 mb-4 rounded-full mx-auto" />
+              <p className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-4 max-w-prose">
+                {technicalSections[activeSection].content}
+              </p>
+              {technicalSections[activeSection].sources && (
+                <div className="mt-2 w-full">
+                  <h4 className="text-sm font-semibold text-gray-800 mb-2">
+                    Sources
+                  </h4>
+                  <ul className="text-xs text-gray-500 space-y-1">
+                    {technicalSections[activeSection].sources.map((s, i) => (
+                      <li key={i}>
+                        <a
+                          href={s}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline"
+                        >
+                          {s}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <section id="articles" className="mt-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-8">
+              Articles
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6 sm:mb-8">
+              {articles.map((article, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSelectArticle(index)}
+                  className={`px-3 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-base font-semibold flex items-center justify-center text-center shadow-sm border overflow-hidden transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer ${
+                    activeArticle === index
+                      ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white ring-2 ring-indigo-300 shadow-lg"
+                      : "bg-white text-gray-800"
+                  }`}
+                >
+                  <div className="text-center break-words whitespace-normal px-1 leading-tight">
+                    {article.title}
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            <div
+              ref={articleContentRef}
+              className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 lg:p-12 border border-indigo-50 mx-auto max-w-4xl transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
             >
               <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
-                  {technicalSections[activeSection].title}
-                </h2>
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
+                  {articles[activeArticle].title}
+                </h3>
                 <div className="h-1 w-28 bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 mb-4 rounded-full mx-auto" />
-                <p className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-4 max-w-prose">
-                  {technicalSections[activeSection].content}
-                </p>
-                {technicalSections[activeSection].sources && (
+                <div className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-4 whitespace-pre-line max-w-prose">
+                  {articles[activeArticle].content}
+                </div>
+                {articles[activeArticle].sources && (
                   <div className="mt-2 w-full">
                     <h4 className="text-sm font-semibold text-gray-800 mb-2">
                       Sources
                     </h4>
                     <ul className="text-xs text-gray-500 space-y-1">
-                      {technicalSections[activeSection].sources.map((s, i) => (
+                      {articles[activeArticle].sources.map((s, i) => (
                         <li key={i}>
                           <a
                             href={s}
                             target="_blank"
                             rel="noreferrer"
-                            className="underline hover:text-indigo-600"
+                            className="underline"
                           >
                             {s}
                           </a>
@@ -410,151 +475,66 @@ const TechnicalCorner = () => {
                   </div>
                 )}
               </div>
-            </motion.div>
-          </AnimatePresence>
-
-          <section id="articles" className="mt-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-8">
-              Articles
-            </h2>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6 sm:mb-8"
-            >
-              {articles.map((article, index) => (
-                <motion.button
-                  key={index}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setActiveArticle(index)}
-                  className={`px-3 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-base font-semibold transition-all duration-300 flex items-center justify-center text-center shadow-sm border overflow-hidden ${
-                    activeArticle === index
-                      ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white ring-2 ring-indigo-300 shadow-lg"
-                      : "bg-white text-gray-800 hover:bg-gray-50 hover:shadow-md"
-                  }`}
-                >
-                  <div className="text-center break-words whitespace-normal px-1 leading-tight">
-                    {article.title}
-                  </div>
-                </motion.button>
-              ))}
-            </motion.div>
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeArticle}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 sm:p-10 lg:p-12 border border-indigo-50 mx-auto max-w-4xl"
-              >
-                <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
-                    {articles[activeArticle].title}
-                  </h3>
-                  <div className="h-1 w-28 bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 mb-4 rounded-full mx-auto" />
-                  <div className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-4 whitespace-pre-line max-w-prose">
-                    {articles[activeArticle].content}
-                  </div>
-                  {articles[activeArticle].sources && (
-                    <div className="mt-2 w-full">
-                      <h4 className="text-sm font-semibold text-gray-800 mb-2">
-                        Sources
-                      </h4>
-                      <ul className="text-xs text-gray-500 space-y-1">
-                        {articles[activeArticle].sources.map((s, i) => (
-                          <li key={i}>
-                            <a
-                              href={s}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="underline hover:text-indigo-600"
-                            >
-                              {s}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            </AnimatePresence>
+            </div>
           </section>
 
           <section id="case-studies" className="mt-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-8">
               Case Studies
             </h2>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6 sm:mb-8"
-            >
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6 sm:mb-8">
               {caseStudies.map((study, index) => (
-                <motion.button
+                <button
                   key={index}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setActiveCaseStudy(index)}
-                  className={`px-3 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-base font-semibold transition-all duration-300 flex items-center justify-center text-center shadow-sm border overflow-hidden ${
+                  onClick={() => handleSelectCaseStudy(index)}
+                  className={`px-3 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-base font-semibold flex items-center justify-center text-center shadow-sm border overflow-hidden transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer ${
                     activeCaseStudy === index
                       ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white ring-2 ring-indigo-300 shadow-lg"
-                      : "bg-white text-gray-800 hover:bg-gray-50 hover:shadow-md"
+                      : "bg-white text-gray-800"
                   }`}
                 >
                   <div className="text-center break-words whitespace-normal px-1 leading-tight">
                     {study.title}
                   </div>
-                </motion.button>
+                </button>
               ))}
-            </motion.div>
+            </div>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeCaseStudy}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 sm:p-10 lg:p-12 border border-indigo-50 mx-auto max-w-4xl"
-              >
-                <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
-                    {caseStudies[activeCaseStudy].title}
-                  </h3>
-                  <div className="h-1 w-28 bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 mb-4 rounded-full mx-auto" />
-                  <div className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-4 whitespace-pre-line max-w-prose">
-                    {caseStudies[activeCaseStudy].content}
-                  </div>
-                  {caseStudies[activeCaseStudy].sources && (
-                    <div className="mt-2 w-full">
-                      <h4 className="text-sm font-semibold text-gray-800 mb-2">
-                        Sources
-                      </h4>
-                      <ul className="text-xs text-gray-500 space-y-1">
-                        {caseStudies[activeCaseStudy].sources.map((s, i) => (
-                          <li key={i}>
-                            <a
-                              href={s}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="underline hover:text-indigo-600"
-                            >
-                              {s}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+            <div
+              ref={caseStudyContentRef}
+              className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 lg:p-12 border border-indigo-50 mx-auto max-w-4xl transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
+            >
+              <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
+                  {caseStudies[activeCaseStudy].title}
+                </h3>
+                <div className="h-1 w-28 bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 mb-4 rounded-full mx-auto" />
+                <div className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-4 whitespace-pre-line max-w-prose">
+                  {caseStudies[activeCaseStudy].content}
                 </div>
-              </motion.div>
-            </AnimatePresence>
+                {caseStudies[activeCaseStudy].sources && (
+                  <div className="mt-2 w-full">
+                    <h4 className="text-sm font-semibold text-gray-800 mb-2">
+                      Sources
+                    </h4>
+                    <ul className="text-xs text-gray-500 space-y-1">
+                      {caseStudies[activeCaseStudy].sources.map((s, i) => (
+                        <li key={i}>
+                          <a
+                            href={s}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="underline"
+                          >
+                            {s}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
           </section>
         </div>
       </div>

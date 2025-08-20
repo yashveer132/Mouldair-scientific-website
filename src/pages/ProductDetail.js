@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import { motion } from "framer-motion";
 import {
   FaIndustry,
   FaCog,
@@ -34,19 +33,14 @@ const ProductDetail = () => {
 
   return (
     <Layout>
-      <div className="bg-gradient-to-b from-indigo-100 via-purple-50 to-pink-100 min-h-screen py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-b from-indigo-100 via-purple-50 to-pink-100 min-h-screen py-6 px-4 sm:py-8 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center justify-center mb-12">
-            <motion.h1
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-8 text-center tracking-tight leading-tight"
-            >
+          <div className="flex flex-col items-center justify-center mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 text-center tracking-tight leading-tight max-w-4xl w-full truncate">
               {product.name}
-            </motion.h1>
+            </h1>
             {product.datasheetUrl && (
-              <motion.a
+              <a
                 href={product.datasheetUrl}
                 download={!product.datasheetUrl.startsWith("https:")}
                 target={
@@ -59,12 +53,7 @@ const ProductDetail = () => {
                     ? "noopener noreferrer"
                     : undefined
                 }
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-12"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 mb-8 sm:mb-10 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
               >
                 {product.datasheetUrl.startsWith("https:") ? (
                   <FaExternalLinkAlt className="mr-2" />
@@ -74,52 +63,40 @@ const ProductDetail = () => {
                 {product.datasheetUrl.startsWith("https:")
                   ? "Visit Website"
                   : "Download Document"}
-              </motion.a>
+              </a>
             )}
           </div>
 
-          <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-6 lg:gap-12 mb-12 lg:mb-16">
-            {product.imageUrl.map((url, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index === 0 ? -50 : 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
-                className="rounded-lg overflow-hidden shadow-lg w-full lg:w-1/2"
-              >
-                <img
-                  src={url}
-                  alt={`${product.name} view ${index + 1}`}
-                  className="w-full h-48 sm:h-64 md:h-80 object-cover"
-                />
-              </motion.div>
-            ))}
+          <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:items-center gap-6 mb-6 lg:mb-10 lg:-mt-4">
+            <div className="bg-white rounded-lg p-4 lg:p-6 mb-8 lg:mb-0 lg:w-1/2 lg:h-full flex flex-col lg:justify-center lg:pb-6 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 text-center">
+                Product Overview
+              </h2>
+              <p className="text-gray-700 text-base mb-4 text-left">
+                {product.description}
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center lg:items-end lg:w-1/2 lg:h-full">
+              <div className="flex flex-col items-center lg:items-end gap-6 w-full h-full justify-center">
+                {product.imageUrl.map((url, index) => (
+                  <div
+                    key={index}
+                    className="rounded-lg overflow-hidden shadow-lg w-full max-w-md lg:w-full flex items-center justify-center bg-white mx-auto lg:mx-0 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
+                  >
+                    <img
+                      src={url}
+                      alt={`${product.name} view ${index + 1}`}
+                      className="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-contain mx-auto"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16"
-            whileHover={{ scale: 1.02 }}
-          >
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 text-center">
-              Product Overview
-            </h2>
-            <p className="text-gray-700 text-lg mb-6 text-center">
-              {product.description}
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="bg-white rounded-lg shadow-xl p-6"
-              whileHover={{ scale: 1.02 }}
-            >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-6 mb-8 lg:mb-10">
+            <div className="bg-white rounded-lg p-4 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <div className="flex items-center justify-center mb-4">
                 <FaCog className="text-indigo-600 mr-2" />
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900">
@@ -128,27 +105,15 @@ const ProductDetail = () => {
               </div>
               <ul className="space-y-2">
                 {product.features.map((feature, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * index }}
-                    className="flex items-center space-x-2"
-                  >
+                  <li key={index} className="flex items-center space-x-2">
                     <FaShieldAlt className="text-indigo-600 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="bg-white rounded-lg shadow-xl p-6"
-              whileHover={{ scale: 1.02 }}
-            >
+            <div className="bg-white rounded-lg p-4 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <div className="flex items-center justify-center mb-4">
                 <FaIndustry className="text-indigo-600 mr-2" />
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900">
@@ -157,27 +122,18 @@ const ProductDetail = () => {
               </div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {product.applications.map((application, index) => (
-                  <motion.li
+                  <li
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * index }}
                     className="flex items-center space-x-2 bg-indigo-50 p-2 rounded"
                   >
                     <FaIndustry className="text-indigo-600 flex-shrink-0" />
                     <span className="text-gray-700">{application}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="bg-white rounded-lg shadow-xl p-6"
-              whileHover={{ scale: 1.02 }}
-            >
+            <div className="bg-white rounded-lg p-4 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <div className="flex items-center justify-center mb-4">
                 <FaTools className="text-indigo-600 mr-2" />
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900">
@@ -187,60 +143,42 @@ const ProductDetail = () => {
               <div className="space-y-2">
                 {Object.entries(product.technicalSpecs).map(
                   ([key, value], index) => (
-                    <motion.div
+                    <div
                       key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 * index }}
                       className="grid grid-cols-2 gap-4 items-start"
                     >
                       <span className="font-semibold text-indigo-600 break-words">
                         {key}:
                       </span>
                       <span className="text-gray-700 break-words">{value}</span>
-                    </motion.div>
+                    </div>
                   )
                 )}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {product.additionalFeatures && (
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-              className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16"
-              whileHover={{ scale: 1.02 }}
-            >
+            <div className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                 Additional Features
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {product.additionalFeatures.map((feature, index) => (
-                  <motion.li
+                  <li
                     key={index}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ delay: 0.1 * index }}
                     className="flex items-center space-x-2 bg-indigo-50 p-3 rounded-lg"
                   >
                     <FaCog className="text-indigo-600 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           )}
 
           {product.videoId && (
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-              className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16 max-w-4xl mx-auto"
-            >
+            <div className="bg-white rounded-lg shadow-xl p-6 lg:p-8 mb-12 lg:mb-16 max-w-4xl mx-auto transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Product Demo Video
               </h3>
@@ -255,15 +193,10 @@ const ProductDetail = () => {
                   ></iframe>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Elevate Your Operations?
             </h2>
@@ -273,16 +206,16 @@ const ProductDetail = () => {
               you find the perfect solution for your needs.
             </p>
             <div className="flex justify-center gap-4">
-              <motion.div whileHover={{ scale: 1.05 }}>
+              <div className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
                 <Link
                   to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
                 >
                   Contact Us
                 </Link>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </Layout>

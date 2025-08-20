@@ -1,8 +1,7 @@
 import React, { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Layout from "../components/Layout/Layout";
 import ProductCard from "../components/Layout/ProductCard";
-import AnimatedSection from "../components/AnimatedSection";
+
 import { productData } from "../data/productData";
 import { FaSearch } from "react-icons/fa";
 
@@ -18,15 +17,10 @@ const Products = () => {
   return (
     <Layout>
       <div className="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 min-h-screen">
-        <AnimatedSection className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 sm:mb-8 text-center"
-          >
+        <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 sm:mb-8 text-center">
             Discover All Our Products
-          </motion.h1>
+          </h1>
 
           <div className="mb-6 sm:mb-8 flex justify-center">
             <div className="relative w-full max-w-md">
@@ -42,43 +36,28 @@ const Products = () => {
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10"
-          >
-            <AnimatePresence>
-              {filteredProducts.map((product) => (
-                <motion.div
-                  key={product.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <ProductCard
-                    id={product.id}
-                    name={product.name}
-                    description={product.description}
-                    imageUrl={product.imageUrl[0]}
-                  />
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+            {filteredProducts.map((product) => (
+              <div
+                key={product.id}
+                className="h-full transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
+              >
+                <ProductCard
+                  id={product.id}
+                  name={product.name}
+                  description={product.description}
+                  imageUrl={product.imageUrl[0]}
+                />
+              </div>
+            ))}
+          </div>
 
           {filteredProducts.length === 0 && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center text-gray-600 mt-8 text-sm sm:text-base"
-            >
+            <p className="text-center text-gray-600 mt-8 text-sm sm:text-base">
               No products found. Try adjusting your search.
-            </motion.p>
+            </p>
           )}
-        </AnimatedSection>
+        </div>
       </div>
     </Layout>
   );
