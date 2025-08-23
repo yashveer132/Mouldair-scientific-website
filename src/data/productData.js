@@ -2349,8 +2349,8 @@ export const productData = [
       "Industrial coating",
     ],
     technicalSpecs: {
-      "Pumping Speed Range": "4-65 m³/h",
-      "Ultimate Pressure": "≤ 2 × 10⁻⁴ mbar",
+      "Pumping Speed Range": "4.8-75 m³/h",
+      "Ultimate Pressure": "10⁻⁴ mbar",
       "Operating Temperature": "12-40°C",
       "Noise Level": "52-65 dB(A)",
       "Motor Power": "0.37-2.2 kW",
@@ -2392,7 +2392,7 @@ export const productData = [
       "Medical technology",
     ],
     technicalSpecs: {
-      "Pumping Speed Range": "4-25 m³/h",
+      "Pumping Speed Range": "40-90 m³/h",
       "Ultimate Pressure": "≤ 2 × 10⁻³ mbar",
       "Operating Temperature": "12-40°C",
       "Noise Level": "50-60 dB(A)",
@@ -2519,7 +2519,7 @@ export const productData = [
     ],
     technicalSpecs: {
       "Pumping Speed Range": "10-330 m³/h",
-      "Ultimate Pressure": "≤ 8 × 10⁻³ mbar",
+      "Ultimate Pressure": "≤ 8 × 10⁻² mbar",
       "Water Vapor Tolerance": "30 mbar",
       "Temperature Range": "12-45°C",
       "Protection Class": "IP55",
@@ -3659,7 +3659,7 @@ export const productData = [
     ],
     technicalSpecs: {
       "Pumping Speed": "15.0 m³/h (250 L/min)",
-      "Ultimate Pressure": "< 7.5 x 10⁻³ Torr",
+      "Ultimate Pressure": "0.012 Torr (0.016 mbar)",
       "Power Consumption": "0.75 kW",
       "Noise Level": "< 55 dB(A)",
       "Operating Temperature": "10-40°C",
@@ -3707,7 +3707,7 @@ export const productData = [
       "General laboratory use",
     ],
     technicalSpecs: {
-      "Pumping Speed": "4.8 m³/h (80 L/min)",
+      "Pumping Speed": "4 m³/h (67 L/min)",
       "Ultimate Pressure": "2 × 10⁻³ mbar",
       "Motor Power": "0.25 kW",
       "Noise Level": "52 dB(A)",
@@ -3755,8 +3755,8 @@ export const productData = [
       "Analytical instrumentation",
     ],
     technicalSpecs: {
-      "Pumping Speed": "6.2 m³/h (103 L/min)",
-      "Ultimate Pressure": "1.5 × 10⁻³ mbar",
+      "Pumping Speed": "6 m³/h (100 L/min)",
+      "Ultimate Pressure": "2 × 10⁻³ mbar",
       "Motor Power": "0.37 kW",
       "Noise Level": "54 dB(A)",
       "Oil Capacity": "0.7 L",
@@ -3803,7 +3803,7 @@ export const productData = [
       "Research applications",
     ],
     technicalSpecs: {
-      "Pumping Speed": "8.4 m³/h (140 L/min)",
+      "Pumping Speed": "8 m³/h (133 L/min)",
       "Ultimate Pressure": "1.3 × 10⁻³ mbar",
       "Motor Power": "0.45 kW",
       "Noise Level": "56 dB(A)",
@@ -3852,7 +3852,7 @@ export const productData = [
       "Pilot plant operations",
     ],
     technicalSpecs: {
-      "Pumping Speed": "16.5 m³/h (275 L/min)",
+      "Pumping Speed": "18.3 m³/h (67 L/min)",
       "Ultimate Pressure": "1.0 × 10⁻³ mbar",
       "Motor Power": "0.75 kW",
       "Noise Level": "58 dB(A)",
@@ -3901,7 +3901,7 @@ export const productData = [
       "Research facilities",
     ],
     technicalSpecs: {
-      "Pumping Speed": "26.2 m³/h (400 L/min)",
+      "Pumping Speed": "26.2 m³/h (436 L/min)",
       "Ultimate Pressure": "3 × 10⁻3 mbar",
       "Motor Power": "1.1 kW",
       "Noise Level": "60 dB(A)",
@@ -3950,7 +3950,7 @@ export const productData = [
       "Central vacuum supply",
     ],
     technicalSpecs: {
-      "Pumping Speed": "33.1 m³/h (500 L/min)",
+      "Pumping Speed": "33.1 m³/h (551 L/min)",
       "Ultimate Pressure": "3 × 10⁻3 mbar",
       "Motor Power": "1.5 kW",
       "Noise Level": "62 dB(A)",
@@ -3999,7 +3999,7 @@ export const productData = [
       "Multiple point extraction",
     ],
     technicalSpecs: {
-      "Pumping Speed": "55.7 m³/h (800 L/min)",
+      "Pumping Speed": "55.7 m³/h (928 L/min)",
       "Ultimate Pressure": "3 × 10⁻⁴ mbar",
       "Motor Power": "2.2 kW",
       "Noise Level": "65 dB(A)",
@@ -4048,7 +4048,7 @@ export const productData = [
       "Process manufacturing",
     ],
     technicalSpecs: {
-      "Pumping Speed": "74.3 m³/h (1083 L/min)",
+      "Pumping Speed": "74.3 m³/h (1238 l/min)",
       "Ultimate Pressure": "3 × 10-3 mbar",
       "Motor Power": "3.0 kW",
       "Noise Level": "68 dB(A)",
@@ -4388,8 +4388,8 @@ export const productData = [
       "Basic research",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "37 L/min",
-      "Ultimate Pressure": "100 Torr",
+      "Free Air Capacity": "22 L/min",
+      "Ultimate Pressure": "100 Torr (133 mbar)",
       "Motor Power": "0.12 HP",
       "Noise Level": "< 55 dB(A)",
       Weight: "4.5 kg",
@@ -4437,8 +4437,8 @@ export const productData = [
       "Quality control",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "46 L/min",
-      "Ultimate Pressure": "75 Torr",
+      "Free Air Capacity": "34 L/min",
+      "Ultimate Pressure": "70 Torr (93 mbar)",
       "Motor Power": "0.16 HP",
       "Noise Level": "57 dB(A)",
       Weight: "5.9 kg",
@@ -4486,8 +4486,8 @@ export const productData = [
       "Scientific applications",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "67 L/min",
-      "Ultimate Pressure": "50 Torr",
+      "Free Air Capacity": "45 L/min",
+      "Ultimate Pressure": "60 Torr (80 mbar)",
       "Motor Power": "0.25 HP",
       "Noise Level": "59 dB(A)",
       Weight: "8.2 kg",
@@ -4535,8 +4535,8 @@ export const productData = [
       "Scientific instruments",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "83 L/min",
-      "Ultimate Pressure": "40 Torr",
+      "Free Air Capacity": "65 L/min",
+      "Ultimate Pressure": "5 Torr (6.7 mbar)",
       "Motor Power": "0.33 HP",
       "Noise Level": "62 dB(A)",
       Weight: "11.4 kg",
@@ -4584,8 +4584,8 @@ export const productData = [
       "Development labs",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "98 L/min",
-      "Ultimate Pressure": "35 Torr",
+      "Free Air Capacity": "65 L/min",
+      "Ultimate Pressure": "7.5 Torr (10 mbar)",
       "Motor Power": "0.4 HP",
       "Noise Level": "63 dB(A)",
       Weight: "13.6 kg",
@@ -4633,8 +4633,8 @@ export const productData = [
       "Development centers",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "127 L/min",
-      "Ultimate Pressure": "30 Torr",
+      "Free Air Capacity": "65 L/min",
+      "Ultimate Pressure": "5 Torr (6.7 mbar)",
       "Motor Power": "0.5 HP",
       "Noise Level": "65 dB(A)",
       Weight: "15.9 kg",
@@ -4682,8 +4682,8 @@ export const productData = [
       "Production systems",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "185 L/min",
-      "Ultimate Pressure": "65 Torr",
+      "Free Air Capacity": "100 L/min",
+      "Ultimate Pressure": "60 Torr (80 mbar)",
       "Motor Power": "0.75 HP",
       "Noise Level": "68 dB(A)",
       Weight: "18.2 kg",
@@ -4731,8 +4731,8 @@ export const productData = [
       "Development facilities",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "235 L/min",
-      "Ultimate Pressure": "25 Torr",
+      "Free Air Capacity": "100 L/min",
+      "Ultimate Pressure": "5 Torr (6.7 mbar)",
       "Motor Power": "1.0 HP",
       "Noise Level": "70 dB(A)",
       Weight: "22.7 kg",
@@ -4780,8 +4780,8 @@ export const productData = [
       "Quality control",
     ],
     technicalSpecs: {
-      "Free Air Capacity": "285 L/min",
-      "Ultimate Pressure": "20 Torr",
+      "Free Air Capacity": "201 L/min",
+      "Ultimate Pressure": "60 Torr (80 mbar)",
       "Motor Power": "1.5 HP",
       "Noise Level": "72 dB(A)",
       Weight: "27.2 kg",

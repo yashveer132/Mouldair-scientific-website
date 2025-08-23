@@ -55,7 +55,7 @@ const About = () => {
             >
               Our Authorised Principals{" "}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
               {companyInfo.map((info, index) => (
                 <div
                   key={index}
@@ -66,12 +66,12 @@ const About = () => {
                   }}
                 >
                   <div className="flex flex-col items-center p-8 flex-grow w-full">
-                    <div className="w-44 h-44 flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-md mb-6">
+                    <div className="w-36 h-36 flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-md mb-4">
                       <img
                         src={info.image}
                         alt={info.title}
                         className="object-contain w-full h-full"
-                        style={{ maxHeight: "160px", maxWidth: "160px" }}
+                        style={{ maxHeight: "130px", maxWidth: "130px" }}
                       />
                     </div>
                     <h3

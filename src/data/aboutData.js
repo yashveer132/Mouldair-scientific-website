@@ -25,6 +25,12 @@ export const companyInfo = [
     content:
       "A leading pump manufacturer of high-quality, durable vacuum products. Their extensive portfolio includes: Diaphragm pumps, Rotary vane pumps, Piston pumps, Turbomolecular pumps and systems, Wide range of accessories.",
   },
+  {
+    title: "Cintex",
+    image: "/home_image5.jpg",
+    content:
+      "Established in 1969, Cintex manufactures and exports laboratory, pharmaceutical and hospital equipment with GMP/cGMP-compliant designs and global regulatory support.",
+  },
 ];
 
 export const videoIds = [
