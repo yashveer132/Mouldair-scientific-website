@@ -13,6 +13,18 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const scrollToCategories = (e) => {
+    if (window.location.pathname === "/") {
+      e.preventDefault();
+      const categoriesElement = document.getElementById("categories");
+      if (categoriesElement) {
+        categoriesElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "/#categories";
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
@@ -95,13 +107,29 @@ const Footer = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link
-                  to="/#categories"
-                  onClick={scrollToTop}
-                  className="text-base text-gray-400 hover:text-white transition duration-300"
-                >
-                  Products
-                </Link>
+                {window.location.pathname === "/" ? (
+                  <button
+                    onClick={() => {
+                      const categoriesElement =
+                        document.getElementById("categories");
+                      if (categoriesElement) {
+                        categoriesElement.scrollIntoView({
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
+                    className="text-base text-gray-400 hover:text-white transition duration-300 bg-transparent border-none cursor-pointer"
+                  >
+                    Products
+                  </button>
+                ) : (
+                  <Link
+                    to="/#categories"
+                    className="text-base text-gray-400 hover:text-white transition duration-300"
+                  >
+                    Products
+                  </Link>
+                )}
               </motion.li>
               <motion.li
                 whileHover={{ scale: 1.05 }}

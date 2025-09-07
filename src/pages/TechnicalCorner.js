@@ -361,7 +361,7 @@ const TechnicalCorner = () => {
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-gray-900 mb-8 sm:mb-12">
-          Technical Corner
+          Knowledge Center
         </h1>
 
         <div className="max-w-7xl mx-auto">

@@ -14,7 +14,7 @@ const About = () => {
         <section className="relative flex items-center justify-center px-4 py-2 pb-10 sm:py-4 sm:pb-16 md:py-6 md:pb-20 lg:py-8 lg:pb-28 overflow-hidden min-h-[20vh] sm:min-h-[25vh] md:min-h-[30vh] lg:min-h-[35vh]">
           <div className="relative z-10 text-center text-black max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 mt-6 sm:mt-0"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 mt-12 sm:mt-6"
               style={{ fontWeight: 800 }}
             >
               {heroContent.title}

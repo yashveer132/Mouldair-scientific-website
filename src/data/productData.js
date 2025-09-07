@@ -5,15 +5,15 @@ export const productData = [
     pumpType: "Chemical Metering Pumps",
     name: "Qdos chemical metering pump",
     description:
-      "The Qdos range sets new standards in chemical metering with high accuracy and near-linear flow under varying process conditions. Designed for tough chemical metering applications.",
+      "The Qdos range provides accurate, linear and repeatable chemical metering with flow maintained right up to 9 bar and long maintenance intervals. Designed to eliminate the need for ancillary equipment and reduce total cost of ownership.",
     imageUrl: ["/watson1.webp"],
     features: [
-      "ReNu pumphead technology",
-      "No-tools maintenance",
-      "Fluid recovery system",
-      "Low maintenance",
-      "Simple installation",
-      "Accurate chemical delivery",
+      "Flow rates from 0.1 to 2000 ml/min at up to 9 bar",
+      "Simple drop-in installation (eliminates ancillary equipment)",
+      "No-tools single-component maintenance",
+      "Reduced cost of ownership compared to diaphragm pumps",
+      "Accurate, linear and repeatable metering",
+      "Long maintenance intervals",
       "Intuitive interface",
     ],
     applications: [
@@ -28,10 +28,11 @@ export const productData = [
     technicalSpecs: {
       "Flow Rates": "0.1 - 2,000 ml/min",
       "Pressure Rating": "up to 9 bar",
-      Accuracy: "±1% accuracy",
-      "Turndown Ratio": "20000:1",
-      Display: '3.5" TFT Color',
-      Control: "Manual, 4-20mA, PROFIBUS",
+      Accuracy: "High accuracy (manufacturer specified)",
+      "Turndown Ratio": "Model dependent (see specifications)",
+      Display: "Optional display (model dependent)",
+      Control:
+        "Manual, Profibus, Remote, Universal, Universal relay, Universal+, Universal+ relay",
     },
     additionalFeatures: [
       "Safety pressure switch",
@@ -1086,7 +1087,6 @@ export const productData = [
       "https://www.cintexindia.com/products/autoclave-steam-sterilizer.html",
     videoId: "",
   },
-  // Placeholders for items with unavailable pages on manufacturer site
   {
     id: "cintex_flp_vacuum_oven",
     brand: "cintex",
@@ -1164,13 +1164,13 @@ export const productData = [
       "Qdos H-FLO offers higher flow rates while maintaining the precision and reliability of the Qdos range. Ideal for larger scale chemical dosing applications.",
     imageUrl: ["/watson2.webp"],
     features: [
-      "Higher flow capability",
-      "ReNu HF pumphead",
-      "Tool-free maintenance",
-      "Advanced fluid handling",
-      "Process control integration",
-      "Robust design",
-      "User-friendly interface",
+      "Flow rates up to 600 L/h",
+      "RFID pumphead detection to confirm correct pumphead",
+      "Revolution counter for pumphead service maintenance",
+      "One common pump drive with multiple pumphead options",
+      "Network integration (EtherNet/IP, PROFIBUS, PROFINET)",
+      "Optional pressure sensing kit with configurable alarms",
+      "Long maintenance intervals and low total cost of ownership",
     ],
     applications: [
       "Large scale water treatment",
@@ -1182,11 +1182,11 @@ export const productData = [
       "Wastewater treatment",
     ],
     technicalSpecs: {
-      "Flow Rates": "0.1 - 4,000 ml/min",
+      "Flow Rates": "0.12 L/h - 600 L/h",
       "Pressure Rating": "up to 7 bar",
-      Accuracy: "±1% accuracy",
-      "Turndown Ratio": "20000:1",
-      "Power Supply": "100-240V AC",
+      Accuracy: "Manufacturer specified accuracy (see datasheet)",
+      "Turndown Ratio": "Model dependent (see specifications)",
+      "Power Supply": "100–240 V AC 50–60 Hz, 350 VA",
       "Protection Rating": "IP66",
     },
     additionalFeatures: [
@@ -1209,13 +1209,13 @@ export const productData = [
       "The Quantum pump is specifically designed for single-use bioprocessing applications, offering high accuracy and sterility with reduced validation requirements.",
     imageUrl: ["/watson3.webp"],
     features: [
-      "Single-use technology",
-      "High accuracy flow",
-      "Low pulsation",
-      "Reduced validation time",
-      "Full traceability",
-      "Plug and play operation",
-      "High turndown ratio",
+      "Patented ReNu SU single-use cartridge technology",
+      "Flow linearity and virtually no pulsation",
+      "Colour display with intuitive menu",
+      "3-level security PIN protection",
+      "Plug and play sterile connections",
+      "High control ratio for TFF and HPLC applications",
+      "Designed for tangential flow filtration and HPLC",
     ],
     applications: [
       "Biopharmaceutical processing",
@@ -1227,10 +1227,11 @@ export const productData = [
       "Buffer preparation",
     ],
     technicalSpecs: {
-      "Flow Range": "0.1 - 20 L/min",
+      "Flow Range": "5.33 ml/min - 20 L/min",
       "Pressure Rating": "up to 3 bar (43.5 psi)",
-      Accuracy: "±1%",
-      Control: "Manual and automated",
+      Accuracy: "Manufacturer specified accuracy (see datasheet)",
+      "Speed control ratio": "4000:1",
+      Control: "Remote analogue/digital; local keypad/display options",
       Materials: "USP Class VI",
       Sterilization: "Gamma irradiated",
     },
@@ -1272,12 +1273,12 @@ export const productData = [
       "Educational facilities",
     ],
     technicalSpecs: {
-      "Flow Rates": "0.001-190 ml/min",
+      "Flow Rates": "0.0001-190 ml/min",
       "Speed Range": "4-400 rpm",
       "Tube Sizes": "0.5-4.8mm bore",
       "Number of Rollers": "8",
       "Operating Temperature": "5-40°C",
-      "Power Supply": "100-240V",
+      "Power Supply": "24 V DC (90–264 V AC via mains transformer)",
     },
     additionalFeatures: [
       "Multiple tube holder options",
@@ -1321,7 +1322,8 @@ export const productData = [
       "Speed Range": "0.1-400 rpm",
       "Tube Sizes": "0.5-8.0mm bore",
       "Number of Rollers": "4",
-      "Control Interface": "Membrane keypad",
+      "Control Interface":
+        "Membrane keypad; 1ph 100–120/220–240 V 50/60 Hz, 100 VA",
       "Protection Rating": "IP31",
     },
     additionalFeatures: [
@@ -1361,12 +1363,13 @@ export const productData = [
       "Process integration",
     ],
     technicalSpecs: {
-      "Flow Rates": "0.1-3500 ml/min",
+      "Flow Rates": "0.004-3500 ml/min",
       "Speed Range": "0.1-220 rpm",
       Accuracy: "±0.5%",
-      "Control Options": "Manual, Auto, PROFIBUS",
+      "Control Options":
+        "Manual, Auto, PROFIBUS, EtherNet/IP, PROFINET, RS232/RS485",
       Display: '3.5" Color TFT',
-      "Protection Rating": "IP66",
+      "Protection Rating": "IP31, IP66",
     },
     additionalFeatures: [
       "Data logging",
@@ -1406,11 +1409,11 @@ export const productData = [
       "Process automation",
     ],
     technicalSpecs: {
-      "Flow Rates": "0.1-33 L/min",
+      "Flow Rates": "0.001-18 L/min",
       "Speed Range": "0.1-265 rpm",
       "Pressure Rating": "up to 7 bar",
       "Control Interface": "Touch screen",
-      Communication: "Multiple protocols",
+      Communication: "Profibus, EtherNet/IP, PROFINET, RS232/RS485",
       "Protection Rating": "IP66",
     },
     additionalFeatures: [
@@ -1451,10 +1454,11 @@ export const productData = [
       "Process integration",
     ],
     technicalSpecs: {
-      "Flow Rates": "up to 33 L/min",
+      "Flow Rates": "0.12 L/h - 3300 L/h",
       "Speed Range": "0.1-360 rpm",
       "Pressure Rating": "up to 7 bar",
-      "Control Options": "Manual, Auto, Network",
+      "Control Options":
+        "Manual, Auto, Network (EtherNet/IP, PROFIBUS, PROFINET)",
       Display: "Color touch screen",
       "Protection Rating": "IP66",
     },
@@ -1541,7 +1545,7 @@ export const productData = [
       "Automated systems",
     ],
     technicalSpecs: {
-      "Flow Rates": "0.1-2000 ml/min",
+      "Flow Rates": "0.002-2000 ml/min",
       "Speed Range": "0.1-400 rpm",
       "Control Input": "0-10V, 4-20mA",
       "Power Supply": "24V DC",
@@ -1590,7 +1594,7 @@ export const productData = [
       "Pressure Rating": "up to 12 bar",
       "Hose Options": "NR, NBR, F-NBR, EPDM",
       "Speed Range": "5-97 rpm",
-      Temperature: "-20 to 80°C",
+      Temperature: "-20 to 80 °C",
       "Connection Size": "1/4 inch",
     },
     additionalFeatures: [
@@ -1631,7 +1635,7 @@ export const productData = [
       "Industrial automation",
     ],
     technicalSpecs: {
-      "Flow Rates": "up to 	5985 L/h",
+      "Flow Rates": "up to 5,985 L/hr",
       "Pressure Rating": "up to 16 bar",
       "Hose Materials": "Multiple options",
       "Drive Power": "up to 1.5 kW",
@@ -1721,9 +1725,9 @@ export const productData = [
       "R&D applications",
     ],
     technicalSpecs: {
-      "Fill Range": "0.2-250ml",
+      "Fill Range": "0.2-250 ml",
       Accuracy: "±0.5%",
-      "Fill Speed": "up to 60/minute",
+      "Fill Speed": "up to 60/min",
       "Control System": "Touch screen HMI",
       Compliance: "GMP, GAMP",
       Protection: "IP54",
@@ -1811,7 +1815,7 @@ export const productData = [
       "Laboratory research",
     ],
     technicalSpecs: {
-      "Size Range": "0.5-25.4mm bore",
+      "Size Range": "0.5-25.4 mm bore",
       "Temperature Range": "5 °C to 80 °C",
       "Pressure Rating": "up to 4 bar",
       Sterilization: "Autoclave, gamma",
@@ -1860,7 +1864,7 @@ export const productData = [
       "Pressure Rating": "up to 16 bar",
       "Hose Options": "NR, NBR, EPDM, CSM",
       "Speed Range": "5-100 rpm",
-      Temperature: "-20 to 80°C",
+      Temperature: "-20 to 80 °C",
       "Connection Size": "3/8 inch",
     },
     additionalFeatures: [
@@ -1946,7 +1950,7 @@ export const productData = [
       "Process automation",
     ],
     technicalSpecs: {
-      "Flow Rates": "up to 20100 L/hr",
+      "Flow Rates": "up to 20,100 L/hr",
       "Pressure Rating": "up to 16 bar",
       "Drive Options": "Multiple configurations",
       "Power Range": "up to 5.5 kW",
@@ -1991,11 +1995,11 @@ export const productData = [
       "Biotechnology",
     ],
     technicalSpecs: {
-      "Flow Rates": "up to 90,000 L/hr",
+      "Flow Rates": "up to 18,000 L/hr",
       "Pressure Rating": "up to 15 bar",
-      "Temperature Range": "-20 to 120°C",
+      "Temperature Range": "-20 to 100 °C",
       "Sanitary Standards": "3A, EHEDG",
-      "Surface Finish": "0.5μm Ra",
+      "Surface Finish": "0.8 μm Ra",
       "Connection Type": "Sanitary fittings",
     },
     additionalFeatures: [
@@ -2035,9 +2039,9 @@ export const productData = [
       "Biological materials",
     ],
     technicalSpecs: {
-      "Fill Range": "0.1-100ml",
+      "Fill Range": "0.1-100 ml",
       Accuracy: "±0.5%",
-      "Fill Speed": "up to 30/minute",
+      "Fill Speed": "up to 30/min",
       Control: "Digital interface",
       Compliance: "GMP, GAMP",
       Protection: "IP54",
@@ -2080,12 +2084,12 @@ export const productData = [
       "General industry",
     ],
     technicalSpecs: {
-      "Flow Rates": "up to 0.5 L/min",
+      "Flow Rates": "up to 0.25 L/min",
       "Pressure Rating": "up to 8 bar",
       "Hose Materials": "NR, NBR, EPDM",
-      "Speed Range": "5-90 rpm",
+      "Speed Range": "5-80 rpm",
       Power: "0.37 kW",
-      "Connection Size": "3/8 inch",
+      "Connection Size": "1/4 inch",
     },
     additionalFeatures: [
       "Easy installation",
@@ -2170,8 +2174,8 @@ export const productData = [
       "High-purity transfer",
     ],
     technicalSpecs: {
-      "Size Range": "0.5-25.4mm bore",
-      "Temperature Range": "-50 to 230°C",
+      "Size Range": "0.5-25.4 mm bore",
+      "Temperature Range": "-50 to 230 °C",
       "Pressure Rating": "up to 3 bar",
       Sterilization: "Autoclave, gamma, EtO",
       Material: "Platinum-cured silicone",
@@ -2215,8 +2219,8 @@ export const productData = [
       "General industry",
     ],
     technicalSpecs: {
-      "Size Range": "0.8-25.4mm bore",
-      "Temperature Range": "-40 to 80°C",
+      "Size Range": "0.8-25.4 mm bore",
+      "Temperature Range": "-40 to 80 °C",
       "Pressure Rating": "up to 4 bar",
       "Chemical Resistance": "Broad spectrum",
       Material: "Thermoplastic elastomer",
@@ -2260,8 +2264,8 @@ export const productData = [
       "Aseptic connections",
     ],
     technicalSpecs: {
-      "Size Range": "3.2-25.4mm bore",
-      "Temperature Range": "-40 to 135°C",
+      "Size Range": "3.2-25.4 mm bore",
+      "Temperature Range": "-40 to 135 °C",
       "Pressure Rating": "up to 4 bar",
       Sterilization: "Autoclave, gamma",
       Material: "TPE",
@@ -2307,7 +2311,7 @@ export const productData = [
     technicalSpecs: {
       "Flow Rates": "0.004-3,500 ml/min",
       "Speed Range": "0.1-220 rpm",
-      "Tube Sizes": "0.5-8.0mm bore",
+      "Tube Sizes": "0.5-8.0 mm bore",
       "Control Options": "Manual, 0-10V, 4-20mA",
       Display: "4-digit LED",
       "Protection Rating": "IP31",

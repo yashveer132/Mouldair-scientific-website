@@ -362,34 +362,6 @@ const CategoryPage = () => {
               <div className="text-gray-700 text-lg sm:text-xl leading-relaxed">
                 {brandInfo.description}
               </div>
-              {(brand === "leybold" ||
-                brand === "welch" ||
-                brand === "watson-marlow") && (
-                <div className="flex justify-center mt-8">
-                  <button
-                    onClick={scrollToApplications}
-                    className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold transform transition-transform duration-200 hover:-translate-y-2 hover:shadow-lg cursor-pointer flex items-center space-x-2"
-                  >
-                    <span>
-                      {brand === "watson-marlow"
-                        ? "View Sectors and Products"
-                        : "View Applications"}
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              )}
             </div>
           </div>
         )}

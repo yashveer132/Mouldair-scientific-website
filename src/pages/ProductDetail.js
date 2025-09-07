@@ -124,10 +124,9 @@ const ProductDetail = () => {
                 {product.applications.map((application, index) => (
                   <li
                     key={index}
-                    className="flex items-center space-x-2 bg-indigo-50 p-2 rounded"
+                    className="flex items-center justify-center text-center bg-indigo-50 p-2 rounded"
                   >
-                    <FaIndustry className="text-indigo-600 flex-shrink-0" />
-                    <span className="text-gray-700">{application}</span>
+                    <span className="text-gray-700 w-full">{application}</span>
                   </li>
                 ))}
               </ul>

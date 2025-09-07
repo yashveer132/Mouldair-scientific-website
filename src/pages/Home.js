@@ -39,29 +39,20 @@ const Home = () => {
       <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
         <section
           ref={heroRef}
-          className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden min-h-[90vh] flex items-center"
+          className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden min-h-[60vh] sm:min-h-[90vh] flex items-center"
         >
           <div className="absolute inset-0 bg-black opacity-10"></div>
-          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto py-6 sm:py-12 px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               <div className="lg:w-1/2">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-3 sm:mb-6 mt-2 sm:mt-0">
                   {heroContent.title}
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl mb-8 text-gray-100">
+                <p className="text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-8 text-gray-100">
                   {heroContent.subtitle}
                 </p>
-                <div>
-                  <button
-                    onClick={handleScrollToCategories}
-                    className="flex sm:inline-flex justify-center items-center mx-auto sm:mx-0 lg:ml-20 bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-medium transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
-                  >
-                    {heroContent.buttonText}
-                    <FaArrowRight className="ml-2" />
-                  </button>
-                </div>
               </div>
-              <div className="lg:w-1/2 relative">
+              <div className="hidden lg:block lg:w-1/2 relative">
                 <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
                   <img
                     src="/original.png"
@@ -93,6 +84,7 @@ const Home = () => {
                     src={cat.imageUrl}
                     alt={cat.name}
                     className="w-full h-36 sm:h-48 lg:h-40 object-contain sm:object-cover object-top mb-4 rounded bg-white"
+                    loading="eager"
                   />
                   <h3 className="text-xl font-semibold mb-2 text-gray-700">
                     {cat.name}
@@ -114,7 +106,7 @@ const Home = () => {
         </div>
         <div className="bg-gray-900 py-16 px-4 sm:py-24 sm:px-6 lg:px-8 -mt-8 lg:-mt-16">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative rounded-lg overflow-hidden pb-[66%] sm:pb-[50%] h-0 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+            <div className="relative rounded-lg overflow-hidden pb-[80%] sm:pb-[50%] h-0 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <iframe
                 src="https://www.youtube.com/embed/8OpkLSdy7ms"
                 frameBorder="0"
@@ -124,7 +116,7 @@ const Home = () => {
                 className="absolute top-0 left-0 w-full h-full"
               ></iframe>
             </div>
-            <div className="relative rounded-lg overflow-hidden pb-[66%] sm:pb-[50%] h-0 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+            <div className="relative rounded-lg overflow-hidden pb-[80%] sm:pb-[50%] h-0 transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <iframe
                 src="https://www.youtube.com/embed/vrJlsgag26M"
                 frameBorder="0"

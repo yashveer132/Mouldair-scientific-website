@@ -145,7 +145,10 @@ const Header = () => {
                       <img
                         src="/logo3.png"
                         alt="Mouldair Logo"
-                        className="h-8 w-auto sm:h-10 lg:h-12 rounded"
+                        className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 rounded"
+                        loading="eager"
+                        width="48"
+                        height="48"
                       />
                       <span className="text-gray-700 font-semibold text-lg sm:text-2xl md:text-2xl lg:text-3xl">
                         Mouldair Scientific
@@ -174,7 +177,7 @@ const Header = () => {
                   >
                     <motion.div className="transition duration-300 cursor-pointer flex items-center text-lg font-medium">
                       <Link
-                        to="/#categories"
+                        to="/"
                         className={`${
                           isProductsOpen
                             ? "text-indigo-600 font-semibold border-b-2 border-indigo-600"
@@ -346,6 +349,14 @@ const Header = () => {
                           className="absolute left-0 mt-2 w-64 text-center bg-white shadow-lg rounded-lg z-40"
                         >
                           <motion.ul className="py-4">
+                            <motion.li>
+                              <Link
+                                to="/technical"
+                                className="block px-6 py-3 text-base text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                              >
+                                Knowledge Center
+                              </Link>
+                            </motion.li>
                             <motion.li>
                               <Link
                                 to="/technical#articles"
@@ -542,6 +553,12 @@ const Header = () => {
                                 }}
                                 className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md"
                               >
+                                <Link
+                                  to="/technical"
+                                  className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
+                                >
+                                  Knowledge Center
+                                </Link>
                                 <Link
                                   to="/technical#articles"
                                   className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
