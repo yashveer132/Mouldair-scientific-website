@@ -142,14 +142,14 @@ const Header = () => {
                       whileTap={{ scale: 0.95 }}
                       className="cursor-pointer flex items-center space-x-2"
                     >
-                      <img
-                        src="/logo3.png"
-                        alt="Mouldair Logo"
-                        className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 rounded"
-                        loading="eager"
-                        width="48"
-                        height="48"
-                      />
+                      <div className="h-9 w-9 sm:h-10 sm:w-10 lg:h-12 lg:w-12 rounded overflow-hidden flex-shrink-0">
+                        <img
+                          src="/logo3.png"
+                          alt="Mouldair Logo"
+                          className="w-full h-full object-contain"
+                          loading="eager"
+                        />
+                      </div>
                       <span className="text-gray-700 font-semibold text-lg sm:text-2xl md:text-2xl lg:text-3xl">
                         Mouldair Scientific
                       </span>
@@ -177,7 +177,7 @@ const Header = () => {
                   >
                     <motion.div className="transition duration-300 cursor-pointer flex items-center text-lg font-medium">
                       <Link
-                        to="/"
+                        to="/#categories"
                         className={`${
                           isProductsOpen
                             ? "text-indigo-600 font-semibold border-b-2 border-indigo-600"
@@ -441,14 +441,18 @@ const Header = () => {
                     <Disclosure>
                       {({ open: productsOpen }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
-                            <span className="flex-1 text-center">Products</span>
-                            <ChevronDownIcon
-                              className={`${
-                                productsOpen ? "transform rotate-180" : ""
-                              } w-5 h-5 text-gray-500`}
-                            />
-                          </Disclosure.Button>
+                          <Link to="/#categories">
+                            <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                              <span className="flex-1 text-center mr-2">
+                                Products
+                              </span>
+                              <ChevronDownIcon
+                                className={`${
+                                  productsOpen ? "transform rotate-180" : ""
+                                } w-5 h-5 text-gray-500`}
+                              />
+                            </Disclosure.Button>
+                          </Link>
 
                           <AnimatePresence>
                             {productsOpen && (
@@ -468,7 +472,7 @@ const Header = () => {
                                         <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
                                           <Link
                                             to={`/categories/${brand}`}
-                                            className="flex-1 text-center"
+                                            className="flex-1 text-center mr-2"
                                           >
                                             {brandLabels[brand]}
                                           </Link>
@@ -518,65 +522,16 @@ const Header = () => {
                       )}
                     </Disclosure>
 
-                    <Disclosure>
-                      {({ open: technicalOpen }) => (
-                        <>
-                          <Disclosure.Button className="flex justify-between items-center w-full px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
-                            <Link
-                              to="/technical"
-                              className={`flex-1 text-center ${
-                                location.pathname.startsWith("/technical")
-                                  ? "bg-indigo-100 text-indigo-700"
-                                  : ""
-                              }`}
-                            >
-                              Technical Corner
-                            </Link>
-                            <ChevronDownIcon
-                              className={`${
-                                technicalOpen ? "transform rotate-180" : ""
-                              } w-5 h-5 text-gray-500`}
-                            />
-                          </Disclosure.Button>
-
-                          <AnimatePresence>
-                            {technicalOpen && (
-                              <Disclosure.Panel
-                                static
-                                as={motion.div}
-                                initial={{ height: 0 }}
-                                animate={{ height: "auto" }}
-                                exit={{ height: 0 }}
-                                transition={{
-                                  duration: 0.3,
-                                  ease: "easeInOut",
-                                }}
-                                className="px-4 pt-2 pb-3 space-y-2 bg-indigo-50 rounded-md"
-                              >
-                                <Link
-                                  to="/technical"
-                                  className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
-                                >
-                                  Knowledge Center
-                                </Link>
-                                <Link
-                                  to="/technical#articles"
-                                  className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
-                                >
-                                  Articles
-                                </Link>
-                                <Link
-                                  to="/technical#case-studies"
-                                  className="w-full block px-4 py-2 rounded-md text-base text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 text-center"
-                                >
-                                  Case Studies
-                                </Link>
-                              </Disclosure.Panel>
-                            )}
-                          </AnimatePresence>
-                        </>
-                      )}
-                    </Disclosure>
+                    <Link
+                      to="/technical"
+                      className={`${
+                        location.pathname.startsWith("/technical")
+                          ? "bg-indigo-100 text-indigo-700"
+                          : "text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                      } w-full block px-4 py-2 rounded-md text-base font-medium text-center`}
+                    >
+                      Technical Corner
+                    </Link>
 
                     {otherNav.map((item) => (
                       <Link

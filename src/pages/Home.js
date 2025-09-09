@@ -20,13 +20,16 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 const Home = () => {
   const heroRef = useRef(null);
   const categoriesRef = useRef(null);
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
-    if (hash === "#categories" && categoriesRef.current) {
+    if (
+      (hash === "#categories" || pathname === "/products") &&
+      categoriesRef.current
+    ) {
       categoriesRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [hash]);
+  }, [hash, pathname]);
 
   const handleScrollToCategories = () => {
     if (categoriesRef.current) {

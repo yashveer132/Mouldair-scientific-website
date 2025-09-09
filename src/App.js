@@ -7,6 +7,7 @@ import ProductDetail from "./pages/ProductDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import TechnicalCorner from "./pages/TechnicalCorner";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -19,9 +20,11 @@ function App() {
           element={<SubCategoryPage />}
         />
         <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/products" element={<Home />} />
         <Route path="/technical" element={<TechnicalCorner />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
