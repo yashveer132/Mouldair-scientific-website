@@ -24,7 +24,7 @@ export const categories = [
     id: "cintex",
     name: "Cintex Lab Equipment",
     description: "Ovens, chambers, incubators, baths and more.",
-    imageUrl: "/laboratory.jpg",
+    imageUrl: "/home_image5.jpg",
     link: "/categories/cintex",
   },
 ];
@@ -104,5 +104,5 @@ export const ctaSection = {
   title: "Ready to Elevate Your Research?",
   content: "Contact our team of experts for personalized solutions.",
   buttonText: "Get in Touch",
-  buttonLink: "/contact",
+  buttonLink: "/contact-us",
 };

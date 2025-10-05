@@ -1,11 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -49,34 +44,17 @@ const Footer = () => {
               research and industry solutions.
             </p>
 
+            <h3 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4 text-center">
+              Follow Us
+            </h3>
+
             <div className="flex justify-center space-x-6">
-              <motion.a
-                href="https://facebook.com"
-                className="text-gray-400 hover:text-indigo-500 transition"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-              >
-                <FaFacebookF className="h-6 w-6" />
-              </motion.a>
-              <motion.a
-                href="https://twitter.com"
-                className="text-gray-400 hover:text-indigo-500 transition"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-              >
-                <FaTwitter className="h-6 w-6" />
-              </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/santosh-singh-65290431?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 className="text-gray-400 hover:text-indigo-500 transition"
                 whileHover={{ scale: 1.3, rotate: 10 }}
               >
                 <FaLinkedinIn className="h-6 w-6" />
-              </motion.a>
-              <motion.a
-                href="https://instagram.com"
-                className="text-gray-400 hover:text-indigo-500 transition"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-              >
-                <FaInstagram className="h-6 w-6" />
               </motion.a>
             </div>
           </motion.div>
@@ -160,7 +138,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  to="/contact"
+                  to="/contact-us"
                   onClick={scrollToTop}
                   className="text-base text-gray-400 hover:text-white transition duration-300"
                 >

@@ -45,5 +45,5 @@ export const ctaSection = {
   content:
     "Explore how Mouldair Scientific can revolutionize your operations. Reach out to us for more information.",
   buttonText: "Contact Us",
-  buttonLink: "/contact",
+  buttonLink: "/contact-us",
 };

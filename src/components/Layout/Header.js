@@ -9,23 +9,20 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { productData } from "../../data/productData";
 import { pumpTypeLabels } from "../../data/pumpTypeLabels";
 
 const otherNav = [
   { name: "About Us", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 const socialMedia = [
-  { icon: FaFacebook, href: "#" },
-  { icon: FaTwitter, href: "#" },
   {
     icon: FaLinkedin,
     href: "https://www.linkedin.com/in/santosh-singh-65290431?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
-  { icon: FaInstagram, href: "#" },
 ];
 
 const brandOrder = ["watson-marlow", "leybold", "welch", "cintex"];
@@ -91,21 +88,21 @@ const Header = () => {
           <div className="flex flex-row justify-center sm:justify-between items-center">
             <div className="flex flex-row items-center space-x-4 mb-0">
               <a
-                href="mailto:info@mouldairscientific.com"
+                href="mailto:mouldairscientific@gmail.com"
                 className="flex items-center text-sm sm:text-base lg:text-lg hover:text-indigo-200 transition-colors duration-300"
               >
                 <EnvelopeIcon className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                 <span className="hidden sm:inline">
-                  info@mouldairscientific.com
+                  mouldairscientific@gmail.com
                 </span>
                 <span className="sm:hidden">Email Us</span>
               </a>
               <a
-                href="tel:+07698660715"
+                href="tel:7698660715"
                 className="flex items-center text-sm sm:text-base lg:text-lg hover:text-indigo-200 transition-colors duration-300"
               >
                 <PhoneIcon className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-                +076986 60715
+                7698660715
               </a>
             </div>
             <div className="hidden sm:flex sm:items-center sm:space-x-4">

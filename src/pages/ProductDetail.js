@@ -207,7 +207,7 @@ const ProductDetail = () => {
             <div className="flex justify-center gap-4">
               <div className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
                 <Link
-                  to="/contact"
+                  to="/contact-us"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
                 >
                   Contact Us

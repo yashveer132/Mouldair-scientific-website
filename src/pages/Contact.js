@@ -1,12 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
-import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const linkedinUrl =
   "https://www.linkedin.com/in/santosh-singh-65290431?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
@@ -33,37 +27,34 @@ const Contact = () => {
                   Contact Information
                 </h2>
                 <div className="space-y-4">
-                  <div className="flex items-start sm:items-center">
-                    <MdLocationOn className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4 mt-1 sm:mt-0" />
-                    <div>
+                  <div className="flex items-start sm:items-center justify-center">
+                    <div className="text-center">
                       <h3 className="font-semibold text-sm sm:text-base">
-                        Address
+                        📍 Address
                       </h3>
                       <p className="text-gray-600 text-xs sm:text-sm">
-                        44 Happy Residency B/H Narmada Hotel, Zadeshwar,
+                        44, Happy Residency B/H Narmada Hotel, Zadeshwar,
                         Bharuch, Gujarat 392011, India
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center">
-                    <MdPhone className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4" />
-                    <div>
+                  <div className="flex items-center justify-center">
+                    <div className="text-center">
                       <h3 className="font-semibold text-sm sm:text-base">
-                        Phone
+                        📞 Phone
                       </h3>
                       <p className="text-gray-600 text-xs sm:text-sm">
-                        +076986 60715
+                        7698660715
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center">
-                    <MdEmail className="text-xl sm:text-2xl text-indigo-600 mr-3 sm:mr-4" />
-                    <div>
+                  <div className="flex items-center justify-center">
+                    <div className="text-center">
                       <h3 className="font-semibold text-sm sm:text-base">
-                        Email
+                        📧 Email
                       </h3>
                       <p className="text-gray-600 text-xs sm:text-sm">
-                        info@mouldairscientific.com
+                        mouldairscientific@gmail.com
                       </p>
                     </div>
                   </div>
@@ -78,30 +69,12 @@ const Contact = () => {
                 </h2>
                 <div className="flex justify-center space-x-3 sm:space-x-4 mb-6">
                   <a
-                    href="#"
-                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
-                  >
-                    <FaFacebookF className="text-lg sm:text-xl" />
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
-                  >
-                    <FaTwitter className="text-lg sm:text-xl" />
-                  </a>
-                  <a
                     href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
                   >
                     <FaLinkedinIn className="text-lg sm:text-xl" />
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-indigo-600 text-white p-2 sm:p-3 rounded-full cursor-pointer"
-                  >
-                    <FaInstagram className="text-lg sm:text-xl" />
                   </a>
                 </div>
                 <img

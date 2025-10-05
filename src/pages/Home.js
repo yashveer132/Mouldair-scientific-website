@@ -86,7 +86,7 @@ const Home = () => {
                   <img
                     src={cat.imageUrl}
                     alt={cat.name}
-                    className="w-full h-36 sm:h-48 lg:h-40 object-contain sm:object-cover object-top mb-4 rounded bg-white"
+                    className="w-full h-36 sm:h-48 lg:h-40 object-contain mb-4 rounded bg-white"
                     loading="eager"
                   />
                   <h3 className="text-xl font-semibold mb-2 text-gray-700">
